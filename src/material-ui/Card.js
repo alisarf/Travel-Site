@@ -1,4 +1,4 @@
-import {react, useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Card, CardMedia, Typography, CardContent, CardActions, Button} from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
@@ -6,23 +6,20 @@ import Favorite from '@mui/icons-material/Favorite';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 
-function CardBuilder () {
-    const [image, setImage] = useState('')
-    useEffect(() => {
-        setImage("https://source.unsplash.com/random/50×100/?bali/landscape");
-        return image;
-    })
+function CardBuilder (props) {
 
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-    
+    console.log(props.image.webformatURL)
+    const image = 'https://source.unsplash.com/random/?bali beach/landscape';
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 }}  className="mx-auto">
         <CardMedia
           component="img"
           alt="green iguana"
           height="100px"
-          image= {image}
+          image= {props.image.webformatURL}
         />
+        
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Lorem Ipsum
