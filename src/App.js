@@ -31,7 +31,7 @@ function App() {
 
   return (
     <main>
-      <nav className='flex justify-between m-3'>
+      <nav className='flex justify-between my-3 mx-auto w-3/4'>
       <Typography variant='h4' component='h4' gutterBottom className="text-center">Travel Bali</Typography>
       <ul>
         <li className='inline-block m-3'>
@@ -57,11 +57,11 @@ function App() {
       <Typography gutterBottom variant="h3" className="text-center">
             Get outside.
       </Typography>
-      <div className="grid grid-cols-3 gap-10">
+      <section className="grid grid-cols-3 gap-10">
       {images.map(image => (
           <CardBuilder key= {image.id} image ={image} className="mx-auto h-full"/>
         ))}
-      </div>
+      </section>
       <Typography gutterBottom variant="h3" className="text-center">
             Support the Locals.
       </Typography>
