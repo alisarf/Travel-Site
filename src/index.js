@@ -4,10 +4,11 @@ import './index.css';
 import './css/style.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import RouterDirectory from './RouterDirectory'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RouterDirectory />
   </React.StrictMode>,
   document.getElementById('root')
 );

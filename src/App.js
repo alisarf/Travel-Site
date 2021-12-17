@@ -8,17 +8,17 @@ import RadioGroupRating from './material-ui/rating';
 import { createTheme } from '@mui/material/styles';
 import culturebali from './assets/culturebali.jpg';
 import { ReactComponent as Logo } from './assets/palm-tree-svgrepo-com.svg';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import { Route , Link } from 'react-router-dom';
 
-import Ubud from './Ubud'
+import NavNew from './material-ui/NavNew';
+
 
 
 //Icons mUI
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import { blue } from '@mui/material/colors';
 
 
@@ -57,23 +57,7 @@ function App() {
     <main>
 
       <section>
-        <nav className='flex justify-between py-3 mx-auto w-3/4'>
-        <Typography variant='h4' component='h4' gutterBottom className="text-center">Travel Bali</Typography>
-        <ul>
-          <li className='inline-block m-3'>
-            <a href="" className='text-xl hover:text-gray-300 hover:underline'>Ubud</a>
-          </li>
-          <li className='inline-block m-3'>
-            <a href="" className='text-xl hover:text-gray-300 hover:underline'>Denpasar</a>
-          </li>
-          <li className='inline-block m-3'>
-            <a href="" className='text-xl hover:text-gray-300 hover:underline'>Kuta</a>
-          </li>
-          <li className='inline-block m-3'>
-            <FavoriteRoundedIcon/>
-          </li>
-        </ul>
-        </nav>
+        <NavNew/>
         <div className='flex-col justify-center w-screen h-screen'>
           <Typography variant='h3' component='h2' gutterBottom className="text-center text-white m-auto relative top-1/3">
             Explore / Eat / Relax
