@@ -1,0 +1,39 @@
+footer{
+    padding: 7.5% 15%;
+}
+.Mymargin{
+    margin: 100px;
+}
+.ListItems{
+    li{
+        font-weight: 500;
+        margin: .5rem 0;
+        color: rgb(115, 115, 115);
+        &:hover{
+            color: rgb(71, 71, 71);
+            cursor: pointer;
+        }
+    }
+}
+.Frost{
+    backdrop-filter: blur(5px);
+    position: absolute;
+    height: 100vh;
+    width: 50vw;
+    top: 0;
+    z-index: 1;
+}
+nav{
+    z-index: 2;
+    position: relative;
+}
+.Heroimage{
+    //background-image: url('C:\Users\Alisar\Documents\React\material-ui-app\src\assets\heroimage.jpg');
+    background-image: url('../assets/heroimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+}
