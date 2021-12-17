@@ -5,8 +5,20 @@ import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { HeartBroken } from '@mui/icons-material';
 
 function CardBuilder (props) {
+
+
+  //onClick={props.setHeart( })}
+  //caches the heart that you make on a card
+  const handleChange = () => { 
+    props.setHeart([...props.heart, [props.image.webformatURL]]); //this now adds to the array of favorites
+    console.log(props.heart + ['this is heart'])
+    console.log(JSON.stringify(props.heart))
+    console.log('The checkbox was toggled' + props.image.webformatURL); 
+    
+  }; 
 
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     console.log(props.image.webformatURL)
@@ -32,7 +44,7 @@ function CardBuilder (props) {
         <CardActions>
           <Button size="small">Learn More</Button>
           <div className="ml-auto">
-            <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />}/>
+            <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} onChange={handleChange}/>
                 <Checkbox
                 {...label}
                 icon={<BookmarkBorderIcon />}

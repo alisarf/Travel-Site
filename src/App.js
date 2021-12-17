@@ -78,7 +78,7 @@ function App() {
       </Typography>
       <section className="grid grid-cols-3 gap-10">
       {images.map(image => (
-          <CardBuilder key= {image.id} image ={image} className="mx-auto h-full"/>
+          <CardBuilder key= {image.id} image ={image} setHeart={setHeart} heart ={heart} className="mx-auto h-full"/>
         ))}
       </section>
       <Typography gutterBottom variant="h3" className="text-center">
