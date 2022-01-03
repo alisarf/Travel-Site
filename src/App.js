@@ -3,12 +3,11 @@ import './css/style.css';
 import './css/custom.css';
 import './css/general.css';
 import CardBuilder from './material-ui/Card';
-import { Typography, Button, Container, Rating, Paper, TextField } from '@mui/material';
+import { Typography, Button, Container, Rating, Paper, TextField, Pagination } from '@mui/material';
 import RadioGroupRating from './material-ui/rating';
-import { createTheme } from '@mui/material/styles';
 import culturebali from './assets/culturebali.jpg';
-import { ReactComponent as Logo } from './assets/palm-tree-svgrepo-com.svg';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+//import { ReactComponent as Logo } from './assets/palm-tree-svgrepo-com.svg';
+//import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 
 
@@ -16,12 +15,6 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Nav from './material-ui/Nav';
 import Footer from './material-ui/Footer';
 
-
-//Icons mUI
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import { blue } from '@mui/material/colors';
 
 
 
@@ -62,25 +55,27 @@ function App() {
 
       <section>
         <Nav/>
-        <div className='flex-col justify-center w-screen h-screen'>
+        <div className='flex-col justify-center w-screen half_vh'>
           <Typography variant='h3' component='h2' gutterBottom className="text-center text-white m-auto relative top-1/3">
             Explore / Eat / Relax
           </Typography>
         </div>
-        <div className='Frost'>
+        <div className='Frost half_vh'>
         </div>
-        <div className='Heroimage'></div>
+        <div className='Heroimage half_vh'></div>
       </section>
     <div className='grid gap-y-10 pt-30 w-3/4 m-auto'>
 
       <Typography gutterBottom variant="h3" className="text-center m-3">
             Get outside.
       </Typography>
-      <section className="grid grid-cols-3 gap-10">
+      <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {images.map(image => (
           <CardBuilder key= {image.id} image ={image} setHeart={setHeart} heart ={heart} className="mx-auto h-full"/>
         ))}
+      <Pagination className = "m-auto" count={5} variant="outlined" color="primary" />
       </section>
+
       <Typography gutterBottom variant="h3" className="text-center">
             Support the Locals.
       </Typography>

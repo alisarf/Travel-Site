@@ -11,10 +11,10 @@ const RouterDirectory = () => {
 
     <BrowserRouter>
       <Routes>
-              <Route path="/" element={<App />} />
-              <Route path='/ubud' element={<Ubud />} />
-              <Route path='/denpasar' element={<Denpasar />} />
-              <Route path='/kuta' element={<Kuta />} />
+        <Route path="/" element={<App />} />
+        <Route path='/ubud' element={<Ubud />} />
+        <Route path='/denpasar' element={<Denpasar />} />
+        <Route path='/kuta' element={<Kuta />} />
       </Routes>
     </BrowserRouter>
 
