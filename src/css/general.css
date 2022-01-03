@@ -18,10 +18,7 @@ footer {
 }
 
 .Frost {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   position: absolute;
-  height: 100vh;
   width: 50vw;
   top: 0;
   z-index: 1;
@@ -37,8 +34,11 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  height: 100vh;
   width: 100vw;
   top: 0;
+}
+
+.half_vh {
+  height: 50vh;
 }
 /*# sourceMappingURL=general.css.map */

@@ -3,23 +3,18 @@ import './css/style.css';
 import './css/custom.css';
 import './css/general.css';
 import CardBuilder from './material-ui/Card';
-import { Typography, Button, Container, Rating, Paper, TextField } from '@mui/material';
+import { Typography, Button, Container, Rating, Paper, TextField, Pagination } from '@mui/material';
 import RadioGroupRating from './material-ui/rating';
-import { createTheme } from '@mui/material/styles';
 import culturebali from './assets/culturebali.jpg';
-import { ReactComponent as Logo } from './assets/palm-tree-svgrepo-com.svg';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-
-
-import NavNew from './material-ui/NavNew';
+//import { ReactComponent as Logo } from './assets/palm-tree-svgrepo-com.svg';
+//import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 
 
-//Icons mUI
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import { blue } from '@mui/material/colors';
+
+import Nav from './material-ui/Nav';
+import Footer from './material-ui/Footer';
+
 
 
 
@@ -30,6 +25,8 @@ function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState('bali');
+
+  const[heart, setHeart] = useState([]);
 
 
   //STYLES OBJECT PALLETTE
@@ -57,26 +54,28 @@ function App() {
     <main>
 
       <section>
-        <NavNew/>
-        <div className='flex-col justify-center w-screen h-screen'>
+        <Nav/>
+        <div className='flex-col justify-center w-screen half_vh'>
           <Typography variant='h3' component='h2' gutterBottom className="text-center text-white m-auto relative top-1/3">
             Explore / Eat / Relax
           </Typography>
         </div>
-        <div className='Frost'>
+        <div className='Frost half_vh'>
         </div>
-        <div className='Heroimage'></div>
+        <div className='Heroimage half_vh'></div>
       </section>
     <div className='grid gap-y-10 pt-30 w-3/4 m-auto'>
 
       <Typography gutterBottom variant="h3" className="text-center m-3">
             Get outside.
       </Typography>
-      <section className="grid grid-cols-3 gap-10">
+      <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {images.map(image => (
-          <CardBuilder key= {image.id} image ={image} className="mx-auto h-full"/>
+          <CardBuilder key= {image.id} image ={image} setHeart={setHeart} heart ={heart} className="mx-auto h-full"/>
         ))}
+      <Pagination className = "m-auto" count={5} variant="outlined" color="primary" />
       </section>
+
       <Typography gutterBottom variant="h3" className="text-center">
             Support the Locals.
       </Typography>
@@ -103,57 +102,7 @@ function App() {
         </Typography>
         <RadioGroupRating/>
       </Paper>
-      <footer>
-        <section className='flex flex-row justify-between'>
-          <div className='inline-block'>
-              <h6 className='font-bold'>Resources</h6>
-              <ul className='ListItems'>
-                <li>Call Center</li>
-                <li>Affliates</li>
-                <li>Toll Free</li>
-                <li>Coupons</li>
-              </ul>
-          </div>
-          <div className='inline-block'>
-              <h6 className='font-bold'>Travelers</h6>
-              <ul className='ListItems'>
-                <li>Insurnace</li>
-                <li>Reimbursement</li>
-                <li>Covid Protocols</li>
-                <li>Travel Bans</li>
-              </ul>
-          </div>
-          <div className='inline-block'>
-            <h6 className='font-bold'>Company</h6>
-            <ul className='ListItems'>
-              <li>Contact us</li>
-              <li>Locations</li>
-              <li>Mission</li>
-              <li>Careers</li>
-            </ul>
-          </div>
-          <div className='inline-block'>
-            <h6 className='font-bold' style={styles.aqua}>Get In Touch</h6>
-            <ul className='ListItems'>
-              <li>1.800.867.5309</li>
-              <li>customerservice@travelbali.com</li>
-            </ul>
-          </div>
-        </section>
-        <section className='flex flex-row justify-between'>
-          <div className="flex flex-row">
-            <Logo className='w-10 h-10 inline-block'/>
-            <h5 className="inline-block font-bold italic text-3xl m-auto" style={styles.aqua}>Travel Bali</h5>
-          </div>
-          
-          
-          <div>
-          <FacebookIcon style = {{...styles.icon, ...styles.aqua}}/>
-          <InstagramIcon style = {{...styles.icon, ...styles.aqua}}/>
-          <TwitterIcon style = {{...styles.icon, ...styles.aqua}}/>
-          </div>
-        </section>
-      </footer>
+      <Footer/>
     </main>
   );
 }
