@@ -16,9 +16,9 @@ footer{
     }
 }
 .Frost{
-    //backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     position: absolute;
-    width: 50vw;
+    width: 100%;
     top: 0;
     z-index: 1;
 }
@@ -27,18 +27,44 @@ nav{
     position: relative;
 }
 .Heroimage{
-    //background-image: url('C:\Users\Alisar\Documents\React\material-ui-app\src\assets\heroimage.jpg');
     background-image: url('../assets/heroimage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     top: 0;
 }
 
 .half_vh{
     height: 50vh;
 }
-.css-o69gx8-MuiCardMedia-root{
-    //height: 50%;
+
+//center pagination
+.MuiPagination-ul{
+    justify-content: center;
+}
+.Nav-link{
+    text-decoration: underline;
+    text-decoration-color: rgba(99, 102, 241, 0.5);
+    transition: all .2s;
+    &:hover{
+        text-decoration-color: rgb(99, 102, 241);
+        
+    }
+}
+main{
+    width: 100%;
+}
+
+
+//font
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(../assets/fonts/brushy/BRUSHY.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+.Font_brushy {
+    font-family: 'MyFont';
 }

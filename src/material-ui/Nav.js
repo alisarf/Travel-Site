@@ -3,6 +3,10 @@ import { Typography } from '@mui/material'
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import { Link } from 'react-router-dom'
 
+import '../css/style.css';
+import '../css/custom.css';
+import '../css/general.css';
+
 const Nav = () => {
     return (
             <nav className='flex justify-between py-3 mx-auto w-3/4'>
@@ -11,21 +15,21 @@ const Nav = () => {
             <li className='inline-block m-3'>
                 
                 <Link to='/ubud'>
-                    <a href="" className='text-xl hover:text-gray-300 hover:underline'>Ubud</a>
+                    <a href="" className='text-xl underline Nav-link'>Ubud</a>
                 </Link>
             </li>
             <li className='inline-block m-3'>
                 <Link to='/denpasar'>
-                    <a href="" className='text-xl hover:text-gray-300 hover:underline'>Denpasar</a>
+                    <a href="" className='text-xl underline Nav-link'>Denpasar</a>
                 </Link>
             </li>
             <li className='inline-block m-3'>
                 <Link to='/kuta'>
-                    <a href="" className='text-xl hover:text-gray-300 hover:underline'>Kuta</a>
+                    <a href="" className='text-xl underline Nav-link'>Kuta</a>
                 </Link>
             </li>
             <li className='inline-block m-3'>
-                <FavoriteRoundedIcon/>
+                <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}}/>
 
             </li>
             </ul>

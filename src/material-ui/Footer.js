@@ -18,7 +18,7 @@ const Footer = () => {
 
     return (
         <footer>
-        <section className='flex flex-row justify-between'>
+        <section className='flex flex-row justify-between mb-10'>
           <div className='inline-block'>
               <h6 className='font-bold'>Resources</h6>
               <ul className='ListItems'>
