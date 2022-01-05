@@ -3,17 +3,18 @@ import './css/style.css';
 import './css/custom.css';
 import './css/general.css';
 import CardBuilder from './material-ui/Card';
-import { Typography, Button, Container, Rating, Paper, TextField, Pagination } from '@mui/material';
+import { Typography, Button, Container, Rating, Paper, TextField, Pagination} from '@mui/material';
 import RadioGroupRating from './material-ui/rating';
 import culturebali from './assets/culturebali.jpg';
 //import { ReactComponent as Logo } from './assets/palm-tree-svgrepo-com.svg';
 //import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-
+import FeatureCards from './material-ui/FeatureCards';
 
 
 import Nav from './material-ui/Nav';
 import Footer from './material-ui/Footer';
+
 
 
 
@@ -40,7 +41,7 @@ function App() {
       .then(res => res.json())
       .then(data => {
           console.log(data.hits[2].webformatURL);
-          setImages(data.hits.splice(0,5)); //splice for fewer results than what was retrieved
+          setImages(data.hits.splice(0,3)); //splice for fewer results than what was retrieved
           console.log('your images' + images[2])
           setIsLoading(false);
       })
@@ -49,45 +50,62 @@ function App() {
 
 
 
+  var docWidth = document.documentElement.offsetWidth;
+
+  [].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+      if (el.offsetWidth > docWidth) {
+        console.log(el);
+      }
+    }
+  );
+
+
   return (
 
     <main>
 
       <section>
         <Nav/>
-        <div className='flex-col justify-center w-screen half_vh'>
+        <div className='flex-col justify-center w-full half_vh'>
           <Typography variant='h3' component='h2' gutterBottom className="text-center text-white m-auto relative top-1/3">
             Explore / Eat / Relax
           </Typography>
         </div>
         <div className='Frost half_vh'>
         </div>
-        <div className='Heroimage half_vh'></div>
+        <div className='Heroimage half_vh flex justify-center'>
+          <h3 className='Font_brushy text-9xl self-center text-white z-10'>Adventure!</h3>
+
+        </div>
       </section>
     <div className='grid gap-y-10 pt-30 w-3/4 m-auto'>
 
-      <Typography gutterBottom variant="h3" className="text-center m-3">
-            Get outside.
-      </Typography>
+    <div>
+      <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
+      <h6 className='text-center text-gray-400'>Find activites hosted by the locals.</h6>
+    </div>
+
       <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        
       {images.map(image => (
           <CardBuilder key= {image.id} image ={image} setHeart={setHeart} heart ={heart} className="mx-auto h-full"/>
         ))}
-      <Pagination className = "m-auto" count={5} variant="outlined" color="primary" />
       </section>
-
+      <Pagination className = "m-auto" count={5} variant="outlined" color="primary" />
       <Typography gutterBottom variant="h3" className="text-center">
             Support the Locals.
       </Typography>
       
       <img className=' m-auto rounded' src={cultureimage} alt="" />
-      <Typography gutterBottom variant="h3" className="text-center">
-            Embrace the Culture.
-      </Typography>
-      <div className="flex justify-center gap-10">
 
       </div>
-    </div>
+
+      <div className="flex justify-center gap-10">     
+      <FeatureCards />
+      </div>
+    
       <Paper elevation={3} className='flex flex-col m-auto w-4/12 items-center p-3 gap-y-4 pb-4'>
       <Typography gutterBottom variant="h5" className="text-center">Get the Latest!</Typography>
         <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1' />

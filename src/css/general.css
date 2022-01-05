@@ -18,8 +18,10 @@ footer {
 }
 
 .Frost {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   position: absolute;
-  width: 50vw;
+  width: 100%;
   top: 0;
   z-index: 1;
 }
@@ -34,11 +36,45 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   top: 0;
 }
 
 .half_vh {
   height: 50vh;
+}
+
+.MuiPagination-ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Nav-link {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(99, 102, 241, 0.5);
+          text-decoration-color: rgba(99, 102, 241, 0.5);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.Nav-link:hover {
+  -webkit-text-decoration-color: #6366f1;
+          text-decoration-color: #6366f1;
+}
+
+main {
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: local("MyFont"), url(../assets/fonts/brushy/BRUSHY.ttf) format("truetype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+.Font_brushy {
+  font-family: 'MyFont';
 }
 /*# sourceMappingURL=general.css.map */
