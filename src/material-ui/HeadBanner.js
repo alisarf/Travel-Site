@@ -1,6 +1,9 @@
 import { Typography } from "@mui/material";
 import Nav from '../material-ui/Nav';
 
+//Default image:
+import ImgBanner from '../assets/images/ubud/ubud-banner.jpg';
+
 //REQUIRED PROPS : Title
 
 const HeadBanner = (props) => {
@@ -11,7 +14,7 @@ const HeadBanner = (props) => {
             </div>
             <div className='Frost half_vh'>
             </div>
-            <div className='Heroimage half_vh flex justify-center'  style={{ backgroundImage: `url(${props.image})` }}>
+            <div className='Heroimage half_vh flex justify-center'  style={{ backgroundImage: `url(${props.image ? props.image : ImgBanner})` }}>
             <h3 className='Font_brushy text-9xl self-center text-white z-10'>{props.title}</h3>
             </div>
         </section>
