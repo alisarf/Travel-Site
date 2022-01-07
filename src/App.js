@@ -10,10 +10,13 @@ import culturebali from './assets/culturebali.jpg';
 //import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import FeatureCards from './material-ui/FeatureCards';
+import HeadBanner from './material-ui/HeadBanner'; 
+import ImgBanner from './assets/images/ubud/ubud-banner.jpg';
+import Video from './assets/images/bali/culture.mp4';
 
 
-import Nav from './material-ui/Nav';
 import Footer from './material-ui/Footer';
+import VideoBanner from './material-ui/VideoBanner';
 
 
 
@@ -66,22 +69,9 @@ function App() {
 
     <main>
 
-      <section>
-        <Nav/>
-        <div className='flex-col justify-center w-full half_vh'>
-          <Typography variant='h3' component='h2' gutterBottom className="text-center text-white m-auto relative top-1/3">
-            Explore / Eat / Relax
-          </Typography>
-        </div>
-        <div className='Frost half_vh'>
-        </div>
-        <div className='Heroimage half_vh flex justify-center'>
-          <h3 className='Font_brushy text-9xl self-center text-white z-10'>Adventure!</h3>
+    <HeadBanner title= 'Adventure!' image = {ImgBanner} />
 
-        </div>
-      </section>
     <div className='grid gap-y-10 pt-30 w-3/4 m-auto'>
-
     <div>
       <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
       <h6 className='text-center text-gray-400'>Find activites hosted by the locals.</h6>
@@ -98,12 +88,20 @@ function App() {
             Support the Locals.
       </Typography>
       
-      <img className=' m-auto rounded' src={cultureimage} alt="" />
+      {/*<img className=' m-auto rounded' src={cultureimage} alt="" />*/}
+      <VideoBanner 
+        video = {Video}
+        msg = 'Culture'
+      />
 
+      
       </div>
 
       <div className="flex justify-center gap-10">     
-      <FeatureCards />
+      <FeatureCards 
+        title = 'Featured Locations' 
+        subtitle = 'Explore the best locations within the southern region.' 
+      />
       </div>
     
       <Paper elevation={3} className='flex flex-col m-auto w-4/12 items-center p-3 gap-y-4 pb-4'>
