@@ -9,6 +9,8 @@ import FeatureTri from '../material-ui/FeatureTri';
 import Weather from '../material-ui/Weather';
 
 
+//Icons for Font-Awesome
+import { faTaxi } from '@fortawesome/free-solid-svg-icons'
 
 
 const Ubud = () => {
@@ -24,7 +26,7 @@ const Ubud = () => {
                 msg = 'Endless Surf'
                 speed = '1.2'
             />
-            <FeatureTri/>
+            <FeatureTri image = {faTaxi} />
             <Weather location = 'ubud'/>
             <Footer/>
         </div>
