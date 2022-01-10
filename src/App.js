@@ -3,23 +3,16 @@ import './css/style.css';
 import './css/custom.css';
 import './css/general.css';
 import CardBuilder from './material-ui/Card';
-import { Typography, Button, Container, Rating, Paper, TextField, Pagination} from '@mui/material';
+import { Typography, Button, Paper, TextField, Pagination} from '@mui/material';
 import RadioGroupRating from './material-ui/rating';
 import culturebali from './assets/culturebali.jpg';
-//import { ReactComponent as Logo } from './assets/palm-tree-svgrepo-com.svg';
-//import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-
 import FeatureCards from './material-ui/FeatureCards';
 import HeadBanner from './material-ui/HeadBanner'; 
 import ImgBanner from './assets/images/ubud/ubud-banner.jpg';
 import Video from './assets/images/bali/culture.mp4';
 
-
 import Footer from './material-ui/Footer';
 import VideoBanner from './material-ui/VideoBanner';
-
-
-
 
 
 
@@ -29,9 +22,7 @@ function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState('bali');
-
   const[heart, setHeart] = useState([]);
-
 
   //STYLES OBJECT PALLETTE
   const styles = {
@@ -50,8 +41,6 @@ function App() {
       })
       .catch(err =>console.log(err));
   }, []);
-
-
 
   var docWidth = document.documentElement.offsetWidth;
 
