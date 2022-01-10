@@ -77,4 +77,32 @@ main {
 .Font_brushy {
   font-family: 'MyFont';
 }
+
+.Weather_icon {
+  width: 100px;
+  height: 100px;
+}
+
+.Font_dk_teal {
+  color: #00796b;
+}
+
+.Font_dk_slate {
+  color: #546e7a;
+}
+
+.Bg_lt_teal {
+  background-color: #e0f2f1;
+}
+
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.Circular_box {
+  background-color: #b2dfdb;
+  border-radius: 100px;
+}
 /*# sourceMappingURL=general.css.map */

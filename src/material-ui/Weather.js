@@ -1,4 +1,5 @@
 import React, {useState , useEffect} from "react";
+import { Card } from "@mui/material";
 
 const Weather = (props) => {
     const [weather, setWeather] = useState({});
@@ -27,15 +28,25 @@ const Weather = (props) => {
     }, []);
 
     return (
-        <div>
+        <Card className = 'mx-auto w-fit'>
             {(typeof weather.main != "undefined") ? (
-            <section>
-                <div> {Math.round(weather.main.temp)}°C</div>
-                <div> {weather.weather[0].main} </div>
-                <img src={weathericon.base + weather.weather[0].icon + weathericon.end} className="Weather_icon"></img>
+            <section className="flex flex-row gap-8 justify-evenly items-center Bg_lt_teal py-8 px-8">
+                <div>
+                    <div className="text-xl font-bold Font_dk_teal"> {weather.weather[0].main} </div>
+                    <div className="text-5xl font-bold Font_dk_teal"> {Math.round(weather.main.temp)}°C</div>
+                    <div className=" text-white Font_dk_slate tracking-widest capitalize mt-4">{query}</div>
+                </div>
+                <div className="Circular_box">
+                    <img src={weathericon.base + weather.weather[0].icon + weathericon.end} className="Weather_icon"></img>
+                    
+                </div>
+                
+
+                
+
             </section>
             ):('')}
-        </div>
+        </Card>
     )
 }
 

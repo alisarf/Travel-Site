@@ -73,3 +73,29 @@ main{
     width: 100px;
     height: 100px;
 }
+
+
+//color pallete
+
+$color-lt-teal: #e0f2f1;
+$color-dk-teal: #00796b;
+$color-slate: #546e7a;
+
+.Font_dk_teal {
+    color: $color-dk-teal;
+}
+.Font_dk_slate {
+    color: $color-slate;
+}
+.Bg_lt_teal {
+    background-color: $color-lt-teal;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.Circular_box{
+    background-color: #b2dfdb;
+    border-radius: 100px;
+}
