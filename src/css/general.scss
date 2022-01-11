@@ -84,8 +84,14 @@ $color-slate: #546e7a;
 .Font_dk_teal {
     color: $color-dk-teal;
 }
+.Bg_dk_teal {
+    background-color: $color-dk-teal;
+}
 .Font_dk_slate {
     color: $color-slate;
+}
+.Bg_dk_slate {
+    background-color: $color-slate;
 }
 .Bg_lt_teal {
     background-color: $color-lt-teal;
@@ -98,4 +104,14 @@ $color-slate: #546e7a;
 .Circular_box{
     background-color: #b2dfdb;
     border-radius: 100px;
+}
+.imagesss {
+    width: 100px;
+    height: 100px;
+}
+
+//to delte below
+.RandomSize {
+    height:24px;
+    //width:20%;
 }
