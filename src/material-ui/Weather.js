@@ -28,7 +28,7 @@ const Weather = (props) => {
     }, []);
 
     return (
-        <Card className = 'mx-auto w-fit'>
+        <Card className = 'w-fit'>
             {(typeof weather.main != "undefined") ? (
             <section className="flex flex-row gap-8 justify-evenly items-center Bg_lt_teal py-8 px-8">
                 <div>
@@ -41,9 +41,6 @@ const Weather = (props) => {
                     
                 </div>
                 
-
-                
-
             </section>
             ):('')}
         </Card>

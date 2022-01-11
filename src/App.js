@@ -30,6 +30,15 @@ function App() {
     aqua: {color: 'rgb(87, 189, 183)',}
   }
 
+      //Feature cards info
+      const [arr, setArr ] = useState([
+        { title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
+        { title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
+        { title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
+        ])
+
+
+
   useEffect(() => {
       fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&orientation=horizontal`)
       .then(res => res.json())
@@ -88,6 +97,7 @@ function App() {
 
       <div className="flex justify-center gap-10">     
       <FeatureCards 
+        array = {arr}
         title = 'Featured Locations' 
         subtitle = 'Explore the best locations within the southern region.' 
       />
