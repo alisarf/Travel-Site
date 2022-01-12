@@ -8,7 +8,7 @@ const ProgressBar = (props) => {
 
     return (
         <div className="flex flex-row gap-4 justify-evenly">
-            <h6 style={{width: '60px'}}>{props.title}:</h6>
+            <h6 className= " font-semibold" style={{width: '60px'}}>{props.title}:</h6>
             <div className="w-2/4 bg-white rounded-full">
                 <div className= {`RandomSize ${(props.value == 100 ? 'rounded-full' : 'Left_rounded')}`}  style={{width: props.value, backgroundColor: color}}></div>
             </div>

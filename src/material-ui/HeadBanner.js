@@ -15,7 +15,7 @@ const HeadBanner = (props) => {
             <div className='Frost half_vh'>
             </div>
             <div className='Heroimage half_vh flex justify-center'  style={{ backgroundImage: `url(${props.image ? props.image : ImgBanner})` }}>
-            <h3 className='Font_brushy text-9xl self-center text-white z-10'>{props.title}</h3>
+            <h3 className='Font_brushy text-9xl self-center text-white z-10 capitalize'>{props.title}</h3>
             </div>
         </section>
     )
