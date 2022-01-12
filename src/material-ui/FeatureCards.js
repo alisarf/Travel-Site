@@ -18,7 +18,6 @@ const FeatureCards = (props) => {
         { title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
         ])
     */
-
     return (
         <section className='my-10'>
             <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}}>{props.title}</Typography>

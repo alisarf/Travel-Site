@@ -10,6 +10,8 @@ import Weather from '../material-ui/Weather';
 import ProgressBarBox from '../material-ui/ProgressBarBox';
 import SectionPara from '../material-ui/SectionPara';
 import MapApi from '../material-ui/MapApi';
+import Cost from '../material-ui/Cost';
+
 
 //Feature Images
 import Image1 from '../assets/images/ubud/ubud-people.jpg';
@@ -32,11 +34,12 @@ const Ubud = () => {
 
     return (
         <div>
-            <HeadBanner title= 'Ubud' image = {ImgBanner} />
+            <HeadBanner title= {location} image = {ImgBanner} />
             <section className='flex flex-row w-3/4 gap-8 justify-center mx-auto'>
-                <Weather location = 'denpasar'/>
+                <Weather location = {location}/>
                 <ProgressBarBox  location = {location}/>
             </section>
+            <Cost location = {location}/>
             <FeatureTri image = {faTaxi} />
             <FeatureCards 
                 array = {arr}
@@ -44,11 +47,11 @@ const Ubud = () => {
                 subtitle = 'Explore the top tourist destinations in the Southern Region of Ubud.' 
             />
             
-            {/*<VideoBanner 
+            <VideoBanner 
                 video = {Video}
                 msg = 'Endless Rice Fields'
                 speed = '1.2'
-            />*/}
+            />
             <SectionPara location = {location}/>
             <MapApi location = {location}/>
             <Footer/>

@@ -4,7 +4,8 @@ import Footer from '../material-ui/Footer'
 import FeatureCards from '../material-ui/FeatureCards';
 import HeadBanner from '../material-ui/HeadBanner';
 import Weather from '../material-ui/Weather';
-import MapApi from "../material-ui/MapApi"
+import MapApi from "../material-ui/MapApi";
+import Cost from '../material-ui/Cost';
 
 //Video Banner
 import Video from '../assets/images/bali/surf.mp4'
@@ -14,6 +15,10 @@ import VideoBanner from '../material-ui/VideoBanner';
 import Image1 from '../assets/images/kuta/Kuta-Beach.jpg';
 import Image2 from '../assets/images/kuta/kuta-surf.jpg';
 import Image3 from '../assets/images/kuta/Waterbom-Kuta.jpg';
+
+import { faTaxi } from '@fortawesome/free-solid-svg-icons'
+import FeatureTri from '../material-ui/FeatureTri';
+import ProgressBarBox from '../material-ui/ProgressBarBox';
 
 const Kuta = () => {
         //Feature cards info
@@ -25,8 +30,15 @@ const Kuta = () => {
         const location = "kuta"
     return (
         <div>
-            <HeadBanner title= 'Kuta'/>
-            Hello this Kuta page
+            <HeadBanner title= {location}/>
+            
+            <section className='flex flex-row w-3/4 gap-8 justify-center mx-auto'>
+                <Weather location = {location}/>
+                <ProgressBarBox  location = {location}/>
+            </section>
+            <Cost location = {location}/>
+            <FeatureTri image = {faTaxi} />
+            <MapApi location = {location}/>
             <FeatureCards 
                 array = {arr}
                 title = 'Things to Do' 
@@ -37,8 +49,7 @@ const Kuta = () => {
                 msg = 'Endless Surf'
                 speed = '1.2'
             />
-            <Weather location = 'kuta'/>
-            <MapApi location = {location}/>
+            
             <Footer/>
         </div>
     )

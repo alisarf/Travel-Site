@@ -1,5 +1,6 @@
 import { Card, CardActionArea, CardMedia, Typography } from '@mui/material';
 
+
 //Requires following props: image and headline text
 
 const FeatureCard = (props) => {
