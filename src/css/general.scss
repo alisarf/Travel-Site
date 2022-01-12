@@ -57,13 +57,17 @@ main{
 }
 
 
-//font
+//fonts
+//BRUSHY
 @font-face {
     font-family: 'MyFont';
     src: local('MyFont'), url(../assets/fonts/brushy/BRUSHY.ttf) format('truetype');
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
 }
+//ROBOTO
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap');
+
 
 .Font_brushy {
     font-family: 'MyFont';
@@ -114,4 +118,19 @@ $color-slate: #546e7a;
 .RandomSize {
     height:24px;
     //width:20%;
+}
+
+//Line Height
+.Header_lh {
+    line-height: 1.25;
+}
+.Para {
+    line-height: 1.5;
+    font-size: 1.125rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+//left rounded for progress bar
+.Left_rounded {
+    border-radius: 100px 0 0 100px;
 }
