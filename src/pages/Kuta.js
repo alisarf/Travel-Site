@@ -4,6 +4,7 @@ import Footer from '../material-ui/Footer'
 import FeatureCards from '../material-ui/FeatureCards';
 import HeadBanner from '../material-ui/HeadBanner';
 import Weather from '../material-ui/Weather';
+import MapApi from "../material-ui/MapApi"
 
 //Video Banner
 import Video from '../assets/images/bali/surf.mp4'
@@ -21,7 +22,7 @@ const Kuta = () => {
             { title : 'Explore ancient traditions', url: Image2},
             { title : 'Spend the Day at the Waterpark', url: Image3}
             ])
-
+        const location = "kuta"
     return (
         <div>
             <HeadBanner title= 'Kuta'/>
@@ -37,6 +38,7 @@ const Kuta = () => {
                 speed = '1.2'
             />
             <Weather location = 'kuta'/>
+            <MapApi location = {location}/>
             <Footer/>
         </div>
     )

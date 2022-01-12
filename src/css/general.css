@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap");
 footer {
   padding: 7.5% 15%;
 }
@@ -121,5 +122,19 @@ main {
 
 .RandomSize {
   height: 24px;
+}
+
+.Header_lh {
+  line-height: 1.25;
+}
+
+.Para {
+  line-height: 1.5;
+  font-size: 1.125rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Left_rounded {
+  border-radius: 100px 0 0 100px;
 }
 /*# sourceMappingURL=general.css.map */
