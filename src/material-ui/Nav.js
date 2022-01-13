@@ -10,7 +10,9 @@ import '../css/general.css';
 const Nav = () => {
     return (
             <nav className='flex justify-between py-3 mx-auto w-3/4'>
-            <Typography variant='h4' component='h4' gutterBottom className="text-center">Travel Bali</Typography>
+                <Link to='/'>
+                    <Typography variant='h4' component='h4' gutterBottom className="text-center">Travel Bali</Typography>
+                </Link>
             <ul>
             <li className='inline-block m-3'>
                 
