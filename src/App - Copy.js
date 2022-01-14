@@ -19,7 +19,7 @@ import VideoBanner from './material-ui/VideoBanner';
 function App() {
   const cultureimage = culturebali;
   //generate random image
-  //const [images, setImages] = useState([]);
+  const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState('bali');
   const[heart, setHeart] = useState([]);
@@ -30,28 +30,47 @@ function App() {
     aqua: {color: 'rgb(87, 189, 183)',}
   }
 
-  //Feature cards info
-  const [arr, setArr ] = useState([
-    { title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
-    { title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-  ])
+      //Feature cards info
+      const [arr, setArr ] = useState([
+        { title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
+        { title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
+        { title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
+        ])
 
-  const [images, setImages ] = useState([
-    { id: 0, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
-    { id: 1,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { id: 2,title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-  ])
 
+
+  useEffect(() => {
+      fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&orientation=horizontal`)
+      .then(res => res.json())
+      .then(data => {
+          //console.log(data.hits[2].webformatURL);
+          setImages(data.hits.splice(0,3)); //splice for fewer results than what was retrieved
+          
+          setIsLoading(false);
+          console.log('your images' + images)
+      })
+      .catch(err =>console.log(err));
+  }, []);
+
+  var docWidth = document.documentElement.offsetWidth;
+
+  [].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+      if (el.offsetWidth > docWidth) {
+        console.log(el);
+      }
+    }
+  );
 
 
   return (
 
     <main>
 
-    <HeadBanner title= 'Adventure!' image = {ImgBanner}  heart = {heart}/>
+    <HeadBanner title= 'Adventure!' image = {ImgBanner} />
 
-    <div className='grid gap-y-10 pt-30 w-full m-auto md:w-full lg:w-3/4'>
+    <div className='grid gap-y-10 pt-30 w-3/4 m-auto'>
     <div>
       <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
       <h6 className='text-center text-gray-400'>Find activites hosted by the locals.</h6>
@@ -60,7 +79,7 @@ function App() {
       <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         
       {images.map(image => (
-          <CardBuilder id= {image.id} image ={image.url} setHeart={setHeart} heart={heart} className="mx-auto h-full"/>
+          <CardBuilder key= {image.id} image ={image} setHeart={setHeart} heart ={heart} className="mx-auto h-full"/>
         ))}
       </section>
       <Pagination className = "m-auto" count={5} variant="outlined" color="primary" />
@@ -85,7 +104,7 @@ function App() {
       />
       </div>
     
-      <Paper elevation={3} className='flex flex-col m-auto w-4/12 items-center p-3 gap-y-4 pb-4 md:mx-4 w-full'>
+      <Paper elevation={3} className='flex flex-col m-auto w-4/12 items-center p-3 gap-y-4 pb-4'>
       <Typography gutterBottom variant="h5" className="text-center">Get the Latest!</Typography>
         <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1' />
         <TextField id="outlined-basic" label="Last Name" variant="outlined" className='flex-2' />
@@ -105,4 +124,4 @@ function App() {
 }
 
 
-export default App;
+

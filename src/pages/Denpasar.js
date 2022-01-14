@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import PageTemplate from './PageTemplate';
+
 //Video Banner, If you want banner, write if statement in page template pass props  {/*video = {video}*/}
 //import video from '../assets/images/bali/culture.mp4'
 
@@ -13,9 +14,9 @@ const Denpasar = () => {
 
     //Feature cards info
     const [imgArr, setArr ] = useState([
-        { title : 'Elephant', url: Image1}, 
-        { title : 'Soldier', url: Image2},
-        { title : 'Lake', url: Image3}
+        { id: 3, title : 'Elephant', url: Image1}, 
+        { id: 4, title : 'Soldier', url: Image2},
+        { id: 5, title : 'Lake', url: Image3}
     ])
     //Feature Image [Title, SubTitle]
     const [feat, setFeat ] = useState([

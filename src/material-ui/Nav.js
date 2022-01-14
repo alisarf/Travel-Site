@@ -2,12 +2,20 @@ import React from 'react'
 import { Typography } from '@mui/material'
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 import '../css/style.css';
 import '../css/custom.css';
 import '../css/general.css';
 
-const Nav = () => {
+
+
+const Nav = (props) => {
+    const printHeart = () => {
+        console.log(props.heart)
+    }
+
+
     return (
             <nav className='flex justify-between py-3 mx-auto w-3/4'>
                 <Link to='/'>
@@ -26,13 +34,12 @@ const Nav = () => {
                 </Link>
             </li>
             <li className='inline-block m-3'>
-                <Link to='/kuta'>
+                <Link to='/kuta' state = {props.heart}>
                     <a href="" className='text-xl underline Nav-link'>Kuta</a>
                 </Link>
             </li>
             <li className='inline-block m-3'>
-                <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}}/>
-
+                <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} onClick={printHeart}/>
             </li>
             </ul>
         </nav>

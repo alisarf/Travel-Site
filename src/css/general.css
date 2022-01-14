@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
 footer {
   padding: 7.5% 15%;
 }
@@ -75,6 +76,10 @@ main {
                               'embedded-opentype', and 'svg' */
 }
 
+.Condense {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 .Font_brushy {
   font-family: 'MyFont';
 }
@@ -136,5 +141,39 @@ main {
 
 .Left_rounded {
   border-radius: 100px 0 0 100px;
+}
+
+.MuiDivider-root::before, .MuiDivider-root::after {
+  border-top: 3px solid rgba(142, 161, 160, 0.68) !important;
+}
+
+.css-1vw6mcs-MuiTypography-root {
+  margin-bottom: 0 !important;
+}
+
+.Feature_cardWidth {
+  height: 450px;
+}
+
+@media screen and (max-width: 600px) {
+  .FeatureCards_MQ {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .FeatureCards_MQ .Feature_cardWidth {
+    height: 50vw;
+  }
+  .MuiDivider-root {
+    white-space: normal !important;
+    width: auto !important;
+  }
+  .css-1vw6mcs-MuiTypography-root {
+    font-size: 2rem !important;
+  }
 }
 /*# sourceMappingURL=general.css.map */

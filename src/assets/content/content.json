@@ -10,6 +10,7 @@
             { "title":"Fun", "value": 100}
             ]
         ,
+        "transport" : [{ "title": "Transportation", "text": "Humans first means of transport were walking and swimming. The domestication of animals introduced a new way to lay the burden of transport on more powerful creatures. Inventions such as the wheel and sled helped make animal transport more efficient while the Industrial revolution in the 19th century transformed transportation by 360 degrees. Transport is the key necessity for specialization- allowing production and consumption of products to occur at different places or locations, thus creating utility of space. Conveyance has, even throughout history, been a spur to expansion since better transport allows more trade and a greater spread of people."}],
         "articles" : [{
                 "title" : "Safety",
                 "text" : "Following the Colombian government's 2016 peace accord with the Revolutionary Armed Forces of Colombia, violent crime in Cartagena has drastically declined. That said, Cartagena is still plagued by many of the same petty crime that you'll find in other major metropolitan areas. Because street crime is the most common threat to tourists, visitors should take common sense precautions: travel with friends, be aware of your valuables at all times, and stay alert for pickpockets and other scams."
@@ -43,6 +44,7 @@
             { "title":"Fun", "value": 80}
             ]
         ,
+        "transport" : [{ "title": "Transportation", "text": "Humans first means of transport were walking and swimming. The domestication of animals introduced a new way to lay the burden of transport on more powerful creatures. Inventions such as the wheel and sled helped make animal transport more efficient while the Industrial revolution in the 19th century transformed transportation by 360 degrees. Transport is the key necessity for specialization- allowing production and consumption of products to occur at different places or locations, thus creating utility of space. Conveyance has, even throughout history, been a spur to expansion since better transport allows more trade and a greater spread of people."}],
         "articles" : [{
                 "title" : "Safety",
                 "text" : "Following the Colombian government's 2016 peace accord with the Revolutionary Armed Forces of Colombia, violent crime in Cartagena has drastically declined. That said, Cartagena is still plagued by many of the same petty crime that you'll find in other major metropolitan areas. Because street crime is the most common threat to tourists, visitors should take common sense precautions: travel with friends, be aware of your valuables at all times, and stay alert for pickpockets and other scams."
@@ -76,6 +78,7 @@
             { "title":"Fun", "value": 80}
             ]
         ,
+        "transport" : [{ "title": "Transportation", "text": "Humans first means of transport were walking and swimming. The domestication of animals introduced a new way to lay the burden of transport on more powerful creatures. Inventions such as the wheel and sled helped make animal transport more efficient while the Industrial revolution in the 19th century transformed transportation by 360 degrees. Transport is the key necessity for specialization- allowing production and consumption of products to occur at different places or locations, thus creating utility of space. Conveyance has, even throughout history, been a spur to expansion since better transport allows more trade and a greater spread of people."}],
         "articles" : [{
                 "title" : "Safety",
                 "text" : "Following the Colombian government's 2016 peace accord with the Revolutionary Armed Forces of Colombia, violent crime in Cartagena has drastically declined. That said, Cartagena is still plagued by many of the same petty crime that you'll find in other major metropolitan areas. Because street crime is the most common threat to tourists, visitors should take common sense precautions: travel with friends, be aware of your valuables at all times, and stay alert for pickpockets and other scams."

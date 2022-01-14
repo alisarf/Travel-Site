@@ -14,9 +14,9 @@ const Ubud = () => {
 
     //Feature cards info
     const [imgArr, setArr ] = useState([
-        { title : 'Local Traditions', url: Image1}, 
-        { title : 'Beautiful Rice Fields', url: Image2},
-        { title : 'Swing through the Jungle', url: Image3}
+        { id: 9, title : 'Local Traditions', url: Image1}, 
+        { id: 10, title : 'Beautiful Rice Fields', url: Image2},
+        { id: 11, title : 'Swing through the Jungle', url: Image3}
     ])
     //Feature Image [Title, SubTitle]
     const [feat, setFeat ] = useState([

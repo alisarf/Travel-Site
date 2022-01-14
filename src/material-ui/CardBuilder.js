@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Card, CardMedia, Typography, CardContent, CardActions, Button} from '@mui/material';
+import React, {useState, useEffect, state} from 'react';
+import {Card, CardMedia, Typography, CardContent, CardActions, Button, ListItemSecondaryAction} from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
@@ -13,33 +13,27 @@ function CardBuilder (props) {
   //onClick={props.setHeart( })}
   //caches the heart that you make on a card
   const handleChange = (e) => { 
-    if (e.target.checked === true ) {
-      props.setHeart([...props.heart, [props.image.webformatURL]]);
-      //the list has nothing to begin with so it wont iterate through
-
-    } else {
-      for(var a = 0; a < props.heart.length; a++) {
-        console.log('running' + props.heart[a])
-        if(props.heart[a] == props.image.webformatURL) {
-          
-          //removed
-          props.heart.splice(a, 1);
-          console.log(a +'it needs to be removed' + JSON.stringify(props.heart))
+      if (props.heart.length == 0) {
+       props.setHeart([{ id: props.id, url: props.image }])
+      } else {
+        if (e.target.checked) {
+          console.log('checked')
+          props.setHeart([...props.heart, { id: props.id, url: props.image }])
         } else {
-          
-          //so add it
-          props.setHeart([...props.heart, [props.image.webformatURL]]);
-          //console.log('its not here anyways' + JSON.stringify(props.heart))
-          //console.log(props.heart[a] + ' vs ' + props.image.webformatURL)
-          //console.log(JSON.stringify(props.heart))
+          console.log('unchecked');
+          props.setHeart(props.heart.filter(({id}) => id !== props.id))
+          //removeItem = (id) => {
+          //  setProduct(product.filter((i)=>(i.id !== id)))
+           
+          //}
         }
       }
-       //remove from array
-       console.log('unchecked')
-    }
-    //props.setHeart([...props.heart, [props.image.webformatURL]]); //this now adds tab info to the array of favorites
 
+    console.log('end of action' + JSON.stringify(props.heart)) 
+    console.log(props.id)
+    
   }; 
+
 
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     //console.log(props.image.webformatURL)
@@ -50,7 +44,7 @@ function CardBuilder (props) {
           component="img"
           alt="green iguana"
           height="100px"
-          image= {props.image.webformatURL}
+          image= {props.image}
         />
         
         <CardContent>
