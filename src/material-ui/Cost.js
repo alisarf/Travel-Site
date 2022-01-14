@@ -16,7 +16,7 @@ const Cost = (props) => {
 
     return (
         <TableContainer component={Paper} sx={{ margin: '2rem auto', width: '70%'}}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: 200 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell sx={{fontWeight: 'bold'}}>Item</TableCell>

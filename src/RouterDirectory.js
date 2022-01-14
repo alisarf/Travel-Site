@@ -6,15 +6,17 @@ import Denpasar from "./pages/Denpasar";
 import Kuta from "./pages/Kuta";
 
 
-const RouterDirectory = () => {
-  return (
+import {useLocation} from 'react-router-dom';
 
+const RouterDirectory = (props) => {
+
+  return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path='/ubud' element={<Ubud />} />
         <Route path='/denpasar' element={<Denpasar />} />
-        <Route path='/kuta' element={<Kuta />} />
+        <Route path='/kuta' element={<Kuta/>}/>
       </Routes>
     </BrowserRouter>
 

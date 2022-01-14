@@ -28,6 +28,7 @@ const Kuta = () => {
             { title : 'Spend the Day at the Waterpark', url: Image3}
             ])
         const location = "kuta"
+
     return (
         <div>
             <HeadBanner title= {location}/>

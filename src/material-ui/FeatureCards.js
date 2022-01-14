@@ -2,6 +2,8 @@ import React, { useState} from 'react';
 import { Pagination, Typography } from '@mui/material';
 import '../css/general.css';
 
+
+
 import FeatureCard from "./FeatureCard";
 import culturebali from '../assets/culturebali.jpg';
 
@@ -10,6 +12,10 @@ import culturebali from '../assets/culturebali.jpg';
 //Output: synthesizes multiple cards via map
 
 const FeatureCards = (props) => {
+
+
+    
+
 
     /*
     const [arr, setArr ] = useState([
@@ -22,8 +28,9 @@ const FeatureCards = (props) => {
         <section className='my-10'>
             <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}}>{props.title}</Typography>
             <h6 className='text-center text-gray-400'>{props.subtitle}</h6>
-            <div className='my-5 flex justify-center'>
+            <div className='my-5 flex justify-center FeatureCards_MQ'>
                 {props.array.map(item => (
+                    //wrap in link hook with location variable
                     <FeatureCard image = {item.url} headline = {item.title} />
                 ))}
             </div>

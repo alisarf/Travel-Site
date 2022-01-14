@@ -3,7 +3,7 @@ import ReactMapGL, {Marker} from 'react-map-gl';
 
 import content from "../assets/content/content.json"
 import pin from "../assets/images/icons/pin.png"
-
+import { Paper } from "@mui/material";
 
 //INPUT: location variable
 //OUTPUT: Map of location with pin
@@ -20,14 +20,14 @@ const MapApi = (props) => {
         latitude: latitude,
         longitude: longitude,
         width: "20vw",
-        height: "20vw",
+        height: "180px",
         zoom: 10
       });
 
 
     return (
-        <div>
-            <ReactMapGL className = 'rounded-full'         
+        <Paper>
+            <ReactMapGL className = 'rounded-md'         
             {...viewport}
             mapboxApiAccessToken={"pk.eyJ1IjoiYWxpZmFyZXNib3Vsb3MiLCJhIjoiY2t3NWs5aWdzNmUxZTJubzB0dXhuMjJjZyJ9.gF9Yte_ZD6xwUJKf8oyyyg"}
             mapStyle = 'mapbox://styles/alifaresboulos/cktfya9h13qjl18s2pkfgiyx4'
@@ -38,7 +38,7 @@ const MapApi = (props) => {
                     <img src={pin} />
                 </Marker>
             </ReactMapGL>
-        </div>
+        </Paper>
     )
 }
 export default MapApi;
