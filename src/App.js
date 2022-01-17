@@ -1,27 +1,21 @@
-import React, { useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import './css/style.css';
 import './css/custom.css';
 import './css/general.css';
 import CardBuilder from './material-ui/CardBuilder';
 import { Typography, Button, Paper, TextField, Pagination} from '@mui/material';
 import RadioGroupRating from './material-ui/rating';
-import culturebali from './assets/culturebali.jpg';
 import FeatureCards from './material-ui/FeatureCards';
 import HeadBanner from './material-ui/HeadBanner'; 
 import ImgBanner from './assets/images/ubud/ubud-banner.jpg';
 import Video from './assets/images/bali/culture.mp4';
-
 import Footer from './material-ui/Footer';
 import VideoBanner from './material-ui/VideoBanner';
 
 
 
 function App() {
-  const cultureimage = culturebali;
-  //generate random image
-  //const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [term, setTerm] = useState('bali');
+  //Favorite Icon Feature Array
   const[heart, setHeart] = useState([]);
 
   //STYLES OBJECT PALLETTE
@@ -30,79 +24,87 @@ function App() {
     aqua: {color: 'rgb(87, 189, 183)',}
   }
 
-  //Feature cards info
-  const [arr, setArr ] = useState([
-    { title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
-    { title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-  ])
+  //Feature cards info : could be json import instead hardcode
+  const arr = [
+    { id: 0, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
+    { id: 1, title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
+    { id: 2, title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
+  ]
 
-  const [images, setImages ] = useState([
+  //Feature with pagination Array: could be json import instead hardcode
+  const images = [
     { id: 0, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
     { id: 1,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { id: 2,title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-  ])
+    { id: 2,title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
+    { id: 3, title : 'Ubud', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}, 
+    { id: 4,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
+    { id: 5,title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
+    { id: 6, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
+    { id: 7,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1584203612447-67d835bb3e14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'},
+    { id: 8,title : 'Kuta', url: 'https://images.unsplash.com/photo-1584203612447-67d835bb3e14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'},
+    { id: 9, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
+    { id: 10,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
+  ]
+  
 
 
+  //---Feature Images with Pagination UI---
+  //Img Array Range
+  const [start, setStart] = useState([0])
+  const [end, setEnd] = useState([3])
+  //Handle new page click
+  function pageChange (e, value) {
+    //value = page count
+    let starter = ((value - 1) * 3)
+    let ending = starter + 3
+    setStart(starter)
+    setEnd(ending)
+  }
 
+
+  
   return (
-
     <main>
-
-    <HeadBanner title= 'Adventure!' image = {ImgBanner}  heart = {heart}/>
-
-    <div className='grid gap-y-10 pt-30 w-full m-auto md:w-full lg:w-3/4'>
-    <div>
-      <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
-      <h6 className='text-center text-gray-400'>Find activites hosted by the locals.</h6>
-    </div>
-
-      <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        
-      {images.map(image => (
-          <CardBuilder id= {image.id} image ={image.url} setHeart={setHeart} heart={heart} className="mx-auto h-full"/>
-        ))}
-      </section>
-      <Pagination className = "m-auto" count={5} variant="outlined" color="primary" />
-      <Typography gutterBottom variant="h3" className="text-center">
-            Support the Locals.
-      </Typography>
-      
-      {/*<img className=' m-auto rounded' src={cultureimage} alt="" />*/}
-      <VideoBanner 
-        video = {Video}
-        msg = 'Culture'
-      />
-
-      
+      <HeadBanner title= 'Adventure!' image = {ImgBanner}  heart = {heart}/>
+      <div className='grid gap-y-10 pt-30 w-full m-auto md:w-full lg:w-3/4'>
+        <div>
+          <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
+          <h6 className='text-center text-gray-400'>Find activites hosted by the locals.</h6>
+        </div>
+        <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">    
+          {images.slice(start, end).map(image => (
+              <CardBuilder id= {image.id} image ={image.url} setHeart={setHeart} heart={heart} className="mx-auto h-full"/>
+            ))}
+        </section>
+        <Pagination className = "m-auto" count={Math.ceil(images.length / 3)} variant="outlined" color="primary"  onChange={pageChange}/>
+        <Typography gutterBottom variant="h3" className="text-center">Support the Locals.</Typography>
+        {/*<img className=' m-auto rounded' src={cultureimage} alt="" />*/}
+        <VideoBanner 
+          video = {Video}
+          msg = 'Culture'
+        />
       </div>
-
       <div className="flex justify-center gap-10">     
-      <FeatureCards 
-        array = {arr}
-        title = 'Featured Locations' 
-        subtitle = 'Explore the best locations within the southern region.' 
-      />
+        <FeatureCards 
+          array = {arr}
+          title = 'Featured Locations' 
+          subtitle = 'Explore the best locations within the southern region.' 
+        />
       </div>
-    
       <Paper elevation={3} className='flex flex-col m-auto w-4/12 items-center p-3 gap-y-4 pb-4 md:mx-4 w-full'>
-      <Typography gutterBottom variant="h5" className="text-center">Get the Latest!</Typography>
+        <Typography gutterBottom variant="h5" className="text-center">Get the Latest!</Typography>
         <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1' />
         <TextField id="outlined-basic" label="Last Name" variant="outlined" className='flex-2' />
         <TextField id="outlined-basic" label="Email" variant="outlined" className='flex-3' />
         <Button>Sign Up</Button>
       </Paper>
-    
       <Paper elevation={3} className="w-1/2 mr-auto ml-auto mt-36 mb-36 p-5 rounded shadow text-center">
-        <Typography variant='h6' className="my-3">
-        How helpful was Travel Bali at planning your next trip?
-        </Typography>
+        <Typography variant='h6' className="my-3">How helpful was Travel Bali at planning your next trip?</Typography>
         <RadioGroupRating/>
       </Paper>
       <Footer/>
     </main>
   );
 }
-
 
 export default App;
