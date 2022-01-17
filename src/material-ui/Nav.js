@@ -2,7 +2,6 @@ import React from 'react'
 import { Typography } from '@mui/material'
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
 
 import '../css/style.css';
 import '../css/custom.css';
