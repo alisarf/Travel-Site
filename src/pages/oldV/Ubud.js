@@ -25,9 +25,9 @@ import { faTaxi } from '@fortawesome/free-solid-svg-icons'
 const Ubud = () => {
         //Feature cards info
         const [arr, setArr ] = useState([
-            { title : 'Local Traditions', url: Image1}, 
-            { title : 'Beautiful Rice Fields', url: Image2},
-            { title : 'Swing through the Jungle', url: Image3}
+            { id: 0, title : 'Local Traditions', url: Image1}, 
+            { id: 1, title : 'Beautiful Rice Fields', url: Image2},
+            { id: 2, title : 'Swing through the Jungle', url: Image3}
             ])
 
     const location = 'ubud';

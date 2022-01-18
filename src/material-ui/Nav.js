@@ -38,7 +38,9 @@ const Nav = (props) => {
                 </Link>
             </li>
             <li className='inline-block m-3'>
-                <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} onClick={printHeart}/>
+                <Link to='/favorites'>
+                    <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} onClick={printHeart}/>
+                </Link>
             </li>
             </ul>
         </nav>

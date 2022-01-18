@@ -17,9 +17,9 @@ const Kuta = (props) => {
 
     //Feature cards info
     const [imgArr, setArr ] = useState([
-        { id: 6, title : 'Walk the beach shore', url: Image1}, 
-        { id: 7, title : 'Explore ancient traditions', url: Image2},
-        { id: 8, title : 'Spend the Day at the Waterpark', url: Image3}
+        { id: 14, title : 'Walk the beach shore', url: Image1}, 
+        { id: 15, title : 'Explore ancient traditions', url: Image2},
+        { id: 16, title : 'Spend the Day at the Waterpark', url: Image3}
     ])
     //Feature Image [Title, SubTitle]
 

@@ -2,10 +2,64 @@ import { Card, CardActionArea, CardMedia, Typography } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
+import { useState, useEffect } from 'react';
+import React from 'react';
 //Requires following props: image and headline text
 
 const FeatureCard = (props) => {
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+    //Favorite Button
+    /*
+    const data = ((JSON.parse(localStorage.getItem('data')) || ''));
+    const [heart, setHeart] = useState(data);
+    const handleChange = (e) => {
+        
+        if (heart.length == 0) {
+         setHeart([{ id: props.id, url: props.image }])
+        } else {
+          if (e.target.checked) {
+            console.log('checked')
+            setHeart([...heart, { id: props.id, url: props.image }])
+          } else {
+            console.log('unchecked');
+            setHeart(heart.filter(({id}) => id !== props.id))
+          }
+        }
+        
+        console.log('end of action' + JSON.stringify(heart)) 
+    }; 
+
+      */
+    //const data = ((JSON.parse(localStorage.getItem('data')) || ''));
+    
+
+    const [checked, setChecked] = React.useState(false);
+    const handleChange = (event)  => {
+        setChecked(event.target.checked);
+        console.log(!checked)
+
+        if (props.elem.length == 0) {
+            props.setElem([{ id: props.id, url: props.image }])
+           } else {
+             if (!checked == true) {
+               console.log('checked')
+               let myItem = { id: props.id , url: props.image }
+               console.log(myItem)
+               //setHeart([...heart, { id: props.id, url: props.image }])
+               props.setElem([...props.elem, myItem])
+               console.log('end of action' + JSON.stringify(props.elem) + props.elem.length) 
+             } else if (!checked == false) {
+               console.log('unchecked');
+               props.setElem(props.elem.filter(({id}) => id !== props.id))
+             }
+            
+        }
+        localStorage.setItem('data', JSON.stringify(props.elem));
+           
+        
+    }
+
 
     return (
         <Card 
@@ -36,7 +90,7 @@ const FeatureCard = (props) => {
                         color: 'white',
                     },
                     }}
-                    {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />}/>
+                    {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} checked = {checked} onChange={handleChange}/>
                 </div>
 
 
