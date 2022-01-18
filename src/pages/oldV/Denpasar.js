@@ -31,9 +31,9 @@ const Denpasar = () => {
     const location = 'denpasar';
         //Feature cards info
     const [imgArr, setArr ] = useState([
-        { title : 'Elephant', url: Image1}, 
-        { title : 'Soldier', url: Image2},
-        { title : 'Lake', url: Image3}
+        { id: 0, title : 'Elephant1', url: Image1}, 
+        { id: 1, title : 'Soldier', url: Image2},
+        { id: 2, title : 'Lake', url: Image3}
     ])
         //console.log(arr)
     return (

@@ -23,9 +23,9 @@ import ProgressBarBox from '../material-ui/ProgressBarBox';
 const Kuta = () => {
         //Feature cards info
         const [arr, setArr ] = useState([
-            { title : 'Walk the beach shore', url: Image1}, 
-            { title : 'Explore ancient traditions', url: Image2},
-            { title : 'Spend the Day at the Waterpark', url: Image3}
+            { id: 0, title : 'Walk the beach shore', url: Image1}, 
+            { id: 1, title : 'Explore ancient traditions', url: Image2},
+            { id: 2, title : 'Spend the Day at the Waterpark', url: Image3}
             ])
         const location = "kuta"
 

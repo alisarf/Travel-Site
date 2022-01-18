@@ -14,9 +14,9 @@ const Denpasar = () => {
 
     //Feature cards info
     const [imgArr, setArr ] = useState([
-        { id: 3, title : 'Elephant', url: Image1}, 
-        { id: 4, title : 'Soldier', url: Image2},
-        { id: 5, title : 'Lake', url: Image3}
+        { id: 17, title : 'Elephant1', url: Image1}, 
+        { id: 18, title : 'Soldier', url: Image2},
+        { id: 19, title : 'Lake', url: Image3}
     ])
     //Feature Image [Title, SubTitle]
     const [feat, setFeat ] = useState([

@@ -12,11 +12,9 @@ import culturebali from '../assets/culturebali.jpg';
 //Output: synthesizes multiple cards via map
 
 const FeatureCards = (props) => {
-
-
     
-
-
+    const data = ((JSON.parse(localStorage.getItem('data')) || ''));
+    const [elem, setElem] = useState(data);
     /*
     const [arr, setArr ] = useState([
         { title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
@@ -31,7 +29,7 @@ const FeatureCards = (props) => {
             <div className='my-5 flex justify-center FeatureCards_MQ'>
                 {props.array.map(item => (
                     //wrap in link hook with location variable
-                    <FeatureCard image = {item.url} headline = {item.title} />
+                    <FeatureCard id = {item.id} image = {item.url} headline = {item.title} elem = {elem} setElem = {setElem} />
                 ))}
             </div>
             <div className='my-5'>

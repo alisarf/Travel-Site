@@ -12,6 +12,7 @@ import Video from './assets/images/bali/culture.mp4';
 import Footer from './material-ui/Footer';
 import VideoBanner from './material-ui/VideoBanner';
 
+import imagesArr from './assets/content/mainFeature.json';
 
 
 function App() {
@@ -31,24 +32,12 @@ function App() {
     { id: 2, title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
   ]
 
-  //Feature with pagination Array: could be json import instead hardcode
-  const images = [
-    { id: 0, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
-    { id: 1,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { id: 2,title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { id: 3, title : 'Ubud', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}, 
-    { id: 4,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { id: 5,title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-    { id: 6, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
-    { id: 7,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1584203612447-67d835bb3e14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'},
-    { id: 8,title : 'Kuta', url: 'https://images.unsplash.com/photo-1584203612447-67d835bb3e14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'},
-    { id: 9, title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
-    { id: 10,title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-  ]
+
+    //---Feature Images with Pagination UI---
+  //Feature Image Arr with pagination: 
+  //cache 'images' object
+  const featImgArr = imagesArr.images;
   
-
-
-  //---Feature Images with Pagination UI---
   //Img Array Range
   const [start, setStart] = useState([0])
   const [end, setEnd] = useState([3])
@@ -59,24 +48,28 @@ function App() {
     let ending = starter + 3
     setStart(starter)
     setEnd(ending)
+    //console.log(images2)
   }
 
 
   
+  const data = ((JSON.parse(localStorage.getItem('data')) || ''));
+  const [elem, setElem] = useState(data);
+  
   return (
     <main>
-      <HeadBanner title= 'Adventure!' image = {ImgBanner}  heart = {heart}/>
+      <HeadBanner title= 'Adventure!' image = {ImgBanner}  elem = {elem}/>
       <div className='grid gap-y-10 pt-30 w-full m-auto md:w-full lg:w-3/4'>
         <div>
           <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
           <h6 className='text-center text-gray-400'>Find activites hosted by the locals.</h6>
         </div>
         <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">    
-          {images.slice(start, end).map(image => (
-              <CardBuilder id= {image.id} image ={image.url} setHeart={setHeart} heart={heart} className="mx-auto h-full"/>
+          {featImgArr.slice(start, end).map(image => (
+              <CardBuilder id= {image.id} image ={image.url} setElem={setElem} elem={elem} className="mx-auto h-full"/>
             ))}
         </section>
-        <Pagination className = "m-auto" count={Math.ceil(images.length / 3)} variant="outlined" color="primary"  onChange={pageChange}/>
+        <Pagination className = "m-auto" count={Math.ceil(featImgArr.length / 3)} variant="outlined" color="primary"  onChange={pageChange}/>
         <Typography gutterBottom variant="h3" className="text-center">Support the Locals.</Typography>
         {/*<img className=' m-auto rounded' src={cultureimage} alt="" />*/}
         <VideoBanner 

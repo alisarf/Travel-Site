@@ -9,7 +9,7 @@ import ImgBanner from '../assets/images/ubud/ubud-banner.jpg';
 const HeadBanner = (props) => {
     return (
         <section>
-            <Nav heart = {props.heart}/>
+            <Nav heart = {props.elem}/>
             <div className='flex-col justify-center w-full half_vh'>
             </div>
             <div className='Frost half_vh'>

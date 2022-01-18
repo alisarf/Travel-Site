@@ -7,35 +7,8 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { HeartBroken } from '@mui/icons-material';
 
-function CardBuilder (props) {
+function FavoriteCardBuilder (props) {
 
-  //const [checked, setChecked] = useState(true);
-  //onClick={props.setHeart( })}
-  //caches the heart that you make on a card
-
-
-  const handleChange = (e) => { 
-      if (props.elem.length == 0) {
-       props.setElem([{ id: props.id, url: props.image }])
-      } else {
-        if (e.target.checked) {
-          console.log('checked')
-          props.setElem([...props.elem, { id: props.id, url: props.image }])
-        } else {
-          console.log('unchecked');
-          props.setElem(props.elem.filter(({id}) => id !== props.id))
-          //removeItem = (id) => {
-          //  setProduct(product.filter((i)=>(i.id !== id)))
-           
-          //}
-        }
-      }
-
-    //console.log('end of action' + JSON.stringify(props.heart)) 
-    //console.log(props.id)
-    localStorage.setItem('data', JSON.stringify(props.elem));
-  }; 
-  
 
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     //console.log(props.image.webformatURL)
@@ -58,19 +31,8 @@ function CardBuilder (props) {
             Laborum et sit cupidatat in aliqua occaecat est dolor tempor ipsum.
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-          <div className="ml-auto">
-            <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} onChange={handleChange}/>
-                <Checkbox
-                {...label}
-                icon={<BookmarkBorderIcon />}
-                checkedIcon={<BookmarkIcon />}
-                />
-            </div>
-        </CardActions>
       </Card>
     );
 }
 
-export default CardBuilder;
+export default FavoriteCardBuilder;
