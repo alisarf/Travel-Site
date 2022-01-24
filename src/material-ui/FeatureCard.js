@@ -56,8 +56,6 @@ const FeatureCard = (props) => {
             
         }
         localStorage.setItem('data', JSON.stringify(props.elem));
-           
-        
     }
 
 

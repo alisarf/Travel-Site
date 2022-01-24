@@ -24,8 +24,8 @@ const FeatureCards = (props) => {
     */
     return (
         <section className='my-10'>
-            <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}}>{props.title}</Typography>
-            <h6 className='text-center text-gray-400'>{props.subtitle}</h6>
+            <Typography variant='h3' className='text-center' sx={{ fontWeight: '700'}}>{props.title}</Typography>
+            <Typography variant='body1' className='text-center'>{props.subtitle}</Typography>
             <div className='my-5 flex justify-center FeatureCards_MQ'>
                 {props.array.map(item => (
                     //wrap in link hook with location variable

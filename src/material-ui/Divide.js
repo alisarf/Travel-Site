@@ -2,10 +2,11 @@ import { Divider, Typography } from "@mui/material";
 import '../css/general.css';
 
 const Divide = (props) => {
-    const margins = {margin: '3rem auto', width: '75%', textTransform: 'capitalize' };
+    const margins = {margin: '3rem auto 0 auto', width: '75%', textTransform: 'capitalize' };
     return (
-        <Divider sx ={margins}>
-            <Typography gutterBottom variant="h4" className='Condensed'>{props.title}</Typography>
+        <Divider sx ={margins} className="gap-4">
+            <Typography gutterBottom variant="h4" className='Condensed Accent uppercase font-bold'>{props.title}</Typography>
+            <Typography variant = 'h5' className='text-center Accent'>Traveling Bali</Typography>
         </Divider>
     )
 }

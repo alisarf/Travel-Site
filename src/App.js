@@ -58,13 +58,15 @@ function App() {
   
   return (
     <main>
+      
       <HeadBanner title= 'Adventure!' image = {ImgBanner}  elem = {elem}/>
-      <div className='grid gap-y-10 pt-30 w-full m-auto md:w-full lg:w-3/4'>
+      <div className='grid gap-y-10 pt-30 w-full mx-auto mt-12 md:w-full lg:w-3/4'>
+      <Typography variant='h1' className='text-center'>Travel Bali</Typography>
         <div>
-          <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
-          <h6 className='text-center text-gray-400'>Find activites hosted by the locals.</h6>
+          <Typography variant='h3' className='text-center' sx={{ fontWeight: '700'}} >Get Outside</Typography>
+          <Typography variant = "body1" className='text-center '>Find activites hosted by the locals.</Typography>
         </div>
-        <section className="grid gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">    
+        <section className="grid m-auto gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">    
           {featImgArr.slice(start, end).map(image => (
               <CardBuilder id= {image.id} image ={image.url} setElem={setElem} elem={elem} className="mx-auto h-full"/>
             ))}

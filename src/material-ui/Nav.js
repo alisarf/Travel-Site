@@ -16,25 +16,25 @@ const Nav = (props) => {
 
 
     return (
-            <nav className='flex justify-between py-3 mx-auto w-3/4'>
-                <Link to='/'>
-                    <Typography variant='h4' component='h4' gutterBottom className="text-center">Travel Bali</Typography>
+            <nav className='flex justify-between pt-8 pb-4 mx-auto w-3/4 items-center text-white Roboto tracking-widest'>
+                <Link to='/' >
+                    <Typography variant='h6' gutterBottom className="text-center">Travel Bali</Typography>
                 </Link>
             <ul>
             <li className='inline-block m-3'>
                 
                 <Link to='/ubud'>
-                    <a href="" className='text-xl underline Nav-link'>Ubud</a>
+                    <a href="" className='text-base underline Nav-link'>Ubud</a>
                 </Link>
             </li>
             <li className='inline-block m-3'>
                 <Link to='/denpasar'>
-                    <a href="" className='text-xl underline Nav-link'>Denpasar</a>
+                    <a href="" className='text-base underline Nav-link'>Denpasar</a>
                 </Link>
             </li>
             <li className='inline-block m-3'>
                 <Link to='/kuta' state = {props.heart}>
-                    <a href="" className='text-xl underline Nav-link'>Kuta</a>
+                    <a href="" className='text-base underline Nav-link'>Kuta</a>
                 </Link>
             </li>
             <li className='inline-block m-3'>
