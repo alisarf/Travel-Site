@@ -26,13 +26,9 @@ function CardBuilder (props) {
           props.setElem(props.elem.filter(({id}) => id !== props.id))
           //removeItem = (id) => {
           //  setProduct(product.filter((i)=>(i.id !== id)))
-           
           //}
         }
       }
-
-    //console.log('end of action' + JSON.stringify(props.heart)) 
-    //console.log(props.id)
     localStorage.setItem('data', JSON.stringify(props.elem));
   }; 
   

@@ -1,3 +1,39 @@
+//color pallete
+$accentBold : orange; 
+.Accent { color: $accentBold }
+
+$color-lt-teal: #e0f2f1;
+$color-dk-teal: #00796b;
+$color-slate: #546e7a;
+$color-md-teal: #00a895b9;
+.Font_dk_teal {
+    color: $color-dk-teal;
+}
+.Font_md_teal {
+    color: $color-md-teal;
+}
+.Bg_dk_teal {
+    background-color: $color-dk-teal;
+}
+.Font_dk_slate {
+    color: $color-slate;
+}
+.Bg_dk_slate {
+    background-color: $color-slate;
+}
+.Bg_lt_teal {
+    background-color: $color-lt-teal;
+}
+
+//font family
+.Roboto {
+    font-family: 'Roboto','sans-serif';
+}
+
+//FONT SIZING
+a {
+    height: fit-content;
+}
 footer{
     padding: 7.5% 15%;
 }
@@ -16,15 +52,20 @@ footer{
     }
 }
 .Frost{
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     position: absolute;
     width: 100%;
     top: 0;
     z-index: 1;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.548) 0%, rgba(255,255,255,0) 30%);
 }
 nav{
     z-index: 2;
     position: relative;
+    a{
+        font-size: .875rem;
+    }
 }
 .Heroimage{
     background-image: url('../assets/heroimage.jpg');
@@ -44,16 +85,42 @@ nav{
     justify-content: center;
 }
 .Nav-link{
-    text-decoration: underline;
-    text-decoration-color: rgba(99, 102, 241, 0.5);
+    text-decoration: none;
+    //text-decoration-color: rgba(99, 102, 241, 0.5);
     transition: all .2s;
     &:hover{
-        text-decoration-color: rgb(99, 102, 241);
+        //text-decoration-color: rgb(99, 102, 241);
+        color: #16ffe4b9;
         
     }
 }
 main{
     width: 100%;
+}
+
+.LetterSpacing p:hover{
+    letter-spacing: .25em !important;
+    transition: .3s ease-in-out;
+    color: orange;
+}
+
+//Headbanner
+.Headbanner{
+
+}
+.Headbanner_div {
+    //top: -3rem;
+
+    width: 70%;
+    padding: 3rem 15% 3rem 12.5%;
+    h3 {
+        line-height: 8rem;
+    }
+}
+.Page_Template_Container{
+    top: -10rem;
+    position: relative;
+
 }
 
 
@@ -84,27 +151,7 @@ main{
 }
 
 
-//color pallete
 
-$color-lt-teal: #e0f2f1;
-$color-dk-teal: #00796b;
-$color-slate: #546e7a;
-
-.Font_dk_teal {
-    color: $color-dk-teal;
-}
-.Bg_dk_teal {
-    background-color: $color-dk-teal;
-}
-.Font_dk_slate {
-    color: $color-slate;
-}
-.Bg_dk_slate {
-    background-color: $color-slate;
-}
-.Bg_lt_teal {
-    background-color: $color-lt-teal;
-}
 
 .w-fit {
     width: fit-content;
@@ -144,8 +191,11 @@ $color-slate: #546e7a;
 
 
 //Divide
+
+
 .MuiDivider-root::before , .MuiDivider-root::after{
-    border-top: 3px solid rgba(142, 161, 160, 0.68) !important;
+    //border-top: 3px solid rgba(142, 161, 160, 0.68) !important;
+    border-top: 3px solid $accentBold !important;
 }
     //Divide-margin of the Typography
     .css-1vw6mcs-MuiTypography-root{
@@ -158,7 +208,15 @@ $color-slate: #546e7a;
 }
 
 
+//Desktop and Large Laptops
+@media screen and (min-width: 992px) {
+    html {
+        //font-size: 24px !important;
+    }
+}
 
+
+//Mobile
 @media screen and (max-width: 600px) {
     //FeatureCards
     .FeatureCards_MQ{
