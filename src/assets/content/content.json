@@ -10,6 +10,12 @@
             { "title":"Fun", "value": 100}
             ]
         ,
+        "transport_time": [
+            {"type": "taxi", "time": "20m", "cost": "$2"},
+            {"type": "bus", "time": "10m", "cost": "$1"},
+            {"type": "airplane", "time": "15m", "cost": "$0.50"}
+        ]
+        ,
         "transport" : [{ "title": "Transportation", "text": "Humans first means of transport were walking and swimming. The domestication of animals introduced a new way to lay the burden of transport on more powerful creatures. Inventions such as the wheel and sled helped make animal transport more efficient while the Industrial revolution in the 19th century transformed transportation by 360 degrees. Transport is the key necessity for specialization- allowing production and consumption of products to occur at different places or locations, thus creating utility of space. Conveyance has, even throughout history, been a spur to expansion since better transport allows more trade and a greater spread of people."}],
         "articles" : [{
                 "title" : "Safety",
@@ -44,6 +50,11 @@
             { "title":"Fun", "value": 80}
             ]
         ,
+        "transport_time": [
+            {"type": "taxi", "time": "5m", "cost": "$5"},
+            {"type": "bus", "time": "20m", "cost": "$3"},
+            {"type": "airplane", "time": "30m", "cost": "$1.50"}
+        ],
         "transport" : [{ "title": "Transportation", "text": "Humans first means of transport were walking and swimming. The domestication of animals introduced a new way to lay the burden of transport on more powerful creatures. Inventions such as the wheel and sled helped make animal transport more efficient while the Industrial revolution in the 19th century transformed transportation by 360 degrees. Transport is the key necessity for specialization- allowing production and consumption of products to occur at different places or locations, thus creating utility of space. Conveyance has, even throughout history, been a spur to expansion since better transport allows more trade and a greater spread of people."}],
         "articles" : [{
                 "title" : "Safety",
@@ -76,6 +87,12 @@
             { "title":"Affordable", "value": 90}, 
             { "title":"Safety", "value": 20},
             { "title":"Fun", "value": 80}
+            ]
+        ,
+        "transport_time": [
+            {"type": "taxi", "time": "1h", "cost": "$80"},
+            {"type": "bus", "time": "4h 30m", "cost": "$2"},
+            {"type": "airplane", "time": "45m", "cost": "$30"}
             ]
         ,
         "transport" : [{ "title": "Transportation", "text": "Humans first means of transport were walking and swimming. The domestication of animals introduced a new way to lay the burden of transport on more powerful creatures. Inventions such as the wheel and sled helped make animal transport more efficient while the Industrial revolution in the 19th century transformed transportation by 360 degrees. Transport is the key necessity for specialization- allowing production and consumption of products to occur at different places or locations, thus creating utility of space. Conveyance has, even throughout history, been a spur to expansion since better transport allows more trade and a greater spread of people."}],
