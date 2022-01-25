@@ -12,7 +12,6 @@ import Cost from '../material-ui/Cost';
 import Divide from '../material-ui/Divide';
 
 //Icons for Font-Awesome
-import { faTaxi } from '@fortawesome/free-solid-svg-icons'
 import { Typography } from '@mui/material';
 
 //INPUT: Location, ImgBanner, ImgArr (containing 3 images), Video
@@ -22,8 +21,14 @@ const PageTemplate = (props) => {
 
     const location = props.city;
 
-
-
+    //Navigation of sections : 
+            //-could be less hardcoded, maybe read from content.json
+    const navArr = [ 
+        {id:1, ref: 'cost', title: 'cost'},
+        {id:2, ref: 'transport', title: 'transportation'},
+        {id:3, ref: 'activities', title: 'activities'},
+        {id:4, ref: 'articles', title: 'what to know'}
+    ]
     
     const htTrio = '180px';
 
@@ -34,7 +39,6 @@ const PageTemplate = (props) => {
             {/*<Typography variant='h1' className='text-center capitalize' sx={{margin: '3rem'}}>{location}</Typography>*/}
 
             <div className='Page_Template_Container z-10 '>
-
             
             <div className="left-0 bg-white Headbanner_div">
                 <h3 className='Accent font-bold self-center text-5xl  capitalize sm:text-5xl md:text-6xl lg:text-7xl'>{location}</h3>
@@ -42,41 +46,32 @@ const PageTemplate = (props) => {
             </div>
             <div className=' w-3/4 mx-auto my-8'>
                 <ul className='LetterSpacing'>
-                    <li><a href="#Activities"><span className='font-bold Font_dk_slate mr-4 text-sm'>01. </span><Typography variant='body1' className='inline' sx={{fontWeight: 600, fontSize: '1.3em'}}> Activities</Typography></a></li>
-                    <li><a href="#Activities"><span className='font-bold Font_dk_slate mr-4 text-sm'>02. </span><Typography variant='body1' className='inline' sx={{fontWeight: 600, fontSize: '1.3em'}}>Transportation</Typography></a></li>
-                    <li><a href="#Activities"><span className='font-bold Font_dk_slate mr-4 text-sm'>03. </span><Typography variant='body1' className='inline' sx={{fontWeight: 600, fontSize: '1.3em'}}>Cost</Typography></a></li>
-                    <li><a href="#Activities"><span className='font-bold Font_dk_slate mr-4 text-sm'>04. </span><Typography variant='body1' className='inline' sx={{fontWeight: 600, fontSize: '1.3em'}}>What to Know</Typography></a></li>
-                    <li><a href="#Activities"><span className='font-bold Font_dk_slate mr-4 text-sm'>05. </span><Typography variant='body1' className='inline' sx={{fontWeight: 600, fontSize: '1.3em'}}>Lodging</Typography></a></li>
+                    {navArr.map( section => (
+                        <li><a href={`#${section.ref}`}><span className='font-bold Font_dk_slate mr-4 text-sm'>0{section.id}. </span><Typography variant='body1' className='inline' sx={{fontWeight: 600, fontSize: '1.3em', textTransform: 'capitalize'}}> {section.title}</Typography></a></li>
+                    ))}
                 </ul>
             </div>
             <section className='flex flex-row w-3/4 gap-8 justify-center mx-auto' style={{height: htTrio}}>
                 <MapApi location = {location} htTrio ={htTrio}/>
                 <Weather location = {location}/>
-                
                 <ProgressBarBox  location = {location}/>
                 
             </section>
-            <Divide title = {`Cost`}/>
-            
-
+            <Divide title = "Cost" nav = 'cost'/>
             <Cost location = {location}/>
 
-            <Divide title = {`Transportation`}/>
-
-            <FeatureTri image = {faTaxi} />
+            <Divide title = "Transportation" nav = 'transport'/>
+            <FeatureTri location = {location}/>
             <SectionPara location = {location} info = 'transport'/>
 
-            <div id="Activities">
-                <Divide title = {`Activites`}/>
-            </div>
+            <Divide title = "Activites" nav = 'activities'/>
             <FeatureCards 
                 array = {props.imgArr}
                 title = {props.imgFeat[0]} 
                 subtitle = {props.imgFeat[1]} 
             />
 
-            <Divide title = {`What to know`}/>
-
+            <Divide title = "What to know" nav = 'articles'/>
             {/* Use a terinary if statement with true/false
              to indicate if videobanner should be here
             <VideoBanner 
@@ -86,6 +81,7 @@ const PageTemplate = (props) => {
             />*/}
             <SectionPara location = {location} info = 'articles'/>
             </div>
+
             <Footer/>
         </div>
     )

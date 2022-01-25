@@ -1,39 +1,39 @@
 import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
-
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { Typography } from '@mui/material';
 import '../css/general.css'
-
+import content from '../assets/content/content.json';
 //INPUT PROPS: font awesome icon name, must be imported within parent hook.
-
+import { faTaxi, faBus, faPlane } from '@fortawesome/free-solid-svg-icons'
 
 const FeatureTri = (props) => {
+    const travel = content[props.location].transport_time;
+
+    function iconCheck(icon) {
+        if (icon == 'taxi') {
+            return faTaxi
+        } else if (icon == 'bus') {
+            return faBus
+        } else if (icon == 'airplane') {
+            return faPlane
+        } else {
+            return faTaxi
+        }
+    }
     return (
         <section className='my-10'>
             <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}}>How to Get Around</Typography>
             <div className='flex justify-evenly my-10'>
-                <div className='flex flex-col'>
-                    <FontAwesomeIcon icon= {props.image}  className= 'mx-auto my-4' style={{ width: 'calc(50px + 3rem)' , height:'calc(50px + 3rem)', backgroundColor: '#57bdb780', borderRadius:'50px', padding: '1.5rem'}}/>
-                    <Typography variant='h5' className='text-center my-2' sx={{ fontWeight: '700', margin: '0.5rem auto'}}>Taxi</Typography>
-                    <h6 className='text-center text-gray-400'>Avg Travel Time: 10m</h6>
-                    <h6 className='text-center text-gray-400'>$10</h6>
-                </div>
-                <div className='flex flex-col'>
-                    <DirectionsBusIcon className= 'mx-auto my-4' sx={{ width: 'calc(50px + 3rem)' , height:'calc(50px + 3rem)', backgroundColor: '#57bdb780', borderRadius:'50px', padding: '1.5rem'}}/>
-                    <Typography variant='h5' className='text-center my-2' sx={{ fontWeight: '700', margin: '0.5rem auto'}}>Bus</Typography>
-                    <h6 className='text-center text-gray-400'>Avg Travel Time: 1h 30m</h6>
-                    <h6 className='text-center text-gray-400'>$15</h6>
-                </div>
-                <div className='flex flex-col'>
-                    <AirplanemodeActiveIcon className= 'mx-auto my-4' sx={{ width: 'calc(50px + 3rem)' , height:'calc(50px + 3rem)', backgroundColor: '#57bdb780', borderRadius:'50px', padding: '1.5rem'}}/>
-                    <Typography variant='h5' className='text-center' sx={{ fontWeight: '700', margin: '0.5rem auto'}}>Plane</Typography>
-                    <h6 className='text-center text-gray-400'>Avg Travel Time: 30m</h6>
-                    <h6 className='text-center text-gray-400'>$20</h6>
-                </div>
+                {travel.map(mode => (
+                    <div className='flex flex-col'>
+                        <FontAwesomeIcon icon= {iconCheck(mode.type)}  className= 'mx-auto my-4' style={{ width: 'calc(50px + 3rem)' , height:'calc(50px + 3rem)', backgroundColor: '#57bdb780', borderRadius:'50px', padding: '1.8rem'}}/>
+                        <Typography variant='h5' className='text-center my-2' sx={{ fontWeight: '700', margin: '0.5rem auto', textTransform: 'capitalize'}}>{mode.type}</Typography>
+                        <h6 className='text-center text-gray-400'>Avg Travel Time: {mode.time}</h6>
+                        <h6 className='text-center text-gray-400'>{mode.cost}</h6>
+                    </div>
+                ))}
             </div>
         </section>
     )
