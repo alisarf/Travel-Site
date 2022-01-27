@@ -6,6 +6,14 @@ import { Link } from 'react-router-dom'
 import '../css/style.css';
 import '../css/custom.css';
 import '../css/general.css';
+import content from '../assets/content/content.json'
+
+
+//GET DESTINATIONS FROM JSON: 
+const potlocations = []
+for(var i in content){
+  potlocations.push(i)
+}
 
 
 
@@ -13,7 +21,6 @@ const Nav = (props) => {
     const printHeart = () => {
         console.log(props.heart)
     }
-    const potlocations = ['/ubud','/denpasar','/kuta']
 
     //navigation appears on hoverstate
     const [navBtn, setNavBtn] = useState(false);
@@ -36,8 +43,8 @@ const Nav = (props) => {
                             <ul>
                                 {potlocations.map( city => (
                                     <li className='inline-block m-3'>  
-                                        <Link to={city} city = {city}>
-                                            <a href="" className='text-base underline Nav-link-destination'>{city}</a>
+                                        <Link to={`/${city}`} >
+                                            <a href="" className='text-base underline Nav-link-destination capitalize'>{city}</a>
                                         </Link>
                                     </li>
                                 ))}

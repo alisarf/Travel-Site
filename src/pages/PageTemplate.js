@@ -34,6 +34,8 @@ const PageTemplate = (props) => {
     //Feature Image [Title, SubTitle]
     const imgFeat = ['Things to Do', `Explore the top tourist destinations in ${location}.`]
 
+    const [coordinates, setCoordinates] = useState([-8.650000 , 115.216667])
+
     return (
         <div>
             
@@ -54,8 +56,8 @@ const PageTemplate = (props) => {
                 </ul>
             </div>
             <section className='flex flex-row w-3/4 gap-8 justify-center mx-auto' style={{height: htTrio}}>
-                <MapApi location = {location} htTrio ={htTrio}/>
-                <Weather location = {location}/>
+                <MapApi location = {location} htTrio ={htTrio} cords = {coordinates}/>
+                <Weather location = {location} cords = {coordinates} setCords = {setCoordinates}/>
                 <ProgressBarBox  location = {location}/> 
             </section>
             <Divide title = "Cost" nav = 'cost'/>

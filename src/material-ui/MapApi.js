@@ -1,21 +1,26 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ReactMapGL, {Marker} from 'react-map-gl';
 
 import content from "../assets/content/content.json"
 import pin from "../assets/images/icons/pin.png"
 import { Paper } from "@mui/material";
+import { Google } from "@mui/icons-material";
 
 //INPUT: location variable
 //OUTPUT: Map of location with pin
 
-//Brewery Finder
-const mapboxapi = {
-  base: 'https://api.openbrewerydb.org/breweries?by_city='
-}
-
 const MapApi = (props) => {
-    const latitude = content[props.location].location.latitude;
-    const longitude = content[props.location].location.longitude;
+
+    const [latitude, setLatitude] = useState(props.cords[0]);
+    const [longitude, setlLongitude ] = useState(props.cords[1]);
+
+    const setCoords = () => {
+        setLatitude(props.cords[0])
+        setlLongitude(props.cords[1])
+        
+    }
+
+
     const [viewport, setViewport] = useState({
         latitude: latitude,
         longitude: longitude,
@@ -24,6 +29,20 @@ const MapApi = (props) => {
         zoom: 10
       });
 
+    //change coords when state changes in weather hook
+    useEffect(() => {
+        setCoords();
+    }, [props.cords]);
+
+    //change viewport when coords change to show current state of viewport
+    useEffect(() => {
+        setViewport({
+            latitude: latitude,
+            longitude: longitude,
+            width: "20vw",
+            height: "180px",
+            zoom: 10})
+    }, [latitude])
 
     return (
         <Paper>

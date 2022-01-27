@@ -117,5 +117,45 @@
             { "title" : "Soldier", "url": "denpasar-fighter.jpg"},
             { "title" : "Lake", "url": "denpasar-lake.jpg"}
             ]
+    },
+    "cartagena": {
+        "location" : {
+            "latitude": -8.650000,
+            "longitude": 115.216667
+        },
+        "factors" : [
+            { "title":"Affordable", "value": 90}, 
+            { "title":"Safety", "value": 20},
+            { "title":"Fun", "value": 80}
+            ]
+        ,
+        "transport_time": [
+            {"type": "taxi", "time": "1h", "cost": "$80"},
+            {"type": "bus", "time": "4h 30m", "cost": "$2"},
+            {"type": "airplane", "time": "45m", "cost": "$30"}
+            ]
+        ,
+        "transport" : [{ "title": "Transportation", "text": "Humans first means of transport were walking and swimming. The domestication of animals introduced a new way to lay the burden of transport on more powerful creatures. Inventions such as the wheel and sled helped make animal transport more efficient while the Industrial revolution in the 19th century transformed transportation by 360 degrees. Transport is the key necessity for specialization- allowing production and consumption of products to occur at different places or locations, thus creating utility of space. Conveyance has, even throughout history, been a spur to expansion since better transport allows more trade and a greater spread of people."}],
+        "articles" : [{
+                "title" : "Safety",
+                "text" : "Following the Colombian government's 2016 peace accord with the Revolutionary Armed Forces of Colombia, violent crime in Cartagena has drastically declined. That said, Cartagena is still plagued by many of the same petty crime that you'll find in other major metropolitan areas. Because street crime is the most common threat to tourists, visitors should take common sense precautions: travel with friends, be aware of your valuables at all times, and stay alert for pickpockets and other scams."
+            },
+            { 
+                "title" : "What to Eat",
+                "text" : "Cartagena's street food provides a cost-effective and delicious option for full meals or snacks. Travelers can purchase an assortment of tropical fruit from las palenqueras, or local women selling fruit from the carefully balanced bowls on the tops of their heads. You'll be able to easily spot them thanks to their colorful dresses. Alternatively, Colombians and tourists alike enjoy feasting every morning on arepa de huevo, a deep-fried breakfast dish that consists of cornmeal dough and eggs."
+            },
+            { 
+                "title" : "Getting Around",
+                "text" : "The best way to get around Cartagena is by taxi. Taxis make it easy to get between distinct points in the city, including Cartagena's Rafael Núñez International Airport (CTG), while short jaunts ought to be made on foot. According to area hotels, taxi rides from the airport to the central tourist areas cost about $10. Rental cars are available in Cartagena (an international driving permit is required), but the U.S. State Department advises against driving in Colombia due to lax traffic laws and poor infrastructure. For the same reasons, travelers should avoid taking the busses from nearby cities into Cartagena. Instead, visitors should opt to arrive by air, which is the most common means of arrival in the city. Local buses are also available at the airport and stops throughout Cartagena, but public transit can be challenging to navigate and is not recommended for tourists."
+            },
+            { 
+                "title" : "Entry & Exit Requirements",
+                "text" : "A valid passport is required for entry into Colombia, and tourists from the United States can stay for up to 90 days without a visa. A yellow fever vaccine is required for travelers entering Colombia from Brazil, Angola, Democratic Republic of Congo and Uganda. For more information on entry and exit requirements, visit the U.S. State Department's website."
+            }],
+        "images" : [
+            { "title" : "Beach", "url": "cartagena-beach.jpg"}, 
+            { "title" : "Town", "url": "cartagena-town.jpg"},
+            { "title" : "City street", "url": "cartagena-street.jpg"}
+            ]
     }
 }
