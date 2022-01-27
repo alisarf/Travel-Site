@@ -11,14 +11,14 @@ import MapApi from '../material-ui/MapApi';
 import Cost from '../material-ui/Cost';
 import Divide from '../material-ui/Divide';
 
+
 //Icons for Font-Awesome
 import { Typography } from '@mui/material';
 
-//INPUT: Location, ImgBanner, ImgArr (containing 3 images), Video
+//INPUT: Location, ImgBanner, Video
 //OUTPUT: Entire Page Template
 
 const PageTemplate = (props) => {
-
     const location = props.city;
 
     //Navigation of sections : 
@@ -29,13 +29,15 @@ const PageTemplate = (props) => {
         {id:3, ref: 'activities', title: 'activities'},
         {id:4, ref: 'articles', title: 'what to know'}
     ]
-    
     const htTrio = '180px';
+
+    //Feature Image [Title, SubTitle]
+    const imgFeat = ['Things to Do', `Explore the top tourist destinations in ${location}.`]
 
     return (
         <div>
-            <HeadBanner title= {location} image = {props.ImgBanner} />
-
+            
+            <HeadBanner title= {location} />
             {/*<Typography variant='h1' className='text-center capitalize' sx={{margin: '3rem'}}>{location}</Typography>*/}
 
             <div className='Page_Template_Container z-10 '>
@@ -54,8 +56,7 @@ const PageTemplate = (props) => {
             <section className='flex flex-row w-3/4 gap-8 justify-center mx-auto' style={{height: htTrio}}>
                 <MapApi location = {location} htTrio ={htTrio}/>
                 <Weather location = {location}/>
-                <ProgressBarBox  location = {location}/>
-                
+                <ProgressBarBox  location = {location}/> 
             </section>
             <Divide title = "Cost" nav = 'cost'/>
             <Cost location = {location}/>
@@ -67,8 +68,9 @@ const PageTemplate = (props) => {
             <Divide title = "Activites" nav = 'activities'/>
             <FeatureCards 
                 array = {props.imgArr}
-                title = {props.imgFeat[0]} 
-                subtitle = {props.imgFeat[1]} 
+                title = {imgFeat[0]} 
+                subtitle = {imgFeat[1]} 
+                location = {location}
             />
 
             <Divide title = "What to know" nav = 'articles'/>
@@ -81,7 +83,6 @@ const PageTemplate = (props) => {
             />*/}
             <SectionPara location = {location} info = 'articles'/>
             </div>
-
             <Footer/>
         </div>
     )
