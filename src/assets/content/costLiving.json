@@ -144,5 +144,51 @@
             "title": "☕️ Coffee",
             "cost": "$1.99"
         }
+    ],
+    "cartagena" : [
+        {
+            "title": "💵 Cost of living for expat",
+            "cost": "$327 / month"
+        },
+        {
+            "title": "💵 Cost of living for family",
+            "cost": "$920 / month"
+        },
+        {
+            "title": "💵 Cost of living for local",
+            "cost": "$263 / month"
+        },
+        {
+            "title": "🏠 1br studio rent in center",
+            "cost": "$122 / month"
+        },
+        {
+            "title": "🏢Coworking",
+            "cost": "$132 / month"
+        },
+        {
+            "title": "🏨 Hotel (median price)",
+            "cost": "$222 / month"
+        },
+        {
+            "title": "🏨 Hotel (median price)",
+            "cost": "$10 / night"
+        },
+        {
+            "title": "🍛 Dinner",
+            "cost": "$1.05"
+        },
+        {
+            "title": "🥤 Coca-Cola (0.3L)",
+            "cost": "$0.51"
+        },
+        {
+            "title": "🍺 Beer (0.5L)",
+            "cost": "$0.52"
+        },
+        {
+            "title": "☕️ Coffee",
+            "cost": "$1.99"
+        }
     ]
 }

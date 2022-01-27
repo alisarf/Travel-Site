@@ -19,13 +19,17 @@ const Weather = (props) => {
             .then(res => res.json()) //format to json result as promise
             .then(result => {
                 setWeather(result) //set result as weather object
-                console.log(result);
+                //props.setCords([weather.,])
+                props.setCords([result.coord.lat, result.coord.lon])
+                console.log(props.cords)
             });
     }
 
     useEffect(() => {
         search();
-    }, []);
+    }, [props.location]);        // eslint-disable-line react-hooks/exhaustive-deps
+
+
 
     return (
         <Card className = 'w-fit'>
@@ -34,7 +38,7 @@ const Weather = (props) => {
                 <div>
                     <div className="text-xl font-bold Font_dk_teal"> {weather.weather[0].main} </div>
                     <div className="text-5xl font-bold Font_dk_teal"> {Math.round(weather.main.temp)}°C</div>
-                    <div className=" text-white Font_dk_slate tracking-widest capitalize mt-4">{query}</div>
+                    <div className=" text-white Font_dk_slate tracking-widest capitalize mt-4">{weather.name}</div>
                 </div>
                 <div className="Circular_box">
                     <img src={weathericon.base + weather.weather[0].icon + weathericon.end} className="Weather_icon"></img>
