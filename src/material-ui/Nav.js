@@ -22,6 +22,8 @@ const Nav = (props) => {
         console.log(navBtn)
     }
 
+    //TESTING GIT 123
+
     return (
             <nav className='flex justify-between pt-8 pb-4 mx-auto w-3/4 items-center text-white Roboto tracking-widest'>
                 <Link to='/' >
