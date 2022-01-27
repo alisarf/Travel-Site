@@ -107,6 +107,14 @@ nav a {
   color: #16ffe4b9;
 }
 
+.Nav-link-destination {
+  color: black !important;
+}
+
+.Nav-h-min {
+  min-height: 3rem;
+}
+
 main {
   width: 100%;
 }

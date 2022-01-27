@@ -12,10 +12,24 @@ import Video from './assets/images/bali/culture.mp4';
 import Footer from './material-ui/Footer';
 import VideoBanner from './material-ui/VideoBanner';
 
+import PageTemplate from './pages/PageTemplate'
+
 import imagesArr from './assets/content/mainFeature.json';
 
 
+
+
+
+
+import content from './assets/content/content.json'
+
 function App() {
+
+  console.log(Object.keys(content))
+
+
+
+
   //Favorite Icon Feature Array
   const[heart, setHeart] = useState([]);
 
@@ -55,11 +69,20 @@ function App() {
   
   const data = ((JSON.parse(localStorage.getItem('data')) || ''));
   const [elem, setElem] = useState(data);
+
+
+
+  //Active Location
+  const [destination, setDestination] = useState()
   
   return (
     <main>
       
       <HeadBanner title= 'Adventure!' image = {ImgBanner}  elem = {elem}/>
+
+
+      { destination ? <PageTemplate city = {destination}/> : 
+
       <div className='grid gap-y-10 pt-30 w-full mx-auto mt-12 md:w-full lg:w-3/4'>
       <Typography variant='h1' className='text-center'>Travel Bali</Typography>
         <div>
@@ -78,14 +101,20 @@ function App() {
           video = {Video}
           msg = 'Culture'
         />
-      </div>
+      
       <div className="flex justify-center gap-10">     
+        {/* default array needed for home page images*/}
         <FeatureCards 
-          array = {arr}
+          location = 'denpasar' 
           title = 'Featured Locations' 
           subtitle = 'Explore the best locations within the southern region.' 
         />
       </div>
+
+      </div>  }
+      {/* end of meat of page here*/}
+
+
       <Paper elevation={3} className='flex flex-col m-auto w-4/12 items-center p-3 gap-y-4 pb-4 md:mx-4 w-full'>
         <Typography gutterBottom variant="h5" className="text-center">Get the Latest!</Typography>
         <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1' />

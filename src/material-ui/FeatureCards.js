@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
 import { Pagination, Typography } from '@mui/material';
 import '../css/general.css';
-
-
+import content from '../assets/content/content.json'
+import test from '../assets/images/denpasar/denpasar-lake.jpg'
 
 import FeatureCard from "./FeatureCard";
 import culturebali from '../assets/culturebali.jpg';
@@ -15,21 +15,18 @@ const FeatureCards = (props) => {
     
     const data = ((JSON.parse(localStorage.getItem('data')) || ''));
     const [elem, setElem] = useState(data);
-    /*
-    const [arr, setArr ] = useState([
-        { title : 'Ubud', url: 'https://images.unsplash.com/photo-1559628233-eb1b1a45564b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80'}, 
-        { title : 'Denpasar', url: 'https://images.unsplash.com/photo-1610375580030-885edbb6f92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
-        { title : 'Kuta', url: 'https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-        ])
-    */
+    const imagesArr = content[props.location].images;
+
+  // const fileUrlBase = `/images/${props.location}/${content[props.location].images[2].url}`
     return (
         <section className='my-10'>
             <Typography variant='h3' className='text-center' sx={{ fontWeight: '700'}}>{props.title}</Typography>
             <Typography variant='body1' className='text-center'>{props.subtitle}</Typography>
             <div className='my-5 flex justify-center FeatureCards_MQ'>
-                {props.array.map(item => (
+                {imagesArr.map( image => (
                     //wrap in link hook with location variable
-                    <FeatureCard id = {item.id} image = {item.url} headline = {item.title} elem = {elem} setElem = {setElem} />
+                    
+                    <FeatureCard url = {image.url} headline = {image.title} location={props.location}/>
                 ))}
             </div>
             <div className='my-5'>
@@ -39,6 +36,10 @@ const FeatureCards = (props) => {
                     color="primary" 
                 />
             </div>
+            
+            
+            
+
         </section>
     )
 }

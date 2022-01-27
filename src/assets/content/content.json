@@ -34,9 +34,9 @@
                 "text" : "A valid passport is required for entry into Colombia, and tourists from the United States can stay for up to 90 days without a visa. A yellow fever vaccine is required for travelers entering Colombia from Brazil, Angola, Democratic Republic of Congo and Uganda. For more information on entry and exit requirements, visit the U.S. State Department's website."
             }],
         "images" : [
-            { "title" : "Elephant", "url": ".../public/images/denpasar/denpasar-elephant.jpg"}, 
-            { "title" : "Soldier", "url": ".../public/images/denpasar/denpasar-fighter.jpg"},
-            { "title" : "Lake", "url": ".../public/images/denpasar/denpasar-lake.jpg"}
+            { "title" : "People", "url": "ubud-people.jpg"}, 
+            { "title" : "Rice Field", "url": "ubud-rice.jpg"},
+            { "title" : "Swing over Fields", "url": "ubud-swing.jpg"}
             ]
     },
     "kuta": {
@@ -73,9 +73,9 @@
                 "text" : "A valid passport is required for entry into Colombia, and tourists from the United States can stay for up to 90 days without a visa. A yellow fever vaccine is required for travelers entering Colombia from Brazil, Angola, Democratic Republic of Congo and Uganda. For more information on entry and exit requirements, visit the U.S. State Department's website."
             }],
         "images" : [
-            { "title" : "Elephant", "url": ".../public/images/denpasar/denpasar-elephant.jpg"}, 
-            { "title" : "Soldier", "url": ".../public/images/denpasar/denpasar-fighter.jpg"},
-            { "title" : "Lake", "url": ".../public/images/denpasar/denpasar-lake.jpg"}
+            { "title" : "Walk the Shoreline", "url": "kuta-Beach.jpg"}, 
+            { "title" : "Surf big waves", "url": "kuta-surf.jpg"},
+            { "title" : "Splash at the Waterbom", "url": "Waterbom-Kuta.jpg"}
             ]
     },
     "denpasar": {
@@ -113,9 +113,9 @@
                 "text" : "A valid passport is required for entry into Colombia, and tourists from the United States can stay for up to 90 days without a visa. A yellow fever vaccine is required for travelers entering Colombia from Brazil, Angola, Democratic Republic of Congo and Uganda. For more information on entry and exit requirements, visit the U.S. State Department's website."
             }],
         "images" : [
-            { "title" : "Elephant", "url": "../assets/images/denpasar/denpasar-elephant.jpg"}, 
-            { "title" : "Soldier", "url": "../assets/images/denpasar/denpasar-fighter.jpg"},
-            { "title" : "Lake", "url": "../assets/images/denpasar/denpasar-lake.jpg"}
+            { "title" : "Elephant", "url": "denpasar-elephant.jpg"}, 
+            { "title" : "Soldier", "url": "denpasar-fighter.jpg"},
+            { "title" : "Lake", "url": "denpasar-lake.jpg"}
             ]
     }
 }

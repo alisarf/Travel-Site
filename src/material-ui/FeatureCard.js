@@ -8,57 +8,8 @@ import React from 'react';
 
 const FeatureCard = (props) => {
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-    //Favorite Button
-    /*
-    const data = ((JSON.parse(localStorage.getItem('data')) || ''));
-    const [heart, setHeart] = useState(data);
-    const handleChange = (e) => {
-        
-        if (heart.length == 0) {
-         setHeart([{ id: props.id, url: props.image }])
-        } else {
-          if (e.target.checked) {
-            console.log('checked')
-            setHeart([...heart, { id: props.id, url: props.image }])
-          } else {
-            console.log('unchecked');
-            setHeart(heart.filter(({id}) => id !== props.id))
-          }
-        }
-        
-        console.log('end of action' + JSON.stringify(heart)) 
-    }; 
-
-      */
-    //const data = ((JSON.parse(localStorage.getItem('data')) || ''));
-    
-
-    const [checked, setChecked] = React.useState(false);
-    const handleChange = (event)  => {
-        setChecked(event.target.checked);
-        console.log(!checked)
-
-        if (props.elem.length == 0) {
-            props.setElem([{ id: props.id, url: props.image }])
-           } else {
-             if (!checked == true) {
-               console.log('checked')
-               let myItem = { id: props.id , url: props.image }
-               console.log(myItem)
-               //setHeart([...heart, { id: props.id, url: props.image }])
-               props.setElem([...props.elem, myItem])
-               console.log('end of action' + JSON.stringify(props.elem) + props.elem.length) 
-             } else if (!checked == false) {
-               console.log('unchecked');
-               props.setElem(props.elem.filter(({id}) => id !== props.id))
-             }
-            
-        }
-        localStorage.setItem('data', JSON.stringify(props.elem));
-    }
-
-
+    const fileUrlBase = `/images/${props.location}/${props.url}`
+    console.log(fileUrlBase)
     return (
         <Card 
             sx={{ maxWidth: 345 }}
@@ -68,7 +19,7 @@ const FeatureCard = (props) => {
                 <CardMedia
                     component="img"
                     height="450px"
-                    image= {props.image}
+                    image= {fileUrlBase}
                     alt="green iguana"
                     className='relative Feature_cardWidth'
                     sx={{ width: '350px' }}
@@ -88,10 +39,8 @@ const FeatureCard = (props) => {
                         color: 'white',
                     },
                     }}
-                    {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} checked = {checked} onChange={handleChange}/>
+                    {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
                 </div>
-
-
                 
             </CardActionArea>
         </Card>
