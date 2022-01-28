@@ -45,7 +45,7 @@ const MapApi = (props) => {
         <Paper>
             <ReactMapGL className = 'rounded-md'         
                 {...viewport}
-                mapboxApiAccessToken={"pk.eyJ1IjoiYWxpZmFyZXNib3Vsb3MiLCJhIjoiY2t3NWs5aWdzNmUxZTJubzB0dXhuMjJjZyJ9.gF9Yte_ZD6xwUJKf8oyyyg"}
+                mapboxApiAccessToken={"pk.eyJ1IjoiYWxpZmFyZXNib3Vsb3MiLCJhIjoiY2t5eXZ2cGt2MHU4YzJ3bXNpa2Q2aGEydCJ9.baxPPmGPeROxU1DLaN-91A"}
                 mapStyle = 'mapbox://styles/alifaresboulos/cktfya9h13qjl18s2pkfgiyx4'
                 onViewportChange={viewport => {
                 setViewport(viewport);

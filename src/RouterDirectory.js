@@ -13,7 +13,7 @@ const RouterDirectory = (props) => {
   for(var i in content){
     potlocal.push(i)
   }
-  console.log('potlocal = ' + JSON.stringify(potlocal))
+  
   return (
     <BrowserRouter>
       <Routes>
