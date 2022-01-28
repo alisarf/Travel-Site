@@ -65,7 +65,7 @@ Because I like to travel, I think I'll continue to add destinations and content 
 
 ### API's
 
-Open Weather Map API:
+Open Weather Map API: 
 
 https://openweathermap.org/
 
