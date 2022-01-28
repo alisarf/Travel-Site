@@ -39,12 +39,12 @@ const Nav = (props) => {
             <ul className='relative'>
                 <li className='inline-block m-3 relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>
                         <button>Destinations</button>
-                        <div className={`bg-white absolute top-12 left-0 ${navBtn == true ? 'block' : 'hidden'}`}>
+                        <div className={`bg-white absolute top-12 left-0 ${navBtn === true ? 'block' : 'hidden'}`}>
                             <ul>
                                 {potlocations.map( city => (
                                     <li className='inline-block m-3'>  
-                                        <Link to={`/${city}`} >
-                                            <a href="" className='text-base underline Nav-link-destination capitalize'>{city}</a>
+                                        <Link to={`/${city}`}  className='text-base underline Nav-link-destination capitalize'>
+                                            {city}
                                         </Link>
                                     </li>
                                 ))}

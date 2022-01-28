@@ -1,11 +1,9 @@
-import React, {useState, useEffect, state} from 'react';
-import {Card, CardMedia, Typography, CardContent, CardActions, Button, ListItemSecondaryAction} from '@mui/material';
+import {Card, CardMedia, Typography, CardContent, CardActions, Button } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-import { HeartBroken } from '@mui/icons-material';
 
 function CardBuilder (props) {
 
@@ -15,7 +13,7 @@ function CardBuilder (props) {
 
 
   const handleChange = (e) => { 
-      if (props.elem.length == 0) {
+      if (props.elem.length === 0) {
        props.setElem([{ id: props.id, url: props.image }])
       } else {
         if (e.target.checked) {
@@ -35,7 +33,6 @@ function CardBuilder (props) {
 
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     //console.log(props.image.webformatURL)
-    const image = 'https://source.unsplash.com/random/?bali beach/landscape';
     return (
         <Card sx={{ maxWidth: 345 }}  className="mx-auto">
         <CardMedia

@@ -1,4 +1,3 @@
-import React, { useState} from 'react';
 import ProgressBar from "./ProgressBar";
 import { Card } from "@mui/material";
 import content from "../assets/content/content.json"

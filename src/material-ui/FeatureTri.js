@@ -1,6 +1,3 @@
-import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
-import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
-import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Typography } from '@mui/material';
 import '../css/general.css'
@@ -12,11 +9,11 @@ const FeatureTri = (props) => {
     const travel = content[props.location].transport_time;
 
     function iconCheck(icon) {
-        if (icon == 'taxi') {
+        if (icon === 'taxi') {
             return faTaxi
-        } else if (icon == 'bus') {
+        } else if (icon === 'bus') {
             return faBus
-        } else if (icon == 'airplane') {
+        } else if (icon === 'airplane') {
             return faPlane
         } else {
             return faTaxi

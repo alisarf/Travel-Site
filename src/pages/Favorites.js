@@ -1,4 +1,3 @@
-import React, { useState, useEffect} from 'react';
 import Footer from '../material-ui/Footer';
 import HeadBanner from '../material-ui/HeadBanner';
 import FavoriteCardBuilder from '../material-ui/FavoriteCardBuilder';

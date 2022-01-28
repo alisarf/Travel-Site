@@ -13,24 +13,9 @@ import Footer from './material-ui/Footer';
 import VideoBanner from './material-ui/VideoBanner';
 
 import PageTemplate from './pages/PageTemplate'
-
 import imagesArr from './assets/content/mainFeature.json';
 
-
-
-
-
-
-import content from './assets/content/content.json'
-
 function App() {
-
-
-
-
-
-
-
 
     //---Feature Images with Pagination UI---
   //Feature Image Arr with pagination: 
@@ -47,15 +32,10 @@ function App() {
     let ending = starter + 3
     setStart(starter)
     setEnd(ending)
-    //console.log(images2)
   }
-
-
   
   const data = ((JSON.parse(localStorage.getItem('data')) || ''));
   const [elem, setElem] = useState(data);
-
-
 
   //Active Location
   const [destination, setDestination] = useState()

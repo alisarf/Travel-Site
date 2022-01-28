@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Travel Bali - Dynamic Multipage Travel Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A dynamic travel site built using React. React Router directory and pages are dynamically constructed via translation of JSON file containing content on a variety of tourist destinations. In order to add pages, admin would simply add new destination information to content.json file. UI constructed using Material UI components and Tailwind css for efficient and consistent styling. Location weather and map from Mapbox and Open Weather App Api.
 
-## Available Scripts
+live: https://loginsite-9f275.web.app/
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [API's](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+The purpose of this repository was to learn how to work with Material UI and Tailwind Css and to build on React knowledge. This mostly was an enjoyable learning process of trial and error. The only significant challenge I have faced with this project is passing array props between pages when using React Router. I tried using local storage to pass the informatin between pages, however, this doesn't seem to solve the problem. I believe creating a database with user accounts would be the way to go but I don't anticipate spending the time to set this up for the "favorite" icon system. Another small issue occured when passing img urls from JSON file to material ui components but I found that storing images within the public folder resolved this issue.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+Destination Page Sample:
+![](./public/images/screenshots/screenshot_page_full.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## My process
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Built with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- Material UI
+- Tailwind CSS
+- Font Awesome Icon Package
+- MapBox Api
+- Open Weather Map Api
+- SASS
+- JSON
 
-### `npm run eject`
+### What I learned
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Build on React knowledge, working with useState, useEffect, props, reusability of components and React Router
+- How to utilize and style Material UI components
+- How convinient Tailwind Css and Material UI can be for time effieciency and styling consistency
+- How to interact with MapBox and Open Weather Map Api system
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Continued development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Favorite Icon Functionality:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+As mentioned earlier, I think the site could benefit from the favorite icon functionality however I am not interested at this time in constructing a database with user login etc. 
 
-## Learn More
+CMS:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I thought it would be interesting to build a simple CMS system for this website however after looking into it, it appears the concensus are that CMS are not worth recreating as there are many CMS services already being offered with plug in features. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Continue to add data to live site:
+Because I like to travel, I think I'll continue to add destinations and content to the JSON file just for fun. :)
 
-### Code Splitting
+### API's
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open Weather Map API:
+https://openweathermap.org/
 
-### Analyzing the Bundle Size
+Map Box API:
+https://www.mapbox.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Author
 
-### Making a Progressive Web App
+- Website - [Alisar Fares-Boulos](https://www.alisarfaresboulos.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+I found these resources helpful along the way.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+useEffect() in Practice:
+https://dmitripavlutin.com/react-useeffect-explanation/
 
-### Deployment
+Working with React Router 6 changes:
+https://www.youtube.com/watch?v=zEQiNFAwDGo&t=1043s
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Working with the MapBox Api:
+https://www.youtube.com/watch?v=JJatzkPcmoI&list=PL6TWpVj3-2povDZZk7osCUQgJG90koJHG&index=3
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
 import { TableContainer } from '@mui/material';
 import { Table } from '@mui/material';
 import { TableHead } from '@mui/material';

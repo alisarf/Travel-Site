@@ -1,12 +1,8 @@
-import {Card, CardMedia, Typography, CardContent, CardActions, Button, ListItemSecondaryAction} from '@mui/material';
+import {Card, CardMedia, Typography, CardContent } from '@mui/material';
 
 
 function FavoriteCardBuilder (props) {
 
-
-    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-    //console.log(props.image.webformatURL)
-    const image = 'https://source.unsplash.com/random/?bali beach/landscape';
     return (
         <Card sx={{ maxWidth: 345 }}  className="mx-auto">
         <CardMedia
