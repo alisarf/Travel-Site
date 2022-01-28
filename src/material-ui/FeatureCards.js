@@ -1,11 +1,8 @@
-import React, { useState} from 'react';
 import { Pagination, Typography } from '@mui/material';
 import '../css/general.css';
 import content from '../assets/content/content.json'
-import test from '../assets/images/denpasar/denpasar-lake.jpg'
 
 import FeatureCard from "./FeatureCard";
-import culturebali from '../assets/culturebali.jpg';
 
 //REQUIRED PARENT PROP: title, subheadline
 //Input: a list of image urls with featured text headline
@@ -13,8 +10,8 @@ import culturebali from '../assets/culturebali.jpg';
 
 const FeatureCards = (props) => {
     
-    const data = ((JSON.parse(localStorage.getItem('data')) || ''));
-    const [elem, setElem] = useState(data);
+    //const data = ((JSON.parse(localStorage.getItem('data')) || ''));
+    //const [elem, setElem] = useState(data);
     const imagesArr = content[props.location].images;
 
   // const fileUrlBase = `/images/${props.location}/${content[props.location].images[2].url}`

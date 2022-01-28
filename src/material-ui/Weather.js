@@ -21,7 +21,7 @@ const Weather = (props) => {
                 setWeather(result) //set result as weather object
                 //props.setCords([weather.,])
                 props.setCords([result.coord.lat, result.coord.lon])
-                console.log(props.cords)
+                console.log(weather)
             });
     }
 
@@ -37,11 +37,11 @@ const Weather = (props) => {
             <section className="flex flex-row gap-8 justify-evenly items-center Bg_lt_teal py-8 px-8">
                 <div>
                     <div className="text-xl font-bold Font_dk_teal"> {weather.weather[0].main} </div>
-                    <div className="text-5xl font-bold Font_dk_teal"> {Math.round(weather.main.temp)}°C</div>
+                    <div className="text-5xl font-bold Font_dk_teal"> {Math.round((weather.main.temp)*1.8 + 32)}°F</div>
                     <div className=" text-white Font_dk_slate tracking-widest capitalize mt-4">{weather.name}</div>
                 </div>
                 <div className="Circular_box">
-                    <img src={weathericon.base + weather.weather[0].icon + weathericon.end} className="Weather_icon"></img>
+                    <img src={weathericon.base + weather.weather[0].icon + weathericon.end} className="Weather_icon" alt={weather.weather[0].description}/>
                     
                 </div>
                 

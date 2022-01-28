@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from "react";
 import ReactMapGL, {Marker} from 'react-map-gl';
-
-import content from "../assets/content/content.json"
 import pin from "../assets/images/icons/pin.png"
 import { Paper } from "@mui/material";
-import { Google } from "@mui/icons-material";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 //INPUT: location variable
 //OUTPUT: Map of location with pin
@@ -42,7 +40,7 @@ const MapApi = (props) => {
             width: "20vw",
             height: "180px",
             zoom: 10})
-    }, [latitude])
+    }, [latitude, longitude])
 
     return (
         <Paper>

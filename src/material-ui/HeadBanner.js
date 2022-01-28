@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import Nav from '../material-ui/Nav';
 
 //Default image:

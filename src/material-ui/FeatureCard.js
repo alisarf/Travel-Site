@@ -2,7 +2,6 @@ import { Card, CardActionArea, CardMedia, Typography } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
-import { useState, useEffect } from 'react';
 import React from 'react';
 //Requires following props: image and headline text
 
