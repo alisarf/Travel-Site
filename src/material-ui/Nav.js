@@ -19,14 +19,13 @@ for(var i in content){
 
 const Nav = (props) => {
     const printHeart = () => {
-        console.log(props.heart)
+        //console.log(props.heart)
     }
 
     //navigation appears on hoverstate
     const [navBtn, setNavBtn] = useState(false);
     function handleChange() {
         setNavBtn(!navBtn);
-        console.log(navBtn)
     }
 
     //TESTING GIT 123

@@ -8,7 +8,6 @@ import React from 'react';
 const FeatureCard = (props) => {
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     const fileUrlBase = `/images/${props.location}/${props.url}`
-    console.log(fileUrlBase)
     return (
         <Card 
             sx={{ maxWidth: 345 }}

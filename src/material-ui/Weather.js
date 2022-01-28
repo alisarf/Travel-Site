@@ -5,10 +5,10 @@ const Weather = (props) => {
     const [weather, setWeather] = useState({});
     const api = {
         key: "3a2b308bcf33b99a8500227f26bafdeb",
-        base: "http://api.openweathermap.org/data/2.5/"
+        base: "https://api.openweathermap.org/data/2.5/"
     }
     const weathericon = {
-        base: "http://openweathermap.org/img/wn/",
+        base: "https://openweathermap.org/img/wn/",
         end: "@2x.png"
     }
 
@@ -21,7 +21,6 @@ const Weather = (props) => {
                 setWeather(result) //set result as weather object
                 //props.setCords([weather.,])
                 props.setCords([result.coord.lat, result.coord.lon])
-                console.log(weather)
             });
     }
 
