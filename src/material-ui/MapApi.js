@@ -4,7 +4,7 @@ import pin from "../assets/images/icons/pin.png"
 import { Paper } from "@mui/material";
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-//INPUT: location variable
+//INPUT: props cordinate state
 //OUTPUT: Map of location with pin
 
 const MapApi = (props) => {
@@ -12,13 +12,12 @@ const MapApi = (props) => {
     const [latitude, setLatitude] = useState(props.cords[0]);
     const [longitude, setlLongitude ] = useState(props.cords[1]);
 
+    //Set Lat/Lon from props that are dependent on Weather.js component
     const setCoords = () => {
         setLatitude(props.cords[0])
         setlLongitude(props.cords[1])
-        
     }
-
-
+    //Set initial viewport
     const [viewport, setViewport] = useState({
         latitude: latitude,
         longitude: longitude,
@@ -27,7 +26,7 @@ const MapApi = (props) => {
         zoom: 10
       });
 
-    //change coords when state changes in weather hook
+    //change coords when state changes in weather component
     useEffect(() => {
         setCoords();
     }, [props.cords]);
@@ -45,17 +44,20 @@ const MapApi = (props) => {
     return (
         <Paper>
             <ReactMapGL className = 'rounded-md'         
-            {...viewport}
-            mapboxApiAccessToken={"pk.eyJ1IjoiYWxpZmFyZXNib3Vsb3MiLCJhIjoiY2t3NWs5aWdzNmUxZTJubzB0dXhuMjJjZyJ9.gF9Yte_ZD6xwUJKf8oyyyg"}
-            mapStyle = 'mapbox://styles/alifaresboulos/cktfya9h13qjl18s2pkfgiyx4'
-            onViewportChange={viewport => {
-            setViewport(viewport);
+                {...viewport}
+                mapboxApiAccessToken={"pk.eyJ1IjoiYWxpZmFyZXNib3Vsb3MiLCJhIjoiY2t3NWs5aWdzNmUxZTJubzB0dXhuMjJjZyJ9.gF9Yte_ZD6xwUJKf8oyyyg"}
+                mapStyle = 'mapbox://styles/alifaresboulos/cktfya9h13qjl18s2pkfgiyx4'
+                onViewportChange={viewport => {
+                setViewport(viewport);
             }}>
-                <Marker latitude={latitude} longitude={longitude} offsetLeft={-20} offsetTop={-10}>
+                <Marker 
+                    latitude={latitude}
+                    longitude={longitude}
+                    offsetLeft={-20} 
+                    offsetTop={-10}>
                     <img src={pin} />
                 </Marker>
             </ReactMapGL>
         </Paper>
-    )
-}
+    )}
 export default MapApi;

@@ -21,7 +21,7 @@ live: Not Available at this time.
 
 ### The challenge
 
-The purpose of this repository was to learn how to work with Material UI and Tailwind CSS and to build on React knowledge. The only significant challenge I have faced with this project is passing array props between pages when using React Router. I tried using local storage to pass the informatin between pages, however, this doesn't seem to solve the problem. I believe creating a database with user accounts would be the way to go but I don't anticipate spending the time to set this up for the "favorite" icon system. Another small issue occured when passing img urls from JSON file to Material UI components. I found that storing images within the public folder resolved this issue.
+The purpose of this repository was to learn how to work with Material UI and Tailwind CSS and to build on React knowledge. The only significant challenge I have faced with this project is passing array props between pages when using React Router. I tried using local storage to pass the informatin between pages, however, this doesn't seem to solve the problem. I believe creating a database with user accounts would be the way to go but I don't anticipate spending the time to set this up for the "favorite" icon system. Another small issue occured when passing img urls from JSON file to Material UI components. I found that storing images within the public folder resolved this issue. 
 
 ### Screenshot
 
@@ -44,6 +44,7 @@ Destination Page Sample:
 
 ### What I learned
 
+- How to repurpose components from previous React projects
 - Build on React knowledge, working with useState, useEffect, props, reusability of components and React Router
 - How to utilize and style Material UI components
 - How convinient Tailwind Css and Material UI can be for time efficiency and styling consistency
@@ -96,3 +97,6 @@ Working with the MapBox Api:
 
 https://www.youtube.com/watch?v=JJatzkPcmoI&list=PL6TWpVj3-2povDZZk7osCUQgJG90koJHG&index=3
 
+UI Inspiration:
+https://nomadlist.com/cost-of-living
+https://www.lonelyplanet.com/
