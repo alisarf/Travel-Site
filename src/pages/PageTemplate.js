@@ -11,7 +11,6 @@ import MapApi from '../material-ui/MapApi';
 import Cost from '../material-ui/Cost';
 import Divide from '../material-ui/Divide';
 
-
 //Icons for Font-Awesome
 import { Typography } from '@mui/material';
 

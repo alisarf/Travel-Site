@@ -1,193 +1,121 @@
 {
     "ubud" : [
         {
-            "title": "💵 Cost of living for expat",
+            "title": "💵 Cost of living",
             "cost": "$908 / month"
         },
         {
-            "title": "💵 Cost of living for family",
-            "cost": "$1,915 / month"
-        },
-        {
-            "title": "💵 Cost of living for local",
-            "cost": "$547 / month"
-        },
-        {
-            "title": "🏠 1br studio rent in center",
+            "title": "🏠 1br studio",
             "cost": "$420 / month"
         },
         {
-            "title": "🏢 Coworking",
-            "cost": "$256 / month"
+            "title": "🩺 Visit to Doctor",
+            "cost": "$50.35"
         },
         {
-            "title": "🏨 Hotel (median price monthly)",
-            "cost": "$437 / month"
+            "title": "✂️ Basic Haircut",
+            "cost": "$5.00"
         },
         {
-            "title": "🏨 Hotel (median price)",
-            "cost": "$20 / night"
-        },
-        {
-            "title": "🏡 Airbnb (median from 1,001 listings)",
-            "cost": "$1,512 / month"
-        },
-        {
-            "title": "🏠 Airbnb (median price)",
-            "cost": "$50 / night"
-        },
-        {
-            "title": "🍛 Dinner",
+            "title": "🍛 Meal",
             "cost": "$2.37"
-        },
-        {
-            "title": "🥤 Coca-Cola (0.3L)",
-            "cost": "$0.35"
         },
         {
             "title": "🍺 Beer (0.5L)",
             "cost": "$2.10"
         },
         {
-            "title": "☕️ Coffee",
+            "title": "☕️ Cup of Joe",
             "cost": "$1.75"
         }
     ],
     "kuta" : [
         {
-            "title": "💵 Cost of living for expat",
+            "title": "💵 Cost of living",
             "cost": "$558 / month"
         },
         {
-            "title": "💵 Cost of living for family",
-            "cost": "$1,189 / month"
+            "title": "🏠 1br studio",
+            "cost": "$310 / month"
         },
         {
-            "title": "💵 Cost of living for local",
-            "cost": "$340 / month"
+            "title": "🩺 Visit to Doctor",
+            "cost": "$50.35"
         },
         {
-            "title": "🏠 1br studio rent in center",
-            "cost": "$210 / month"
+            "title": "✂️ Basic Haircut",
+            "cost": "$7.00"
         },
         {
-            "title": "🏢 Coworking",
-            "cost": "$210 / month"
-        },
-        {
-            "title": "🏨 Hotel (median price monthly)",
-            "cost": "$283 / month"
-        },
-        {
-            "title": "🏨 Hotel (median price)",
-            "cost": "$13 / night"
-        },
-        {
-            "title": "🍛 Dinner",
+            "title": "🍛 Meal",
             "cost": "$3.50"
-        },
-        {
-            "title": "🥤 Coca-Cola (0.3L)",
-            "cost": "$0.58"
         },
         {
             "title": "🍺 Beer (0.5L)",
             "cost": "$1.75"
         },
         {
-            "title": "☕️ Coffee",
+            "title": "☕️ Cup of Joe",
             "cost": "$1.17"
         }
     ],
     "denpasar" : [
         {
-            "title": "💵 Cost of living for expat",
+            "title": "💵 Cost of living",
             "cost": "$327 / month"
         },
         {
-            "title": "💵 Cost of living for family",
-            "cost": "$920 / month"
-        },
-        {
-            "title": "💵 Cost of living for local",
-            "cost": "$263 / month"
-        },
-        {
-            "title": "🏠 1br studio rent in center",
+            "title": "🏠 1br studio",
             "cost": "$122 / month"
         },
         {
-            "title": "🏢Coworking",
-            "cost": "$132 / month"
+            "title": "✂️ Basic Haircut",
+            "cost": "$6.00"
         },
         {
-            "title": "🏨 Hotel (median price monthly)",
-            "cost": "$222 / month"
+            "title": "🩺 Visit to Doctor",
+            "cost": "$50.35"
         },
         {
-            "title": "🏨 Hotel (median price)",
-            "cost": "$10 / night"
-        },
-        {
-            "title": "🍛 Dinner",
+            "title": "🍛 Meal",
             "cost": "$1.05"
-        },
-        {
-            "title": "🥤 Coca-Cola (0.3L)",
-            "cost": "$0.51"
         },
         {
             "title": "🍺 Beer (0.5L)",
             "cost": "$0.52"
         },
         {
-            "title": "☕️ Coffee",
+            "title": "☕️ Cup of Joe",
             "cost": "$1.99"
         }
     ],
     "cartagena" : [
         {
-            "title": "💵 Cost of living for expat",
+            "title": "💵 Cost of living",
             "cost": "$327 / month"
         },
         {
-            "title": "💵 Cost of living for family",
-            "cost": "$920 / month"
-        },
-        {
-            "title": "💵 Cost of living for local",
-            "cost": "$263 / month"
-        },
-        {
-            "title": "🏠 1br studio rent in center",
+            "title": "🏠 1br studio",
             "cost": "$122 / month"
         },
         {
-            "title": "🏢Coworking",
-            "cost": "$132 / month"
+            "title": "✂️ Basic Haircut",
+            "cost": "$3.00"
         },
         {
-            "title": "🏨 Hotel (median price monthly)",
-            "cost": "$222 / month"
+            "title": "🩺 Visit to Doctor",
+            "cost": "$50.35"
         },
         {
-            "title": "🏨 Hotel (median price)",
-            "cost": "$10 / night"
-        },
-        {
-            "title": "🍛 Dinner",
+            "title": "🍛 Meal",
             "cost": "$1.05"
-        },
-        {
-            "title": "🥤 Coca-Cola (0.3L)",
-            "cost": "$0.51"
         },
         {
             "title": "🍺 Beer (0.5L)",
             "cost": "$0.52"
         },
         {
-            "title": "☕️ Coffee",
+            "title": "☕️ Cup of Joe",
             "cost": "$1.99"
         }
     ]
