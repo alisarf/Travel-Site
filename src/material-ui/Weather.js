@@ -4,7 +4,7 @@ import { Card } from "@mui/material";
 const Weather = (props) => {
     const [weather, setWeather] = useState({});
     const api = {
-        key: "3a2b308bcf33b99a8500227f26bafdeb",
+        key: process.env.REACT_APP_WEATHER_API_KEY,
         base: "https://api.openweathermap.org/data/2.5/"
     }
     const weathericon = {

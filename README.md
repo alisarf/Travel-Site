@@ -2,7 +2,7 @@
 
 A dynamic travel site built using React. React Router directory and pages are dynamically constructed via translation of JSON file containing content on a variety of tourist destinations. In order to add pages, admin would simply add new destination information to content.json file. UI constructed using Material UI components and Tailwind css for efficient and consistent styling. Location weather and map from Mapbox and Open Weather Map Api.
 
-live: Not Available at this time.
+live: https://globetravel.web.app
 
 ## Table of contents
 
