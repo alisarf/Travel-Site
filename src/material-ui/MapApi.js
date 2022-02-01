@@ -4,6 +4,14 @@ import pin from "../assets/images/icons/pin.png"
 import { Paper } from "@mui/material";
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+
+import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
+
+//TO PREVENT BUG IN MAP API
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
+
 //INPUT: props cordinate state
 //OUTPUT: Map of location with pin
 

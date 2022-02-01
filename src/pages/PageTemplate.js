@@ -10,9 +10,9 @@ import SectionPara from '../material-ui/SectionPara';
 import MapApi from '../material-ui/MapApi';
 import Cost from '../material-ui/Cost';
 import Divide from '../material-ui/Divide';
-
+import TitleHead from '../material-ui/TitleHead';
 //Icons for Font-Awesome
-import { Typography } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 
 //INPUT: Location, ImgBanner, Video
 //OUTPUT: Entire Page Template
@@ -28,7 +28,7 @@ const PageTemplate = (props) => {
         {id:3, ref: 'activities', title: 'activities'},
         {id:4, ref: 'articles', title: 'what to know'}
     ]
-    const htTrio = '180px';
+    const htTrio = 'auto';
 
     //Feature Image [Title, SubTitle]
     const imgFeat = ['Things to Do', `Explore the top tourist destinations in ${location}.`]
@@ -64,7 +64,7 @@ const PageTemplate = (props) => {
                         ))}
                     </ul>
                 </div>
-                <section className='flex flex-row w-3/4 gap-8 justify-center mx-auto' style={{height: htTrio}}>
+                <section className='flex flex-row w-3/4 gap-8 justify-center mx-auto pt-16 pb-8' style={{height: htTrio}}>
                     <MapApi cords = {coordinates}/>
                     <Weather 
                         location = {location}
@@ -74,28 +74,37 @@ const PageTemplate = (props) => {
                     <ProgressBarBox  location = {location}/> 
                 </section>
 
-                <Divide title = "Cost" nav = 'cost'/>
-                <Cost location = {location}/>
 
-                <Divide title = "Transportation" nav = 'transport'/>
-                <FeatureTri location = {location}/>
-                <SectionPara 
-                    location = {location}
-                    info = 'transport'
-                />
 
-                <Divide 
-                    title = "Activites"
-                    nav = 'activities'
-                />
-                <FeatureCards 
-                    array = {props.imgArr}
-                    title = {imgFeat[0]} 
-                    subtitle = {imgFeat[1]} 
-                    location = {location}
-                />
 
-                <Divide title = "What to know" nav = 'articles'/>
+
+                <section className='Accent_Lt pt-16 pb-8'>
+                    <TitleHead  title = "transport" nav = 'transport'/>
+                    <FeatureTri location = {location}/>
+                    <SectionPara 
+                        location = {location}
+                        info = 'transport'
+                    />
+                    <Button variant="contained" className='Button'>Learn More</Button>
+                </section>
+
+                <section className='pt-16 pb-8'>                
+                    <TitleHead  title = "Cost of Living" nav = 'cost'/>
+                    <Cost location = {location}/>
+                </section> 
+
+                <section className='Accent_Lt pt-16 pb-8'>
+                    <TitleHead  title = "Things to Do" nav = 'activities'/>
+                    <FeatureCards 
+                        array = {props.imgArr}
+                        title = {imgFeat[0]} 
+                        subtitle = {imgFeat[1]} 
+                        location = {location}
+                    />
+                </section>
+
+                <section className='pt-16 pb-8'>
+                <TitleHead title = "What to know" nav = 'articles'/>
                 <SectionPara location = {location} info = 'articles'/>
                 {/* Use a terinary if statement with true/false
                 to indicate if videobanner should be here
@@ -104,6 +113,7 @@ const PageTemplate = (props) => {
                     msg = 'Endless Rice Fields'
                     speed = '1.2'
                 />*/}
+                </section>
             </div>
             <Footer/>
         </div>

@@ -77,8 +77,7 @@ function App() {
       </div>
 
       </div>  }
-      {/* end of meat of page here*/}
-
+      {/* end of bulk of page here*/}
 
       <Paper elevation={3} className='flex flex-col m-auto w-4/12 items-center p-3 gap-y-4 pb-4 md:mx-4 w-full'>
         <Typography gutterBottom variant="h5" className="text-center">Get the Latest!</Typography>

@@ -25,10 +25,11 @@ const FeatureTri = (props) => {
             <div className='flex justify-evenly my-10'>
                 {travel.map(mode => (
                     <div className='flex flex-col'>
-                        <FontAwesomeIcon icon= {iconCheck(mode.type)}  className= 'mx-auto my-4' style={{ width: 'calc(50px + 3rem)' , height:'calc(50px + 3rem)', backgroundColor: '#57bdb780', borderRadius:'50px', padding: '1.8rem'}}/>
-                        <Typography variant='h5' className='text-center my-2' sx={{ fontWeight: '700', margin: '0.5rem auto', textTransform: 'capitalize'}}>{mode.type}</Typography>
-                        <h6 className='text-center text-gray-400'>Avg Travel Time: {mode.time}</h6>
-                        <h6 className='text-center text-gray-400'>{mode.cost}</h6>
+                        
+                        <FontAwesomeIcon icon= {iconCheck(mode.type)}  className= 'mx-auto' style={{ width:'50px' , height:'50px', color:'black'}}/>
+                        <Typography variant='h6' className='text-center my-2 uppercase' sx={{ fontWeight: '700', margin: '0.5rem auto', fontFamily: 'Roboto Condensed'}}>{mode.type}</Typography>
+                        <h6 className='text-center '>{mode.time}</h6>
+                        <h6 className='text-center '>{mode.cost}</h6>
                     </div>
                 ))}
             </div>

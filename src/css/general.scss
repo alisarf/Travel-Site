@@ -1,11 +1,34 @@
 //color pallete
-$accentBold : orange; 
+$accentBold : #ff3d00; 
+$accentBoldLt : #fff5f2;
 .Accent { color: $accentBold }
+.Accent_Bg {
+    background-color: $accentBold;
+}
+.Accent_Lt {
+    background-color: $accentBoldLt;
+}
+
+.Button{
+    background-color: #ff3d00 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 0 !important;
+    font-family: 'Roboto Condensed', 'sans-serif' !important;
+    font-weight: 700 !important;
+    display: flex !important;
+    position: relative !important;
+    margin: auto !important;
+    &:hover{
+        background-color: #e63600 !important;
+    }
+}
 
 $color-lt-teal: #e0f2f1;
 $color-dk-teal: #00796b;
 $color-slate: #546e7a;
 $color-md-teal: #00a895b9;
+
+$color-deep-grey: #28282a;
 .Font_dk_teal {
     color: $color-dk-teal;
 }
@@ -29,6 +52,32 @@ $color-md-teal: #00a895b9;
 .Roboto {
     font-family: 'Roboto','sans-serif';
 }
+.Roboto_Condensed {
+    font-family: 'Roboto Condensed','sans-serif';
+}
+
+
+//header border bottom
+.Divider::after{
+    position: relative; 
+    content: ""; 
+    width: 30px; 
+    height: 4px; 
+    background: $accentBold; 
+    display: block; margin:auto;
+}
+
+
+//Main-Section-Container:
+
+.Shadow_Img{
+    //background-image: url('../assets/images/media/line.png');
+    //background-size: cover;
+    //opacity: .3;
+}
+
+
+
 
 //FONT SIZING
 a {
@@ -97,9 +146,15 @@ nav{
 .Nav-link-destination {
     color: black !important;
 }
+
+//NAV responsive to destination hover
 .Nav-h-min{
-    min-height: 3rem;
+    //min-height: 3rem;
 }
+.Grey-Deep-Bg{
+    background-color:$color-deep-grey;
+}
+
 main{
     width: 100%;
 }
@@ -142,14 +197,23 @@ main{
 @import url('https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap');
 //ROBOTO Condensed
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
-
+//Work Sans
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400&display=swap');
 .Condense {
     font-family: 'Roboto Condensed', sans-serif;
+}
+.Work_sans{
+    font-family: 'Work Sans', sans-serif;
 }
 
 .Font_brushy {
     font-family: 'MyFont';
 }
+
+h6{
+    font-family: 'Work Sans', sans-serif;
+}
+
 
 .Weather_icon {
     width: 100px;
@@ -185,7 +249,7 @@ main{
 .Para {
     line-height: 1.5;
     font-size: 1.125rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 
@@ -213,6 +277,16 @@ main{
     height: 450px;
 }
 
+//FOOTER COLORS
+//SOCIAL ICONS:
+.Transition_Grey{
+    cursor: pointer;
+    color: #3d3d4e;
+    transition: .3 ease-in;
+    &:hover{
+        color: black;
+    }
+}
 
 //Desktop and Large Laptops
 @media screen and (min-width: 992px) {
