@@ -12,8 +12,7 @@ const HeadBanner = (props) => {
             
             <div className='flex-col justify-center w-full half_vh'>
             </div>
-            <div className='Frost half_vh'>
-            </div>
+
             <div className='Heroimage half_vh flex justify-center'  style={{ backgroundImage: `url(${props.image ? props.image : ImgBanner})` }}>
                
             </div>

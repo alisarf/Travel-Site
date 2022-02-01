@@ -13,11 +13,12 @@ import { ReactComponent as Logo } from '../assets/palm-tree-svgrepo-com.svg';
 const Footer = () => {
     const styles = {
         icon: { width: '30px', height: '30px',},
-        aqua: {color: 'rgb(87, 189, 183)',}
+        aqua: {color: 'rgb(87, 189, 183)',},
+        grey: {color: 'rgb(65 71 74)',}
       }
 
     return (
-        <footer>
+        <footer className=' Accent_Lt'>
         <section className='flex flex-row justify-between mb-10'>
           <div className='inline-block'>
               <h6 className='font-bold'>Resources</h6>
@@ -62,9 +63,9 @@ const Footer = () => {
           
           
           <div>
-          <FacebookIcon style = {{...styles.icon, ...styles.aqua}}/>
-          <InstagramIcon style = {{...styles.icon, ...styles.aqua}}/>
-          <TwitterIcon style = {{...styles.icon, ...styles.aqua}}/>
+          <FacebookIcon className='Transition_Grey'/>
+          <InstagramIcon className='Transition_Grey'/>
+          <TwitterIcon className='Transition_Grey'/>
           </div>
         </section>
       </footer>

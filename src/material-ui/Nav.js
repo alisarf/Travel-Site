@@ -31,12 +31,8 @@ const Nav = (props) => {
     //TESTING GIT 123
 
     return (
-            <nav className='flex justify-between pt-8 pb-4 mx-auto w-3/4 items-center text-white Roboto tracking-widest'>
-                <Link to='/' >
-                    <Typography variant='h6' gutterBottom className="text-center">Travel Bali</Typography>
-                </Link>
-            <ul className='relative'>
-                <li className='inline-block m-3 relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>
+            <nav className=' Grey-Deep-Bg Roboto_Condensed flex px-8 py-2 justify-between w-full items-center text-white tracking-widest'>
+                <div className='inline-block m-3 relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>
                         <button>Destinations</button>
                         <div className={`bg-white absolute top-12 left-0 ${navBtn === true ? 'block' : 'hidden'}`}>
                             <ul>
@@ -49,14 +45,16 @@ const Nav = (props) => {
                                 ))}
                             </ul>
                         </div>
-                    
-                </li>
-                <li className='inline-block m-3'>
+                </div>
+                <Link to='/' >
+                    <Typography variant='h6' gutterBottom sx={{ fontFamily: 'Roboto Condensed', fontWeight:700}} className="text-center uppercase">Travel Bali</Typography>
+                </Link>
+                <div className='inline-block m-3'>
                     <Link to='/favorites'>
                         <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} onClick={printHeart}/>
                     </Link>
-                </li>
-            </ul>
+                </div>
+            
         </nav>
     )
 }

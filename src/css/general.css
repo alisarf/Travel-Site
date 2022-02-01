@@ -1,7 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400&display=swap");
 .Accent {
-  color: orange;
+  color: #ff3d00;
+}
+
+.Accent_Bg {
+  background-color: #ff3d00;
+}
+
+.Accent_Lt {
+  background-color: #fff5f2;
+}
+
+.Button {
+  background-color: #ff3d00 !important;
+  padding: 1rem 2rem !important;
+  border-radius: 0 !important;
+  font-family: 'Roboto Condensed', 'sans-serif' !important;
+  font-weight: 700 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: relative !important;
+  margin: auto !important;
+}
+
+.Button:hover {
+  background-color: #e63600 !important;
 }
 
 .Font_dk_teal {
@@ -30,6 +56,20 @@
 
 .Roboto {
   font-family: 'Roboto','sans-serif';
+}
+
+.Roboto_Condensed {
+  font-family: 'Roboto Condensed','sans-serif';
+}
+
+.Divider::after {
+  position: relative;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background: #ff3d00;
+  display: block;
+  margin: auto;
 }
 
 a {
@@ -111,8 +151,8 @@ nav a {
   color: black !important;
 }
 
-.Nav-h-min {
-  min-height: 3rem;
+.Grey-Deep-Bg {
+  background-color: #28282a;
 }
 
 main {
@@ -151,8 +191,16 @@ main {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.Work_sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
 .Font_brushy {
   font-family: 'MyFont';
+}
+
+h6 {
+  font-family: 'Work Sans', sans-serif;
 }
 
 .Weather_icon {
@@ -187,7 +235,7 @@ main {
 .Para {
   line-height: 1.5;
   font-size: 1.125rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .Left_rounded {
@@ -195,7 +243,7 @@ main {
 }
 
 .MuiDivider-root::before, .MuiDivider-root::after {
-  border-top: 3px solid orange !important;
+  border-top: 3px solid #ff3d00 !important;
 }
 
 .css-1vw6mcs-MuiTypography-root {
@@ -204,6 +252,17 @@ main {
 
 .Feature_cardWidth {
   height: 450px;
+}
+
+.Transition_Grey {
+  cursor: pointer;
+  color: #3d3d4e;
+  -webkit-transition: .3 ease-in;
+  transition: .3 ease-in;
+}
+
+.Transition_Grey:hover {
+  color: black;
 }
 
 @media screen and (max-width: 600px) {
