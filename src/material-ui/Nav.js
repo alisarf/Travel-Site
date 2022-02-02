@@ -31,7 +31,7 @@ const Nav = (props) => {
     //TESTING GIT 123
 
     return (
-            <nav className=' Grey-Deep-Bg Roboto_Condensed flex px-8 py-2 justify-between w-full items-center text-white tracking-widest'>
+            <nav className=' Grey-Deep-Bg Roboto_Condensed flex px-8 py-2 justify-between w-full h-16 items-center text-white tracking-widest'>
                 <div className='inline-block m-3 relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>
                         <button>Destinations</button>
                         <div className={`bg-white absolute top-12 left-0 ${navBtn === true ? 'block' : 'hidden'}`}>
@@ -47,7 +47,7 @@ const Nav = (props) => {
                         </div>
                 </div>
                 <Link to='/' >
-                    <Typography variant='h6' gutterBottom sx={{ fontFamily: 'Roboto Condensed', fontWeight:700}} className="text-center uppercase">Travel Bali</Typography>
+                    <Typography variant='h6' gutterBottom sx={{ fontFamily:  'MyFont , sans-serif', fontWeight:700, color: 'white'}} className="text-center capitalize">Travel Bali</Typography>
                 </Link>
                 <div className='inline-block m-3'>
                     <Link to='/favorites'>

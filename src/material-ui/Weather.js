@@ -1,5 +1,4 @@
 import React, {useState , useEffect} from "react";
-import { Card } from "@mui/material";
 
 const Weather = (props) => {
     const [weather, setWeather] = useState({});
@@ -31,9 +30,9 @@ const Weather = (props) => {
 
 
     return (
-        <Card className = 'w-fit'>
+        <article className = 'w-fit'>
             {(typeof weather.main != "undefined") ? (
-            <section className="flex flex-row gap-8 justify-evenly items-center Bg_lt_teal py-8 px-8">
+            <section className="flex flex-row gap-8 justify-evenly items-center Grey_lt py-8 px-8">
                 <div>
                     <div className="text-xl font-bold Font_dk_teal"> {weather.weather[0].main} </div>
                     <div className="text-5xl font-bold Font_dk_teal"> {Math.round((weather.main.temp)*1.8 + 32)}°F</div>
@@ -46,7 +45,7 @@ const Weather = (props) => {
                 
             </section>
             ):('')}
-        </Card>
+        </article>
     )
 }
 

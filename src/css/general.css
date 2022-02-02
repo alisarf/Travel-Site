@@ -13,21 +13,12 @@
   background-color: #fff5f2;
 }
 
-.Button {
-  background-color: #ff3d00 !important;
-  padding: 1rem 2rem !important;
-  border-radius: 0 !important;
-  font-family: 'Roboto Condensed', 'sans-serif' !important;
-  font-weight: 700 !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  position: relative !important;
-  margin: auto !important;
+.Black {
+  color: #3d3d4e;
 }
 
-.Button:hover {
-  background-color: #e63600 !important;
+.Grey_lt {
+  background-color: #fafafa;
 }
 
 .Font_dk_teal {
@@ -60,6 +51,27 @@
 
 .Roboto_Condensed {
   font-family: 'Roboto Condensed','sans-serif';
+}
+
+h5, h4, h6 {
+  color: #3d3d4e;
+}
+
+.Button {
+  background-color: #ff3d00 !important;
+  padding: 1rem 2rem !important;
+  border-radius: 0 !important;
+  font-family: 'Roboto Condensed', 'sans-serif' !important;
+  font-weight: 700 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: relative !important;
+  margin: auto !important;
+}
+
+.Button:hover {
+  background-color: #e63600 !important;
 }
 
 .Divider::after {
@@ -151,8 +163,24 @@ nav a {
   color: black !important;
 }
 
+.Nav-h-min {
+  min-height: 3rem;
+  top: .75rem;
+}
+
 .Grey-Deep-Bg {
   background-color: #28282a;
+}
+
+.Palm {
+  background-image: url("../assets/images/media/palm/palm.svg");
+}
+
+.Palm_leaf {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: -2;
 }
 
 main {
@@ -182,7 +210,7 @@ main {
 
 @font-face {
   font-family: 'MyFont';
-  src: local("MyFont"), url(../assets/fonts/brushy/BRUSHY.ttf) format("truetype");
+  src: local("MyFont"), url(../assets/fonts/fall_in_love/FallInLove.ttf) format("truetype");
   /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
 }
@@ -192,11 +220,11 @@ main {
 }
 
 .Work_sans {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif !important;
 }
 
-.Font_brushy {
-  font-family: 'MyFont';
+.Font_Custom {
+  font-family: 'MyFont', sans-serif;
 }
 
 h6 {
@@ -242,6 +270,15 @@ h6 {
   border-radius: 100px 0 0 100px;
 }
 
+.css-1ex1afd-MuiTableCell-root {
+  font-weight: 700 !important;
+  font-family: 'Work Sans', 'sans-serif' !important;
+}
+
+.css-177gid-MuiTableCell-root {
+  font-family: 'Work Sans', 'sans-serif' !important;
+}
+
 .MuiDivider-root::before, .MuiDivider-root::after {
   border-top: 3px solid #ff3d00 !important;
 }
@@ -251,7 +288,7 @@ h6 {
 }
 
 .Feature_cardWidth {
-  height: 450px;
+  height: 350px;
 }
 
 .Transition_Grey {

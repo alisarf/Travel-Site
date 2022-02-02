@@ -15,7 +15,7 @@ const Cost = (props) => {
 
     return (
         <TableContainer component={Paper} sx={{ margin: '2rem auto', width: '70%'}}>
-        <Table sx={{ minWidth: 200 }} aria-label="simple table">
+        <Table sx={{ minWidth: 200 , backgroundColor: '#fafafa' }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell sx={{fontWeight: 'bold'}}>Item</TableCell>
@@ -26,7 +26,7 @@ const Cost = (props) => {
             {arr.map((row) => (
               <TableRow
                 key={row.title}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 }, textTransform: 'capitalize' }}
               >
                 <TableCell component="th" scope="row">
                   {row.title}

@@ -57,8 +57,7 @@ const Footer = () => {
         </section>
         <section className='flex flex-row justify-between'>
           <div className="flex flex-row">
-            <Logo className='w-10 h-10 inline-block'/>
-            <h5 className="inline-block font-bold italic text-3xl m-auto" style={styles.aqua}>Travel Bali</h5>
+            <h5 className="inline-block font-bold italic text-3xl m-auto Font_Custom">Travel Bali</h5>
           </div>
           
           

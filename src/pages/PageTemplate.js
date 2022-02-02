@@ -11,6 +11,7 @@ import MapApi from '../material-ui/MapApi';
 import Cost from '../material-ui/Cost';
 import Divide from '../material-ui/Divide';
 import TitleHead from '../material-ui/TitleHead';
+import palm_leaf from '../assets/images/media/palm/palm_leaf.svg'
 //Icons for Font-Awesome
 import { Typography, Button } from '@mui/material';
 
@@ -41,7 +42,7 @@ const PageTemplate = (props) => {
             <div className='Page_Template_Container z-10 '>
                 <div className="left-0 bg-white Headbanner_div">
                     <h3 className='Accent font-bold self-center text-5xl  capitalize sm:text-5xl md:text-6xl lg:text-7xl'>{location}</h3>
-                    <h4 className='self-center text-xl text-black  capitalize sm:text-xl md:text-2xl lg:text-3xl'>lorem impusum dolor color lorem ipsum pretty beahes and twinkling sands. Walk the beach and explore the dinign cuisine like never efore.</h4>
+                    <h4 className='self-center text-xl Black  capitalize sm:text-xl md:text-2xl lg:text-3xl'>lorem impusum dolor color lorem ipsum pretty beahes and twinkling sands. Walk the beach and explore the dinign cuisine like never efore.</h4>
                 </div>
                 <div className=' w-3/4 mx-auto my-8'>
                     <ul className='LetterSpacing'>
@@ -51,7 +52,7 @@ const PageTemplate = (props) => {
                                     <span className='font-bold Font_dk_slate mr-4 text-sm'>0{section.id}.</span>
                                     <Typography 
                                         variant='body1' 
-                                        className='inline' 
+                                        className='inline Black' 
                                         sx={{
                                             fontWeight: 600,
                                             fontSize: '1.3em',
@@ -78,7 +79,7 @@ const PageTemplate = (props) => {
 
 
 
-                <section className='Accent_Lt pt-16 pb-8'>
+                <section className='Accent_Lt Palm pt-16 pb-8'>
                     <TitleHead  title = "transport" nav = 'transport'/>
                     <FeatureTri location = {location}/>
                     <SectionPara 
@@ -86,6 +87,7 @@ const PageTemplate = (props) => {
                         info = 'transport'
                     />
                     <Button variant="contained" className='Button'>Learn More</Button>
+
                 </section>
 
                 <section className='pt-16 pb-8'>                
@@ -93,7 +95,7 @@ const PageTemplate = (props) => {
                     <Cost location = {location}/>
                 </section> 
 
-                <section className='Accent_Lt pt-16 pb-8'>
+                <section className='Accent_Lt Palm pt-16 pb-8'>
                     <TitleHead  title = "Things to Do" nav = 'activities'/>
                     <FeatureCards 
                         array = {props.imgArr}
@@ -103,8 +105,9 @@ const PageTemplate = (props) => {
                     />
                 </section>
 
-                <section className='pt-16 pb-8'>
+                <section className='pt-16 pb-8 relative'>
                 <TitleHead title = "What to know" nav = 'articles'/>
+                
                 <SectionPara location = {location} info = 'articles'/>
                 {/* Use a terinary if statement with true/false
                 to indicate if videobanner should be here
@@ -113,6 +116,8 @@ const PageTemplate = (props) => {
                     msg = 'Endless Rice Fields'
                     speed = '1.2'
                 />*/}
+                <img className='Palm_leaf top-28 right-1/3' style={{transform: 'rotate(180deg)'}} src={palm_leaf}/>
+                <img className='Palm_leaf bottom-0 left-1/3' src={palm_leaf}/>
                 </section>
             </div>
             <Footer/>
