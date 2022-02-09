@@ -47,7 +47,7 @@ const Nav = (props) => {
                         </div>
                 </div>
                 <Link to='/' >
-                    <Typography variant='h6' gutterBottom sx={{ fontFamily:  'MyFont , sans-serif', fontWeight:700, color: 'white'}} className="text-center capitalize">Travel Bali</Typography>
+                    <Typography variant='h6' gutterBottom sx={{ fontFamily:  'Roboto Condensed , sans-serif', fontWeight:700, color: 'white'}} className="text-center capitalize">Travel Bali</Typography>
                 </Link>
                 <div className='inline-block m-3'>
                     <Link to='/favorites'>

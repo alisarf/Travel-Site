@@ -44,8 +44,8 @@ const MapApi = (props) => {
         setViewport({
             latitude: latitude,
             longitude: longitude,
-            width: "20vw",
-            height: "180px",
+            width: "50vw",
+            height: "50vw",
             zoom: 10})
     }, [latitude, longitude])
 
