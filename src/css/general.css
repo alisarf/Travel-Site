@@ -74,6 +74,25 @@ h5, h4, h6 {
   background-color: #e63600 !important;
 }
 
+.Test {
+  background-image: url("../assets/images/bali/headbanner.jpg");
+  background-size: cover;
+}
+
+.Text-shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Overlay {
+  opacity: .2;
+  -webkit-transition: .1s ease-in;
+  transition: .1s ease-in;
+}
+
+.Overlay:hover {
+  opacity: 0 !important;
+}
+
 .Divider::after {
   position: relative;
   content: "";
@@ -169,7 +188,7 @@ nav a {
 }
 
 .Grey-Deep-Bg {
-  background-color: #28282a;
+  background-color: #3d3d4edb;
 }
 
 .Palm {

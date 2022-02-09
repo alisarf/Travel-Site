@@ -22,10 +22,9 @@ const FeatureTri = (props) => {
     return (
         <section className='my-10'>
             <Typography variant='h5' className='text-center' sx={{ fontWeight: '700'}}>How to Get Around</Typography>
-            <div className='flex justify-evenly my-10'>
+            <div className='block my-10 sm:flex justify-evenly'>
                 {travel.map(mode => (
-                    <div className='flex flex-col'>
-                        
+                    <div className='flex flex-col my-8 sm:my-0'>
                         <FontAwesomeIcon icon= {iconCheck(mode.type)}  className= 'mx-auto' style={{ width:'50px' , height:'50px', color:'black'}}/>
                         <Typography variant='h6' className='text-center my-2 uppercase' sx={{ fontWeight: '700', margin: '0.5rem auto', fontFamily: 'Roboto Condensed'}}>{mode.type}</Typography>
                         <h6 className='text-center '>{mode.time}</h6>
