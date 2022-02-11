@@ -7,11 +7,12 @@ import { Typography, Button, Paper, TextField, Pagination} from '@mui/material';
 import RadioGroupRating from './material-ui/rating';
 import FeatureCards from './material-ui/FeatureCards';
 import HeadBanner from './material-ui/HeadBanner'; 
-import ImgBanner from './assets/images/bali/headbanner2.png';
+import ImgBanner from './assets/images/kuta/Kuta-Beach.jpg';
 import Video from './assets/images/bali/culture.mp4';
 import Footer from './material-ui/Footer';
 import VideoBanner from './material-ui/VideoBanner';
 import TitleHead from './material-ui/TitleHead';
+import IntroBanner from './material-ui/IntroBanner';
 import palm_leaf from './assets/images/media/palm/palm_leaf.svg'
 import this_img from './assets/images/ubud/ubud-people.jpg';
 import PageTemplate from './pages/PageTemplate'
@@ -62,7 +63,7 @@ function App() {
     <main>
       
       <HeadBanner title= 'Adventure!' image = {ImgBanner}  elem = {elem}/>
-
+      <IntroBanner image = {ImgBanner}/>
 
       { destination ? <PageTemplate city = {destination}/> : 
 

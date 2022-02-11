@@ -7,11 +7,14 @@ import FeatureTri from '../material-ui/FeatureTri';
 import Weather from '../material-ui/Weather';
 import ProgressBarBox from '../material-ui/ProgressBarBox';
 import SectionPara from '../material-ui/SectionPara';
+import SectionParaMulti from '../material-ui/SectionParaMulti';
 import MapApi from '../material-ui/MapApi';
 import Cost from '../material-ui/Cost';
 import Divide from '../material-ui/Divide';
 import TitleHead from '../material-ui/TitleHead';
 import palm_leaf from '../assets/images/media/palm/palm_leaf.svg'
+import IntroBanner from '../material-ui/IntroBanner';
+import DashCard from '../material-ui/DashCard';
 //Icons for Font-Awesome
 import { Typography, Button } from '@mui/material';
 
@@ -39,11 +42,9 @@ const PageTemplate = (props) => {
     return (
         <div>  
             <HeadBanner title= {location} />
+            <IntroBanner />
             <div className='Page_Template_Container z-10 '>
-                <div className="left-0 bg-white Headbanner_div">
-                    <h3 className='Accent font-bold self-center text-5xl capitalize sm:text-5xl md:text-6xl lg:text-7xl'>{location}</h3>
-                    <h4 className='self-center text-xl Black capitalize sm:text-xl md:text-2xl lg:text-3xl'>lorem impusum dolor color lorem ipsum pretty beahes and twinkling sands. Walk the beach and explore the dinign cuisine like never efore.</h4>
-                </div>
+                {/* The navigation selections */}
                 <div className=' w-3/4 mx-auto my-8'>
                     <ul className='LetterSpacing'>
                         {navArr.map( section => (
@@ -65,26 +66,34 @@ const PageTemplate = (props) => {
                         ))}
                     </ul>
                 </div>
-                <section className='block w-3/4 gap-8 justify-center mx-auto pt-16 pb-8 sm:flex flex-row' style={{height: htTrio}}>
-                    <MapApi cords = {coordinates}/>
-                    <Weather 
-                        location = {location}
-                        cords = {coordinates} 
-                        setCords = {setCoordinates}
-                    />
-                    <ProgressBarBox  location = {location}/> 
+                {/* The navigation selections */}
+                <section className='block w-4/5 gap-8 justify-between mx-auto pt-16 pb-8 sm:flex flex-row' style={{height: htTrio}}>
+                    <section className='w-2/5'>
+                        <DashCard location = {location}/>
+                    </section>
+                     <MapApi cords = {coordinates}/>
                 </section>
 
+                
+                
+                
+                <Weather 
+                    location = {location}
+                    cords = {coordinates} 
+                    setCords = {setCoordinates}
+                />
+                
 
-
-                <section className='Accent_Lt Palm pt-16 pb-8'>
-                    <TitleHead  title = "transport" nav = 'transport'/>
-                    <FeatureTri location = {location}/>
+                <section className=' w-4/5 m-auto rounded-2xl overflow-hidden  shadow-lg'>
+                    <div className='bg-white p-12'>
+                        <TitleHead  title = "transport" nav = 'transport'/>
+                        <FeatureTri location = {location}/>
+                    </div>
                     <SectionPara 
                         location = {location}
                         info = 'transport'
                     />
-                    <Button variant="contained" className='Button'>Learn More</Button>
+                    {/*<Button variant="contained" className='Button'>Learn More</Button>*/}
 
                 </section>
 
@@ -103,10 +112,10 @@ const PageTemplate = (props) => {
                     />
                 </section>
 
-                <section className='pt-16 pb-8 relative'>
+                <section className='w-4/5 m-auto p-16 relative mx-auto bg-white rounded-2xl overflow-hidden shadow-lg'>
                 <TitleHead title = "What to know" nav = 'articles'/>
                 
-                <SectionPara location = {location} info = 'articles'/>
+                <SectionParaMulti location = {location} info = 'articles'/>
                 {/* Use a terinary if statement with true/false
                 to indicate if videobanner should be here
                 <VideoBanner 

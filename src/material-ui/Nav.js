@@ -31,9 +31,13 @@ const Nav = (props) => {
     //TESTING GIT 123
 
     return (
-            <nav className=' Grey-Deep-Bg Roboto_Condensed flex px-8 py-2 justify-between w-full h-16 items-center text-white tracking-widest'>
+            <nav className='flex w-4/5 m-auto py-2 justify-between VW-10 items-center tracking-widest'>
+                <Link to='/' >
+                    <span className="Special_Title font-bold text-center uppercase">Travel Bali</span>
+                </Link>
+                <div className='flex flex-row items-center'>
                 <div className='inline-block m-3 relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>
-                        <button>Destinations</button>
+                        <button className='uppercase Work-sans'>Destinations</button>
                         <div className={`bg-white absolute top-12 left-0 ${navBtn === true ? 'block' : 'hidden'}`}>
                             <ul>
                                 {potlocations.map( city => (
@@ -46,13 +50,14 @@ const Nav = (props) => {
                             </ul>
                         </div>
                 </div>
-                <Link to='/' >
-                    <Typography variant='h6' gutterBottom sx={{ fontFamily:  'Roboto Condensed , sans-serif', fontWeight:700, color: 'white'}} className="text-center capitalize">Travel Bali</Typography>
-                </Link>
+                <a className='uppercase Work-sans tracking-normal m-4'>About us</a>
+                <a className='uppercase Work-sans tracking-normal m-4'>Contact</a>
+
                 <div className='inline-block m-3'>
                     <Link to='/favorites'>
                         <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} onClick={printHeart}/>
                     </Link>
+                </div>
                 </div>
             
         </nav>

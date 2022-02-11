@@ -6,11 +6,11 @@ import content from "../assets/content/content.json"
 
 const SectionPara = (props) => {
     return (
-        <section className="w-3/4 mx-auto">
+        <section className="mx-auto Accent_Bg p-12">
             {content[props.location][props.info].map( article => (
-                <div className=" my-8">
-                    <Typography className='Header_lh uppercase' variant='h5' sx={{ fontWeight: '700', margin: '1rem auto', fontFamily: 'Roboto Condensed' }}>{article.title}</Typography>
-                    <p className='text-black-400 Para'>{article.text}</p>
+                <div className="">
+                    <h4 className='uppercase text-white' variant='h2'>{article.title}</h4>
+                    <p className='text-white'>{article.text}</p>
                 </div>
             ))}
         </section>

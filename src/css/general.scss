@@ -1,63 +1,62 @@
-//color pallete
-$accentBold : #ff3d00; 
-$accentBoldLt : #fff5f2;
-.Accent { color: $accentBold }
+
+/*COLOR PALLETTE*/
+
+//Blues
+$accentBold : #0912FF;
+$accent : #818CF8;
+$accent_active : #5665FC;
+$accentLt : rgba(129, 140, 248, 0.04);
+$primary_blue : #3B8FF1;
+$primary_blue_active: #1476E9;
+
+//Neutrals
+$grey-lightest: #EBEBEB;
+$black_grey : #3d3d4e;
+$black-grey_grey: #28282a;
+$white_text : white;
+$main_Bg : #FBFBFB;
+
+
+.Accent { 
+    color: $accent;
+}
 .Accent_Bg {
+    background-color: $accent;
+}
+.Accent_Bg_Lt {
+    background-color: $accentLt;
+}
+.Accent_Active {
+    color: $accent_active;
+}
+.Accent_Bold {
     background-color: $accentBold;
 }
-.Accent_Lt {
-    background-color: $accentBoldLt;
+.Accent_Bold_Bg {
+    background-color: $accentBold;
 }
 
-
-
-
-
-
-$color-lt-teal: #e0f2f1;
-$color-dk-teal: #00796b;
-$color-slate: #546e7a;
-$color-md-teal: #00a895b9;
-
-$grey-lightest: #fafafa;
-$black-accent : #3d3d4e;
-$black-grey-accent: #28282a;
-
 .Black {
-    color: $black-accent;
+    color: $black_grey;
 }
 .Grey_lt {
     background-color: $grey-lightest;
 }
-.Font_dk_teal {
-    color: $color-dk-teal;
-}
-.Font_md_teal {
-    color: $color-md-teal;
-}
-.Bg_dk_teal {
-    background-color: $color-dk-teal;
-}
-.Font_dk_slate {
-    color: $color-slate;
-}
-.Bg_dk_slate {
-    background-color: $color-slate;
-}
-.Bg_lt_teal {
-    background-color: $color-lt-teal;
+
+
+/*----Box Shadow----*/
+.Box_Shadow {
+    box-shadow: 4px 4px 14px #D2D2D2;
 }
 
-//font family
-.Roboto {
-    font-family: 'Roboto','sans-serif';
-}
-.Roboto_Condensed {
-    font-family: 'Roboto Condensed','sans-serif';
+body {
+    background-color: $main_Bg;
 }
 
-h5, h4, h6{
-    color: $black-accent;
+
+//UNIVERSAL SPACING VIEWWIDTH
+.VW-10 {
+    height: 10vw;
 }
 
 
@@ -100,15 +99,17 @@ h5, h4, h6{
 
 
 
-//header border bottom
+/*----H2 Accent Line----*/
 .Divider::after{
     position: relative; 
     content: ""; 
     width: 30px; 
     height: 4px; 
     background: $accentBold; 
-    display: block; margin:auto;
+    display: block; 
+    margin: 0.5rem auto;
 }
+
 
 
 //Main-Section-Container:
@@ -143,21 +144,10 @@ footer{
         }
     }
 }
-.Frost{
-    backdrop-filter: blur(2px);
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.548) 0%, rgba(255,255,255,0) 30%);
-}
 nav{
     z-index: 2;
     position: relative;
-    a{
-        font-size: .875rem;
-    }
+
 }
 .Heroimage{
     background-image: url('../assets/heroimage.jpg');
@@ -202,14 +192,13 @@ nav{
 
 //Page Section background
 .Palm {
-    background-image: url('../assets/images/media/palm/palm.svg');
+    background-image: url('../assets/images/media/palm/palm_leaf.svg');
 }
 .Palm_leaf {
-    width: 300px;
-    height: 300px;
     position: absolute;
-    //left: 15%;
-    z-index: -2;
+    min-width: 614px;
+    top: -6.24%;
+    right: 0;
 }
 main{
     width: 100%;
@@ -234,11 +223,6 @@ main{
         line-height: 8rem;
     }
 }
-.Page_Template_Container{
-    top: -10rem;
-    position: relative;
-
-}
 
 
 //fonts
@@ -255,20 +239,122 @@ main{
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
 //Work Sans
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400&display=swap');
+//Spartan
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+/*----Font Classes----*/
+
 .Condense {
     font-family: 'Roboto Condensed', sans-serif;
 }
 .Work_sans{
     font-family: 'Work Sans', sans-serif !important;
 }
-
 .Font_Custom {
     font-family: 'MyFont', sans-serif;
 }
-
-h6{
-    font-family: 'Work Sans', sans-serif;
+//font family
+.Roboto {
+    font-family: 'Roboto','sans-serif';
 }
+.Roboto_Condensed {
+    font-family: 'Roboto Condensed','sans-serif';
+}
+
+/*----Font Pre-Sets----*/
+
+h1, h2, h3, h5{
+    color: $black_grey;
+} 
+h1{
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 5rem;
+    color: #FFFFFF;
+}
+
+h2{
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+h3 {
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+h4 {
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 1.875rem;
+    line-height: 2.2rem;
+
+    padding-bottom: 1rem;
+}
+
+h5{
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.185em;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+//Nav Fonts : Special Classes
+.Special_Title{
+    font-family: 'Spartan', sans-serif;
+    color: $black_grey;
+    font-size: 2rem;
+    
+}
+.css-1iwtne7-MuiTypography-root-MuiLink-root {
+    text-decoration: none !important;
+}
+
+
+
+/*----Buttons----*/
+.Primary_Btn {
+    font-family: 'Roboto Condensed','sans-serif';
+    display: flex;
+    justify-content: center;
+    background: $primary_blue;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 3rem;
+    color: $white_text;
+    text-transform: uppercase;
+    transition: all 0.1s ease;
+    &:hover {
+        background-color: $primary_blue_active;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+
+/*----Tag Keyword----*/
+.Tag {
+    width: fit-content;
+    padding: .2rem .8rem;
+    background-color: $accentBold;
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $white_text;
+}
+
 
 
 .Weather_icon {
@@ -292,11 +378,6 @@ h6{
     height: 100px;
 }
 
-//to delte below
-.RandomSize {
-    height:24px;
-    //width:20%;
-}
 
 //Line Height
 .Header_lh {
@@ -343,14 +424,24 @@ h6{
 
 //FOOTER COLORS
 //SOCIAL ICONS:
-.Transition_Grey{
+.Transition_Icon{
     cursor: pointer;
-    color: #3d3d4e;
+    color: $accent;
     transition: .3 ease-in;
     &:hover{
-        color: black;
+        color: $accent_active;
     }
 }
+
+//MUI OVERRIDES
+.css-1ps6pg7-MuiPaper-root {
+    border-radius: 1rem !important;
+    overflow: hidden;
+}
+
+
+
+/*----MEDIA QUERIES----*/
 
 //Desktop and Large Laptops
 @media screen and (min-width: 992px) {
@@ -358,7 +449,6 @@ h6{
         //font-size: 24px !important;
     }
 }
-
 
 //Mobile
 @media screen and (max-width: 600px) {

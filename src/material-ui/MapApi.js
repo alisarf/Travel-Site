@@ -44,13 +44,13 @@ const MapApi = (props) => {
         setViewport({
             latitude: latitude,
             longitude: longitude,
-            width: "50vw",
+            width: "auto",
             height: "50vw",
             zoom: 10})
     }, [latitude, longitude])
 
     return (
-        <Paper>
+        <Paper className="w-3/5">
             <ReactMapGL className = 'rounded-md'         
                 {...viewport}
                 mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX}

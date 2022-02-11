@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '@mui/material';
 
 //Icons mUI
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -55,16 +56,16 @@ const Footer = () => {
             </ul>
           </div>
         </section>
-        <section className='flex flex-row justify-between'>
-          <div className="flex flex-row">
-            <h5 className="inline-block font-bold italic text-3xl m-auto Font_Custom">Travel Bali</h5>
-          </div>
+        <section className='flex flex-col justify-between'>
           
+            <Link to='/' >
+                <span className="Special_Title font-bold text-center uppercase">Travel Bali</span>
+            </Link>
           
           <div>
-          <FacebookIcon className='Transition_Grey'/>
-          <InstagramIcon className='Transition_Grey'/>
-          <TwitterIcon className='Transition_Grey'/>
+          <FacebookIcon className='Transition_Icon'/>
+          <InstagramIcon className='Transition_Icon'/>
+          <TwitterIcon className='Transition_Icon'/>
           </div>
         </section>
       </footer>
