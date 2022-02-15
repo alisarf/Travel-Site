@@ -33,7 +33,7 @@ const Nav = (props) => {
     return (
             <nav className='flex w-4/5 m-auto py-2 justify-between VW-10 items-center tracking-widest'>
                 <Link to='/' >
-                    <span className="Special_Title font-bold text-center uppercase">Travel Bali</span>
+                    <span className="Special_Title Black font-bold text-center uppercase">Travel Bali</span>
                 </Link>
                 <div className='flex flex-row items-center'>
                 <div className='inline-block m-3 relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>

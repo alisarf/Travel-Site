@@ -35,9 +35,11 @@ $main_Bg : #FBFBFB;
 .Accent_Bold_Bg {
     background-color: $accentBold;
 }
-
 .Black {
     color: $black_grey;
+}
+.Black_Bg {
+    background-color: $black-grey;
 }
 .Grey_lt {
     background-color: $grey-lightest;
@@ -88,11 +90,18 @@ body {
 //Overlay
 
 .Overlay {
-    opacity: .2;
+    background: rgb(61, 61, 78);
+    opacity: .3;
     transition: .1s ease-in;
     &:hover {
         opacity: 0 !important;
     }
+}
+
+//SidePanel 
+.Square_Img {
+    width: 30vw;
+    height: 30vw;
 }
 
 
@@ -110,6 +119,9 @@ body {
     margin: 0.5rem auto;
 }
 
+.SidePanel .Divider::after {
+    margin: .5rem 0 !important;
+}
 
 
 //Main-Section-Container:
@@ -203,11 +215,32 @@ nav{
 main{
     width: 100%;
 }
+.LetterSpacing{
+    transition: all .3s ease;
+    font-size: 1.2rem;
+    padding: 4px;
+    position: relative;
+    border-bottom: 3px solid $accentBold; 
+}
 
-.LetterSpacing p:hover{
-    letter-spacing: .25em !important;
-    transition: .3s ease-in-out;
-    color: orange;
+.LetterSpacing:hover{
+    color: white;
+    z-index: 1;
+}
+
+.LetterSpacing::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: $accentBold;
+    height: 3px !important;
+    width: 100%;
+    left: 0;
+    transition: all .3s ease;
+    z-index: -1; //relative to the Letterspacing
+}
+.LetterSpacing:hover::before{
+    height: 100% !important;
 }
 
 //Headbanner
@@ -313,13 +346,14 @@ p {
 //Nav Fonts : Special Classes
 .Special_Title{
     font-family: 'Spartan', sans-serif;
-    color: $black_grey;
-    font-size: 2rem;
-    
+    font-size: 2rem;  
 }
+//Prevent anchor decor on Title text
 .css-1iwtne7-MuiTypography-root-MuiLink-root {
     text-decoration: none !important;
 }
+
+
 
 
 
@@ -358,8 +392,8 @@ p {
 
 
 .Weather_icon {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 
@@ -370,7 +404,7 @@ p {
 }
 
 .Circular_box{
-    background-color: #b2dfdb;
+    background-color: #00000034;
     border-radius: 100px;
 }
 .imagesss {
@@ -438,6 +472,11 @@ p {
     border-radius: 1rem !important;
     overflow: hidden;
 }
+    //mui icon rating
+    .css-i4bv87-MuiSvgIcon-root{
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+    }
 
 
 

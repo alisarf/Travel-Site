@@ -6,11 +6,11 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
+import viewportMercatorProject from "viewport-mercator-project";
 
 //TO PREVENT BUG IN MAP API
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
-
 
 //INPUT: props cordinate state
 //OUTPUT: Map of location with pin
@@ -31,9 +31,11 @@ const MapApi = (props) => {
         longitude: longitude,
         width: "20vw",
         height: "180px",
-        zoom: 10
-      });
+        zoom: 10,
 
+      });
+    
+    
     //change coords when state changes in weather component
     useEffect(() => {
         setCoords();
@@ -46,6 +48,7 @@ const MapApi = (props) => {
             longitude: longitude,
             width: "auto",
             height: "50vw",
+
             zoom: 10})
     }, [latitude, longitude])
 
@@ -53,6 +56,7 @@ const MapApi = (props) => {
         <Paper className="w-3/5">
             <ReactMapGL className = 'rounded-md'         
                 {...viewport}
+                scrollZoom={false}
                 mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX}
                 mapStyle = 'mapbox://styles/alifaresboulos/cktfya9h13qjl18s2pkfgiyx4'
                 onViewportChange={viewport => {
