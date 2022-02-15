@@ -19,9 +19,20 @@ const Footer = () => {
       }
 
     return (
-        <footer className=' Accent_Lt'>
-        <section className='flex flex-row justify-between mb-10'>
-          <div className='inline-block'>
+        <footer className=' flex flex-row justify-between bg-black'>
+        <section className='flex flex-col justify-center'>
+          <Link to='/' >
+              <span className="Special_Title font-bold text-center uppercase text-white">Travel Bali</span>
+          </Link>
+        <div>
+        <FacebookIcon className='Transition_Icon'/>
+        <InstagramIcon className='Transition_Icon'/>
+        <TwitterIcon className='Transition_Icon'/>
+        </div>
+      </section>
+      <section className='flex flex-row justify-center mb-10'>
+
+          {/*<div className='inline-block'>
               <h6 className='font-bold'>Resources</h6>
               <ul className='ListItems'>
                 <li>Call Center</li>
@@ -38,7 +49,7 @@ const Footer = () => {
                 <li>Covid Protocols</li>
                 <li>Travel Bans</li>
               </ul>
-          </div>
+          </div>*/}
           <div className='inline-block'>
             <h6 className='font-bold'>Company</h6>
             <ul className='ListItems'>
@@ -48,26 +59,14 @@ const Footer = () => {
               <li>Careers</li>
             </ul>
           </div>
-          <div className='inline-block'>
+          {/*<div className='inline-block'>
             <h6 className='font-bold' style={styles.aqua}>Get In Touch</h6>
             <ul className='ListItems'>
               <li>1.800.867.5309</li>
               <li>customerservice@travelbali.com</li>
             </ul>
-          </div>
-        </section>
-        <section className='flex flex-col justify-between'>
-          
-            <Link to='/' >
-                <span className="Special_Title font-bold text-center uppercase">Travel Bali</span>
-            </Link>
-          
-          <div>
-          <FacebookIcon className='Transition_Icon'/>
-          <InstagramIcon className='Transition_Icon'/>
-          <TwitterIcon className='Transition_Icon'/>
-          </div>
-        </section>
+          </div>*/}
+      </section>
       </footer>
     )
 }

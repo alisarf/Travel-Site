@@ -36,6 +36,7 @@ Destination Page Sample:
 - React
 - Material UI
 - Tailwind CSS
+- Adobe Illustrator
 - Font Awesome Icon Package
 - MapBox Api
 - Open Weather Map Api

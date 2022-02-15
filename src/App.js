@@ -81,7 +81,7 @@ function App() {
           <Card className='w-full h-auto Test flex flex-col justify-center' sx={{ height: '13vw', borderRadius: 0 }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
       </section>
       {/*<Typography variant='h1' className='text-center'>Travel Bali</Typography>*/}
-      <section className='Accent_Lt Palm flex flex-col m-auto items-center pt-32 pb-32 gap-y-4 w-full'>
+      <section className='Accent_Bg flex flex-col m-auto items-center pt-12 pb-12 gap-y-4 w-4/5 rounded-2xl shadow-lg'>
         <TitleHead title = "Get the Latest News!" nav = 'signup'/>
         <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1' />
         <TextField id="outlined-basic" label="Last Name" variant="outlined" className='flex-2' />
@@ -89,29 +89,31 @@ function App() {
         <Button>Sign Up</Button>
       </section>
 
-      <section className='relative grid grid-cols-3  mx-auto my-32 w-3/4'>
+      <section className='relative grid grid-cols-3  mx-auto my-32 w-4/5'>
 
-        <div className='grid grid-cols-2 grid-rows-2 gap-1 mx-auto col-span-2 w-full' style={{height: '50vh'}}>
+        <div className='grid grid-cols-2 grid-rows-2 mx-auto col-span-2 w-full rounded-2xl overflow-hidden' style={{height: '50vh'}}>
           <div className='relative h-fit overflow-hidden'>
             <img className='w-full h-auto absolute -top-1/2' src={`/images/ubud/${ftArr[0].url}`}/>
-            <div className='absolute bg-black w-full h-full cursor-pointer Overlay'></div>
+            <div className='absolute w-full h-full cursor-pointer Overlay'></div>
           </div>
           <div className='relative h-fit  overflow-hidden'>
             <img className='w-full h-auto absolute -top-1/2' src={`/images/ubud/${ftArr[1].url}`}/>
-            <div className='absolute bg-black w-full h-full cursor-pointer Overlay'></div>
+            <div className='absolute w-full h-full cursor-pointer Overlay'></div>
           </div>
           <div className='relative h-fit overflow-hidden'>
             <img className='w-full h-auto absolute -top-1/2' src={`/images/ubud/${ftArr[3].url}`}/>
-            <div className='absolute bg-black w-full h-full cursor-pointer Overlay'></div>
+            <div className='absolute w-full h-full cursor-pointer Overlay'></div>
           </div>
-          <div className='relative h-fit  overflow-hidden'>
+          <div className='relative h-fit overflow-hidden'>
             <img className='w-full h-auto absolute -top-1/2' src={`/images/ubud/${ftArr[2].url}`}/>
-            <div className='absolute bg-black w-full h-full cursor-pointer Overlay'></div>
+            <div className='absolute w-full h-full cursor-pointer Overlay'></div>
           </div>
         </div>
-        <div className='my-auto bg-gray-200 h-4/5 border rounded-r-xl flex flex-col justify-center'>
-          <TitleHead title = "Get Outside" nav = 'articles'/>
-          <Typography variant = "body1" className='text-center Work_sans'>Find activites hosted by the locals.</Typography>
+        <div className='my-auto px-16 bg-white h-4/5 border rounded-r-xl flex flex-col justify-center items-baseline shadow-lg SidePanel'>
+          <div className=' my-0'>
+            <h2 className='Divider text-left capitalize'>Get Outside</h2>
+          </div>
+          <Typography variant = "body1" className='Work_sans'>Find activites hosted by the locals.</Typography>
         </div>
 
       </section>
@@ -145,8 +147,8 @@ function App() {
 
 
 
-      <section className="w-1/2 mr-auto ml-auto mt-36 mb-36 p-5 text-center relative">
-        <Typography variant='h6' className="my-3">How helpful was Travel Bali at planning your next trip?</Typography>
+      <section className="w-4/5 mx-auto p-16 text-center relative Accent_Bg rounded-2xl bottom-4 " style={{top: '5vw'}}>
+        <h3 className='text-white'>How helpful was Travel Bali at planning your next trip?</h3>
         <RadioGroupRating/>
         <div className='absolute w-full top-0' style={{zIndex:-1}}><img src={palm_leaf} className='m-auto w-40'/></div>
       </section>

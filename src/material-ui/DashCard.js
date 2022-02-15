@@ -1,5 +1,11 @@
+
 import ProgressBarBox from '../material-ui/ProgressBarBox';
 import img from '../assets/images/kuta/Kuta-Beach.jpg'
+
+//Weather API
+import Weather from '../material-ui/Weather';
+
+
 
 const DashCard = (props) => {
     const location = props.location;
@@ -9,6 +15,7 @@ const DashCard = (props) => {
                 <span className='w-20 h-20 absolute bottom-0 right-0'>
                     <h5 className='text-white uppercase text-sm'>Cloudy</h5>
                     <h5 className='text-white uppercase text-4xl'>80{'\u00b0'}</h5>
+
                 </span>
             </div>
             <div className='h-3/5 flex flex-col justify-evenly bg-white p-8'>

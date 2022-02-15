@@ -32,17 +32,14 @@ const Weather = (props) => {
     return (
         <article className = 'w-fit'>
             {(typeof weather.main != "undefined") ? (
-            <section className="flex flex-row gap-8 justify-evenly items-center Grey_lt py-8 px-8">
-                <div>
-                    <div className="text-xl font-bold Font_dk_teal"> {weather.weather[0].main} </div>
-                    <div className="text-5xl font-bold Font_dk_teal"> {Math.round((weather.main.temp)*1.8 + 32)}°F</div>
-                    <div className=" text-white Font_dk_slate tracking-widest capitalize mt-4">{weather.name}</div>
-                </div>
+            <section className="flex flex-row gap-8 justify-evenly items-center">
                 <div className="Circular_box">
                     <img src={weathericon.base + weather.weather[0].icon + weathericon.end} className="Weather_icon" alt={weather.weather[0].description}/>
-                    
                 </div>
-                
+                <div>
+                    <h5 className="text-white uppercase text-sm"> {weather.weather[0].main} </h5>
+                    <h5 className="text-white uppercase text-4xl"> {Math.round((weather.main.temp)*1.8 + 32)}°</h5>
+                </div>
             </section>
             ):('')}
         </article>
