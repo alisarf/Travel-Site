@@ -1,5 +1,9 @@
 {
     "ubud": {
+        "general" : {
+            "description": "Dolor dolor non laborum laboris enim velit veniam do. Ut exercitation sunt irure consectetur sunt ex reprehenderit sunt esse sint deserunt qui.",
+            "imageUrl": "ubud_general.jpg"
+        },
         "factors" : [
             { "title":"Affordable", "value": 40}, 
             { "title":"Safety", "value": 20},
@@ -36,6 +40,10 @@
             ]
     },
     "kuta": {
+        "general" : {
+            "description": "Sunt culpa enim quis fugiat sint officia in duis cupidatat ea cupidatat mollit. Deserunt qui officia tempor aliqua amet.",
+            "imageUrl": "kuta_general.jpg"
+        },
         "factors" : [
             { "title":"Affordable", "value": 20}, 
             { "title":"Safety", "value": 100},
@@ -71,6 +79,10 @@
             ]
     },
     "denpasar": {
+        "general" : {
+            "description": "Minim voluptate est fugiat eu velit. Ex officia ullamco aliqua adipisicing dolore nulla amet magna exercitation non magna qui esse dolor.",
+            "imageUrl": "denpasar_general.jpg"
+        },
         "factors" : [
             { "title":"Affordable", "value": 90}, 
             { "title":"Safety", "value": 20},

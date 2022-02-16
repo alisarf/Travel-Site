@@ -46,7 +46,7 @@ export default function RadioGroupRating() {
       defaultValue={2}
       IconContainerComponent={IconContainer}
       highlightSelectedOnly
-      className="cursor-pointer mt-12"
+      className="cursor-pointer mt-12 RadioGroupRating"
     />
   );
 }

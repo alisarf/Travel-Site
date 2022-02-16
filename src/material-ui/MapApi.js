@@ -29,10 +29,7 @@ const MapApi = (props) => {
     const [viewport, setViewport] = useState({
         latitude: latitude,
         longitude: longitude,
-        width: "20vw",
-        height: "180px",
-        zoom: 10,
-
+        zoom : 10
       });
     
     
@@ -46,17 +43,17 @@ const MapApi = (props) => {
         setViewport({
             latitude: latitude,
             longitude: longitude,
-            width: "auto",
-            height: "50vw",
-
-            zoom: 10})
+            zoom : 10
+        })
     }, [latitude, longitude])
 
     return (
-        <Paper className="w-3/5">
+        <Paper className="w-full lg:w-3/5">
             <ReactMapGL className = 'rounded-md'         
                 {...viewport}
                 scrollZoom={false}
+                width = "auto"
+                height = "50vw"
                 mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX}
                 mapStyle = 'mapbox://styles/alifaresboulos/cktfya9h13qjl18s2pkfgiyx4'
                 onViewportChange={viewport => {

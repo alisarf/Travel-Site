@@ -18,6 +18,7 @@ import palm_leaf from '../assets/images/media/palm/palm_leaf.svg'
 import IntroBanner from '../material-ui/IntroBanner';
 import DashCard from '../material-ui/DashCard';
 import img from '../assets/images/kuta/Kuta-Beach.jpg'
+import Palm from '../material-ui/Palm';
 
 //Icons for Font-Awesome
 import { Typography, Button } from '@mui/material';
@@ -46,43 +47,36 @@ const PageTemplate = (props) => {
     return (
         <div>  
             <HeadBanner title= {location} />
-            <IntroBanner navArr = {navArr}/>
+            <IntroBanner navArr = {navArr} location = {location}/>
             <div className='Page_Template_Container z-10 '>
                 {/* The navigation selections */}
 
                 {/* The navigation selections */}
-                <section className='block w-4/5 gap-8 justify-between mx-auto pt-16 pb-8 sm:flex flex-row' style={{height: htTrio}}>
-                    <section className='w-2/5'>
-
-                    <section className='rounded-2xl m-auto h-full overflow-hidden shadow-lg' >
-                        <div className='h-2/5 p-8 relative bg-cover bg-center' style={{ backgroundImage: `url(${props.image ? props.image : img})` }}>
-                            <span className='absolute bottom-8 right-8'>
-                                <Weather 
-                                location = {location}
-                                cords = {coordinates} 
-                                setCords = {setCoordinates}
-                                />
-                            </span>
-                        </div>
-                        <div className='h-3/5 flex flex-col justify-evenly bg-white p-8'>
-                            <span className='Tag'>Asia</span>
-                            <h3>{location}, Indonesia</h3>
-                            < ProgressBarBox location = {location}/>
-                            <button className='Primary_Btn'>Learn More</button>
-                        </div>
-                    </section>
-
+                <section className='flex flex-col w-container gap-16 justify-between mx-auto pt-16 pb-8 lg:flex-row lg:gap-8 lg:w-4/5' style={{height: htTrio}}>
+                    <section className='w-full lg:w-2/5'>
+                        <section className='rounded-2xl m-auto h-full overflow-hidden shadow-lg' >
+                            <div className='min-h-20vh p-8 relative bg-cover bg-center lg:h-2/5' style={{ backgroundImage: `url(${props.image ? props.image : img})` }}>
+                                <span className='absolute bottom-8 right-8'>
+                                    <Weather 
+                                    location = {location}
+                                    cords = {coordinates} 
+                                    setCords = {setCoordinates}
+                                    />
+                                </span>
+                            </div>
+                            <div className='h-3/5 flex flex-col justify-evenly bg-white p-8'>
+                                <span className='Tag'>Asia</span>
+                                <h3>{location}, Indonesia</h3>
+                                < ProgressBarBox location = {location}/>
+                                <button className='Primary_Btn'>Learn More</button>
+                            </div>
+                        </section>
                     </section>
                      <MapApi cords = {coordinates}/>
                 </section>
 
-                
-                
-                
 
-                
-
-                <section className=' w-4/5 m-auto rounded-2xl overflow-hidden  shadow-lg'>
+                <section className='overflow-hidden Section_Container'>
                     <div className='bg-white p-12'>
                         <TitleHead  title = "transport" nav = 'transport'/>
                         <FeatureTri location = {location}/>
@@ -95,7 +89,7 @@ const PageTemplate = (props) => {
 
                 </section>
 
-                <section className='pt-16 pb-8'>                
+                <section className='pt-16 pb-8 Section_Container'>                
                     <TitleHead  title = "Cost of Living" nav = 'cost'/>
                     <Cost location = {location}/>
                 </section> 
@@ -110,7 +104,7 @@ const PageTemplate = (props) => {
                     />
                 </section>
 
-                <section className='w-4/5 m-auto p-16 relative mx-auto bg-white rounded-2xl overflow-hidden shadow-lg'>
+                <section className='pt-4 px-4 relative mx-auto bg-white overflow-hidden Section_Container md:pt-16 md:pb-12 md:px-16 '>
                 <TitleHead title = "What to know" nav = 'articles'/>
                 
                 <SectionParaMulti location = {location} info = 'articles'/>
@@ -139,12 +133,14 @@ const PageTemplate = (props) => {
                 <Card className='w-full h-auto Test flex flex-col justify-center' sx={{ height: '13vw', borderRadius: 0 }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
             </section>
 
-            <section className="w-4/5 mx-auto p-16 text-center relative Accent_Bg rounded-2xl bottom-4 " style={{top: '5vw'}}>
+            <section className="p-16 text-center relative Accent_Bg bottom-4 Section_Container" style={{top: '5vw'}}>
                 <h3 className='text-white'>How helpful was Travel Bali at planning your next trip?</h3>
                 <RadioGroupRating/>
                 <div className='absolute w-full top-0' style={{zIndex:-1}}><img src={palm_leaf} className='m-auto w-40'/></div>
             </section>
             <Footer/>
+            <Palm position = 'left' top = '30%'/>
+            <Palm position = 'right' top = '80%'/>
         </div>
     )
 }
