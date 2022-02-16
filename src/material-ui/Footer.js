@@ -24,7 +24,7 @@ const Footer = () => {
           <Link to='/' >
               <span className="Special_Title font-bold text-center uppercase text-white">Travel Bali</span>
           </Link>
-        <div>
+        <div className=' SocialIcons'>
         <FacebookIcon className='Transition_Icon'/>
         <InstagramIcon className='Transition_Icon'/>
         <TwitterIcon className='Transition_Icon'/>

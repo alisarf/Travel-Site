@@ -1,8 +1,12 @@
-/*COLOR PALLETTE*/
 @import url("https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+html {
+  overflow-x: hidden;
+}
+
+/*COLOR PALLETTE*/
 .Accent {
   color: #818CF8;
 }
@@ -49,8 +53,14 @@ body {
   background-color: #FBFBFB;
 }
 
-.VW-10 {
+.VW-nav {
   height: 10vw;
+}
+
+@media screen and (max-width: 640px) {
+  .VW-nav {
+    height: 20vw;
+  }
 }
 
 .Button {
@@ -193,21 +203,27 @@ nav {
   right: 0;
 }
 
+.RightFlip {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 main {
   width: 100%;
 }
 
 .LetterSpacing {
+  color: #28282a;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   font-size: 1.2rem;
   padding: 4px;
   position: relative;
-  border-bottom: 3px solid #0912FF;
+  border-bottom: 3px solid white;
 }
 
 .LetterSpacing:hover {
-  color: white;
+  color: #818CF8;
   z-index: 1;
 }
 
@@ -215,7 +231,7 @@ main {
   content: "";
   position: absolute;
   bottom: 0;
-  background-color: #0912FF;
+  background-color: white;
   height: 3px !important;
   width: 100%;
   left: 0;
@@ -377,7 +393,7 @@ p {
 }
 
 .Circular_box {
-  background-color: #00000034;
+  background: #424346d1;
   border-radius: 100px;
 }
 
@@ -437,12 +453,45 @@ p {
   overflow: hidden;
 }
 
-.css-i4bv87-MuiSvgIcon-root {
-  width: 3.5rem !important;
-  height: 3.5rem !important;
+.SocialIcons .css-i4bv87-MuiSvgIcon-root {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.RadioGroupRating .css-i4bv87-MuiSvgIcon-root {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+
+.Section_Container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.min-h-20vh {
+  min-height: 20vh;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
+.w-container {
+  width: 80%;
 }
 
 /*----MEDIA QUERIES----*/
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 15px !important;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .FeatureCards_MQ {
     -webkit-box-orient: vertical;
@@ -462,6 +511,12 @@ p {
   }
   .css-1vw6mcs-MuiTypography-root {
     font-size: 2rem !important;
+  }
+  .Section_Container {
+    width: 90% !important;
+  }
+  .w-container {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=general.css.map */

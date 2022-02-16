@@ -1,4 +1,3 @@
-
 import ProgressBarBox from '../material-ui/ProgressBarBox';
 import img from '../assets/images/kuta/Kuta-Beach.jpg'
 
@@ -24,7 +23,6 @@ const DashCard = (props) => {
                 < ProgressBarBox location = {location}/>
                 <button className='Primary_Btn'>Learn More</button>
             </div>
-            
         </section>
     )
 }
