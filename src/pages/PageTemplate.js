@@ -52,9 +52,9 @@ const PageTemplate = (props) => {
                 {/* The navigation selections */}
 
                 {/* The navigation selections */}
-                <section className='flex flex-col w-container gap-16 justify-between mx-auto pt-16 pb-8 lg:flex-row lg:gap-8 lg:w-4/5' style={{height: htTrio}}>
+                <section className='flex flex-col w-container gap-12 justify-between mx-auto my-12 lg:flex-row lg:gap-8 lg:my-20 lg:w-4/5' style={{height: htTrio}}>
                     <section className='w-full lg:w-2/5'>
-                        <section className='rounded-2xl m-auto h-full overflow-hidden shadow-lg' >
+                        <section className='rounded-2xl m-auto h-fit  overflow-hidden shadow-lg' >
                             <div className='min-h-20vh p-8 relative bg-cover bg-center lg:h-2/5' style={{ backgroundImage: `url(${props.image ? props.image : img})` }}>
                                 <span className='absolute bottom-8 right-8'>
                                     <Weather 
@@ -65,10 +65,10 @@ const PageTemplate = (props) => {
                                 </span>
                             </div>
                             <div className='h-3/5 flex flex-col justify-evenly bg-white p-8'>
-                                <span className='Tag'>Asia</span>
-                                <h3>{location}, Indonesia</h3>
-                                < ProgressBarBox location = {location}/>
-                                <button className='Primary_Btn'>Learn More</button>
+                                <span className='Tag mb-4'>Asia</span>
+                                <h3 className='mb-4'>{location}, Indonesia</h3>
+                                <ProgressBarBox location = {location}/>
+                                <button className='Primary_Btn mt-8'>Learn More</button>
                             </div>
                         </section>
                     </section>
@@ -89,12 +89,12 @@ const PageTemplate = (props) => {
 
                 </section>
 
-                <section className='pt-16 pb-8 Section_Container'>                
+                <section className='pt-16 pb-8 Section_Container mb-12 md:mb-20'>                
                     <TitleHead  title = "Cost of Living" nav = 'cost'/>
                     <Cost location = {location}/>
                 </section> 
 
-                <section className='Accent_Lt Palm pt-16 pb-8'>
+                <section className='Accent_Lt Palm w-container m-auto mb-12 md:mb-20'>
                     <TitleHead  title = "Things to Do" nav = 'activities'/>
                     <FeatureCards 
                         array = {props.imgArr}
@@ -104,7 +104,7 @@ const PageTemplate = (props) => {
                     />
                 </section>
 
-                <section className='pt-4 px-4 relative mx-auto bg-white overflow-hidden Section_Container md:pt-16 md:pb-12 md:px-16 '>
+                <section className='pt-4 px-4 relative mx-auto bg-white overflow-hidden Section_Container  mb-12 md:mb-20 md:pt-16 md:pb-12 md:px-16 '>
                 <TitleHead title = "What to know" nav = 'articles'/>
                 
                 <SectionParaMulti location = {location} info = 'articles'/>
@@ -121,19 +121,29 @@ const PageTemplate = (props) => {
             </div>
 
             {/* More Destinations Hook */}
-            <div>
-                <TitleHead title = "Featured Destinations" nav = 'articles'/>
-                <Typography variant = "body1" className='text-center Work_sans'>Find activites hosted by the locals.</Typography>
-            </div>
-            <section className='grid grid-cols-5 gap-8 w-3/4 mx-auto mt-16 mb-32'>
-                <Card className='w-full h-auto Test flex flex-col justify-center' sx={{ height: '13vw', borderRadius: 0}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='w-full h-auto Test flex flex-col justify-center' sx={{ height: '13vw', borderRadius: 0 }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='w-full h-auto Test flex flex-col justify-center' sx={{ height: '13vw', borderRadius: 0 }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='w-full h-auto Test flex flex-col justify-center' sx={{ height: '13vw', borderRadius: 0 }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='w-full h-auto Test flex flex-col justify-center' sx={{ height: '13vw', borderRadius: 0 }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+            
+            <TitleHead classNam="mt-16 mb-10" sx={{marginTop:'4rem', marginBottom:'2.5rem'}} title = "Featured Destinations" nav = 'articles'/>
+            <p className='text-center Work_sans mb-12'>Find activites hosted by the locals.</p>
+            
+            <section className='w-container mx-auto grid grid-cols-2 gap-4 mb-12 md:mb-20 md:grid-cols-3 lg:grid-cols-4'>
+                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
             </section>
 
-            <section className="p-16 text-center relative Accent_Bg bottom-4 Section_Container" style={{top: '5vw'}}>
+            {/* Carousel for dragging 
+            <section className='w-full Carousel-container gap-8 overflow-x-auto mb-12 md:mb-20' style={{height:'30vh'}}>
+                <Card className='Carousel-child h-auto Test' sx={{borderRadius: '15px' }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='Carousel-child h-auto Test' sx={{borderRadius: '15px' }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='Carousel-child h-auto Test' sx={{borderRadius: '15px' }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='Carousel-child h-auto Test' sx={{borderRadius: '15px' }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+                <Card className='Carousel-child h-auto Test' sx={{borderRadius: '15px' }}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
+            </section>
+            */}
+
+            <section className="p-16 text-center relative Accent_Bg bottom-4 w-container mx-auto rounded-2xl" style={{top: '5vw', maxWidth: '1280px'}}>
                 <h3 className='text-white'>How helpful was Travel Bali at planning your next trip?</h3>
                 <RadioGroupRating/>
                 <div className='absolute w-full top-0' style={{zIndex:-1}}><img src={palm_leaf} className='m-auto w-40'/></div>

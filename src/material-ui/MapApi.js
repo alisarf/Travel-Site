@@ -48,12 +48,12 @@ const MapApi = (props) => {
     }, [latitude, longitude])
 
     return (
-        <Paper className="w-full lg:w-3/5">
-            <ReactMapGL className = 'rounded-md'         
+        <Paper className="w-full h-auto overflow-hidden lg:w-3/5" sx={{minHeight: '30vh', borderRadius: '15px'}}>
+            <ReactMapGL className = 'rounded-md Min-H-30VH'       
                 {...viewport}
                 scrollZoom={false}
                 width = "auto"
-                height = "50vw"
+                height = "100%"
                 mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX}
                 mapStyle = 'mapbox://styles/alifaresboulos/cktfya9h13qjl18s2pkfgiyx4'
                 onViewportChange={viewport => {

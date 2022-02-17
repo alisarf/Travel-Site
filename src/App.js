@@ -111,7 +111,7 @@ function App() {
         </div>
         <div className='my-auto px-16 bg-white h-4/5 border rounded-r-xl flex flex-col justify-center items-baseline shadow-lg SidePanel'>
           <div className=' my-0'>
-            <h2 className='Divider text-left capitalize'>Get Outside</h2>
+            <h2 className='Divider text-left capitalize text-4xl md:text-5xl '>Get Outside</h2>
           </div>
           <Typography variant = "body1" className='Work_sans'>Find activites hosted by the locals.</Typography>
         </div>
@@ -132,7 +132,7 @@ function App() {
           msg = 'Culture'
         />*/}</section>
       
-      <div className="gap-10 pt-8 pb-4">     
+      <div className="gap-10 pt-8 pb-4 w-container m-auto">     
         {/* default array needed for home page images*/}
         <TitleHead title = "Things to do" nav = 'articles'/>
         <FeatureCards 
