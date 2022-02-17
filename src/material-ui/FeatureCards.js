@@ -19,8 +19,8 @@ const FeatureCards = (props) => {
     return (
         <section className='my-10'>
             {/*<TitleHead title = "Get Outside" nav = 'articles'/>*/}
-            <Typography variant='body1' className='text-center Work_sans'>{props.subtitle}</Typography>
-            <div className='my-5 mx-auto w-3/4 flex justify-center FeatureCards_MQ'>
+            <p className='text-center mb-12 Work_sans'>{props.subtitle}</p>
+            <div className='grid-col-1to3 my-5 mx-auto w-full flex flex-col justify-center gap-8 items-center sm:grid sm:grid-cols-2 lg:grid-cols-3'>
                 {imagesArr.map( image => (
                     //wrap in link hook with location variable
                     

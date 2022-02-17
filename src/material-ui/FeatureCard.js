@@ -10,8 +10,7 @@ const FeatureCard = (props) => {
     const fileUrlBase = `/images/${props.location}/${props.url}`
     return (
         <Card 
-            sx={{ maxWidth: 345 }}
-            className = 'inline-block m-4'
+            className = 'inline-block w-full relative'
         >
             <CardActionArea>
                 <CardMedia
@@ -19,9 +18,9 @@ const FeatureCard = (props) => {
                     height="450px"
                     image= {fileUrlBase}
                     alt="green iguana"
-                    className='relative Feature_cardWidth'
-                    sx={{ width: '350px' }}
+                    className='relative W-20vh'
                 />
+                <div className='Txt-over-Img1 absolute'></div>
                 <div className='absolute bottom-0 text-white flex flex-row justify-between px-8 py-6 w-full'>
                 <Typography 
                     gutterBottom variant="h6"

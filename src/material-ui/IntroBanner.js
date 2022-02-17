@@ -15,12 +15,12 @@ const IntroBanner = (props) => {
 
     return (
         <section className="flex flex-col h-auto m-auto overflow-hidden Section_Container md:flex-row">
-            <div className='Accent_Bg w-full relative p-8 md:w-3/5 md:p-16'>
+            <div className='Accent_Bg w-full relative p-8 overflow-hidden md:w-3/5 md:p-16'>
                 <h1 className='text-white font-bold Roboto_Condensed uppercase text-6xl mb-8 text-center md:text-left'>{props.location ? props.location : 'Bali'}</h1>
                 <p className='text-white text-center md:text-left'>{props.location ? (content[props.location].general.description) : 'Ut anim ad aliqua fugiat excepteur nulla eiusmod eu.'}</p>
                 <img className='absolute Palm_leaf' src={palmLeaf}/>
             </div>
-            <div className='h-auto w-full bg-cover bg-center py-8 md:w-2/5 p-auto'  style={{ minHeight: '30vw', backgroundImage: `url(${props.location ?  `/images/${props.location}/${content[props.location].general.imageUrl}` : ImgBanner})` }}>
+            <div className='h-auto w-full bg-cover bg-center py-8 md:w-2/5 p-auto'  style={{ minHeight: '30vh', backgroundImage: `url(${props.location ?  `/images/${props.location}/${content[props.location].general.imageUrl}` : ImgBanner})` }}>
                 <div className='flex flex-col justify-center m-auto w-fit h-full'>
                     <ul className=''>
 

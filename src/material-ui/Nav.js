@@ -36,7 +36,7 @@ const Nav = (props) => {
     //TESTING GIT 123
 
     return (
-            <nav className='flex w-4/5 m-auto py-2 justify-between VW-nav items-center tracking-widest'>
+            <nav className='flex w-4/5 m-auto py-2 justify-between VW-nav items-center tracking-widest w-container'>
                 <Link to='/' >
                     <span className="Special_Title Black font-bold text-center uppercase">Travel Bali</span>
                 </Link>

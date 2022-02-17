@@ -27,7 +27,7 @@ The purpose of this repository was to learn how to work with Material UI and Tai
 
 Destination Page Sample:
 
-![](./public/images/screenshots/screenshot_page_full_sml.png)
+![](./public/images/screenshots/screenshot_Demo.png)
 
 ## My process
 
