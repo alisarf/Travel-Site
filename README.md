@@ -2,7 +2,8 @@
 
 A dynamic travel site built using React. React Router directory and pages are dynamically constructed via translation of JSON file containing content on a variety of tourist destinations. In order to add pages, admin would simply add new destination information to content.json file. UI constructed using Material UI components and Tailwind css for efficient and consistent styling. Location weather and map from Mapbox and Open Weather Map Api.
 
-live: https://globetravel.web.app
+Live: https://globetravel.web.app
+My Figma Design : https://www.figma.com/file/x4g13FOmawte7m2r2yNMGz/Travel_Site?node-id=93%3A24
 
 ## Table of contents
 
@@ -48,8 +49,9 @@ Destination Page Sample:
 - How to repurpose components from previous React projects
 - Build on React knowledge, working with useState, useEffect, props, reusability of components and React Router
 - How to utilize and style Material UI components
-- How convinient Tailwind Css and Material UI can be for time efficiency and styling consistency
-- How to interact with MapBox and Open Weather Map Api system
+- MUI was okay but overiding the styling was annoying. However, I liked how efficient it was to implement components and have results with uniform styling patterns. 
+- Tailwind was very useful and I would like to learn more about working with custom styles. Would use again on future projects.
+- How to interact with MapBox and Open Weather Map Api system.
 
 ### Continued development
 

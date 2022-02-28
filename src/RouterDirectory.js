@@ -3,6 +3,7 @@ import App from './App'
 import Favorites from "./pages/Favorites";
 import PageTemplate from "./pages/PageTemplate";
 import content from './assets/content/content.json'
+import ScrollToTop from "./material-ui/ScrollToTop";
 
 
 const RouterDirectory = (props) => {
@@ -16,7 +17,9 @@ const RouterDirectory = (props) => {
   
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Routes>
+        
         <Route path="/" element={<App />} />
         <Route path="/favorites" element={<Favorites />} />
         {potlocal.map(local => (

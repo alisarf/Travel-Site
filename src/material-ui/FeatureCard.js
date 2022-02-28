@@ -11,6 +11,7 @@ const FeatureCard = (props) => {
     return (
         <Card 
             className = 'inline-block w-full relative'
+            sx={{borderRadius: '15px'}}
         >
             <CardActionArea>
                 <CardMedia
@@ -20,6 +21,7 @@ const FeatureCard = (props) => {
                     alt="green iguana"
                     className='relative W-20vh'
                 />
+                {/* TODO : USE TXT OVER IMG CLASS FOR VISIBILTY TEXT GRADIENT ON IMAGES */}
                 <div className='Txt-over-Img1 absolute'></div>
                 <div className='absolute bottom-0 text-white flex flex-row justify-between px-8 py-6 w-full'>
                 <Typography 
