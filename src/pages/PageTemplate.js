@@ -20,6 +20,12 @@ import DashCard from '../material-ui/DashCard';
 import img from '../assets/images/kuta/Kuta-Beach.jpg'
 import Palm from '../material-ui/Palm';
 
+import content from '../assets/content/content.json'
+import FeatureDestinations from '../material-ui/FeatureDestinations';
+import ScrollToTop from '../material-ui/ScrollToTop';
+
+
+
 //Icons for Font-Awesome
 import { Typography, Button } from '@mui/material';
 
@@ -27,6 +33,7 @@ import { Typography, Button } from '@mui/material';
 //OUTPUT: Entire Page Template
 
 const PageTemplate = (props) => {
+
     const location = props.city;
 
     //Navigation of sections : 
@@ -44,8 +51,24 @@ const PageTemplate = (props) => {
 
     const [coordinates, setCoordinates] = useState([-8.650000 , 115.216667])
 
+
+    /** Feature Destination Hook **/
+    //format 'content' obj for the FeatureDestination hook 'arr' input
+    var ftDestArr = []
+    function getKeys() {
+        for (const location in content) {
+            let imageUrl = content[location].general.imageUrl;
+            let pathUrl = location;
+            ftDestArr = [...ftDestArr , {'title': location , 'imageUrl': imageUrl, 'pathUrl': pathUrl}];
+        }
+    }
+    getKeys()
+
+
+
     return (
-        <div>  
+        <div className='overflow-hidden relative scroll-smooth'>  
+        <ScrollToTop/>
             <HeadBanner title= {location} />
             <IntroBanner navArr = {navArr} location = {location}/>
             <div className='Page_Template_Container z-10 '>
@@ -115,23 +138,15 @@ const PageTemplate = (props) => {
                     msg = 'Endless Rice Fields'
                     speed = '1.2'
                 />*/}
+
                 <img className='Palm_leaf top-28 right-1/3' style={{transform: 'rotate(180deg)'}} src={palm_leaf}/>
                 <img className='Palm_leaf bottom-0 left-1/3' src={palm_leaf}/>
                 </section>
             </div>
 
-            {/* More Destinations Hook */}
-            
             <TitleHead classNam="mt-16 mb-10" sx={{marginTop:'4rem', marginBottom:'2.5rem'}} title = "Featured Destinations" nav = 'articles'/>
             <p className='text-center Work_sans mb-12'>Find activites hosted by the locals.</p>
-            
-            <section className='w-container mx-auto grid grid-cols-2 gap-4 mb-12 md:mb-20 md:grid-cols-3 lg:grid-cols-4'>
-                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-                <Card className='grid_sq h-auto Test flex flex-col justify-center' sx={{borderRadius: '15px'}}><h5 className='font-bold text-white text-center text-2xl Text-shadow Roboto_Condensed'>Denpasar</h5></Card>
-            </section>
+            <FeatureDestinations arr = {ftDestArr}/>
 
             {/* Carousel for dragging 
             <section className='w-full Carousel-container gap-8 overflow-x-auto mb-12 md:mb-20' style={{height:'30vh'}}>
@@ -149,8 +164,10 @@ const PageTemplate = (props) => {
                 <div className='absolute w-full top-0' style={{zIndex:-1}}><img src={palm_leaf} className='m-auto w-40'/></div>
             </section>
             <Footer/>
-            <Palm position = 'left' top = '30%'/>
-            <Palm position = 'right' top = '80%'/>
+            <Palm position = 'left' top = '10%'/>
+            <Palm position = 'right' top = '30%'/>
+            <Palm position = 'left' top = '50%'/>
+            <Palm position = 'right' top = '70%'/>
         </div>
     )
 }

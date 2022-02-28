@@ -2,7 +2,13 @@
 html {
     overflow-x: hidden;
 }
+html {
+    //scroll-behavior: auto !important;
+  }
 
+.scroll-smooth {
+    scroll-behavior: smooth !important;
+}
 
 /*COLOR PALLETTE*/
 
@@ -87,10 +93,6 @@ body {
 }
 
 //testing background
-.Test {
-    background-image: url('../assets/images/bali/headbanner.jpg');
-    background-size: cover;
-}
 
 .Text-shadow{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -370,6 +372,20 @@ p {
 .css-1iwtne7-MuiTypography-root-MuiLink-root {
     text-decoration: none !important;
 }
+//text field mui override
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border: 5px solid white !important;
+    border-radius: 15px !important;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+//FOCUSED ON INPUT FIELD
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    //color: $accentBold !important;
+    //font-weight: bold;
+    //text-transform: uppercase;
+    //font-size: 16px;
+    //background-color: white;
+}
 
 
 
@@ -594,7 +610,7 @@ p {
     html {
         font-size: 15px !important;
     }
-        //GRID LAST OF TYPE SPREAD
+        //GRID LAST OF TYPE SPREAD AWKWARD UI FIX
         .grid-col-1to3 div:nth-last-child(1) {
             grid-column: 1/3;
         }

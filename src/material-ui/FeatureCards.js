@@ -34,10 +34,6 @@ const FeatureCards = (props) => {
                     color="primary" 
                 />
             </div>
-            
-            
-            
-
         </section>
     )
 }
