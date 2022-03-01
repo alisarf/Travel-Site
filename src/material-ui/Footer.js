@@ -19,7 +19,7 @@ const Footer = () => {
       }
 
     return (
-        <footer className=' flex flex-row justify-between bg-black'>
+        <footer className=' text-center flex flex-col md:flex-row justify-between bg-black'>
         <section className='flex flex-col justify-center'>
           <Link to='/' >
               <span className="Special_Title font-bold text-center uppercase text-white">Travel Bali</span>

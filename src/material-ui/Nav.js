@@ -3,6 +3,9 @@ import { Typography } from '@mui/material'
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
+import arrow from '../assets/images/media/arrow.svg'
+
+
 
 import '../css/style.css';
 import '../css/custom.css';
@@ -25,48 +28,91 @@ const Nav = (props) => {
 
     //navigation appears on hoverstate
     const [navBtn, setNavBtn] = useState(false);
+    const [navView, setNavView] = useState(false)
+    const [toggleOverflow, setToggleOverflow] =useState(false)
+    const [hoverDest, setHoverDest] = useState(false)
+
     function handleChange() {
         setNavBtn(!navBtn);
     }
-    const [navView, setNavView] = useState(false)
+    //Toggle the Nav Mobile Menu and passively toggle scroll on html tag
     function viewNav() {
         setNavView(!navView);
+        setToggleOverflow(!toggleOverflow)
+        toggleOverflowSwitch(toggleOverflow)
     }
+    
+    //Toggle the html tags scroll (doesn't work with body tag)
+    function toggleOverflowSwitch(toggleOverflow) {
+        if (toggleOverflow == false) {
+            document.documentElement.style.overflow = "hidden"
+        } else {
+            document.documentElement.style.overflowY = "scroll"
+        }
+    }
+    //Hover destination in md to show options
+    function toggleHoverDest() {
+        setHoverDest(!hoverDest);
+    }
+    
 
     //TESTING GIT 123
 
     return (
-            <nav className='flex w-4/5 m-auto py-2 justify-between VW-nav items-center tracking-widest w-container'>
+            <nav className='z-100 flex w-4/5 m-auto py-2 justify-between VW-nav items-center tracking-widest w-container'>
                 <Link to='/' >
-                    <span className="Special_Title Black font-bold text-center uppercase">Travel Bali</span>
+                    <span className="Special_Title Black font-bold text-center uppercase">Globe Travel</span>
                 </Link>
                 <button className={`${navView === true ? 'z-10' : ''} md:hidden`} onClick={viewNav} >
                     <MenuIcon/>
                 </button>
-                <div className={`flex-row items-center ${navView === true ? 'flex flex-col -right-1/5 top-0 absolute bg-white' : 'hidden'} md:flex`}>
-                    <div className='inline-block m-3 relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>
-                            <button className='uppercase Work-sans'>Destinations</button>
-                            <div className={`bg-white absolute top-12 left-0 ${navBtn === true ? 'block' : 'hidden'}`}>
-                                <ul>
-                                    {potlocations.map( city => (
-                                        <li className='inline-block m-3'>  
-                                            <Link to={`/${city}`}  className='text-base underline Nav-link-destination capitalize'>
-                                                {city}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                    </div>
-                    <a className='uppercase Work-sans tracking-normal m-4'>About us</a>
-                    <a className='uppercase Work-sans tracking-normal m-4'>Contact</a>
+                <div className={`Nav-mobile items-center ${navView === true ? 'flex flex-col -right-1/5 top-0 absolute bg-white' : 'hidden'} md:flex md:flex-row md:relative`}>
+                    <div className='inline-block relative h-fit Nav-h-min' onMouseLeave={handleChange} onMouseEnter={handleChange}>
+                    <button className='Roboto_Condensed Black h-20 tracking-wider font-bold text-4xl mt-5 mb-2 md:mx-3 md:my-0 md:text-lg md:font-light transition-colors md:hover:text-indigo-600' onMouseEnter={toggleHoverDest} onMouseLeave={toggleHoverDest}>
+                    Destinations
 
+
+                    {/*Start: HOVER FOR MD OPTIONS*/}                           
+                    <div className={`top-12 p-4 left-0 hidden Nav-card-hover rounded-xl shadow-md ${hoverDest === true ? 'md:block ' : ''}`}>
+                        <div className='Nav-card-hover-triangle'></div>
+                        <ul className=' text-left'>
+                            {potlocations.map( city => (
+                                <li className='px-2 py-1 w-full transition hover:bg-indigo-50'>  
+                                    <Link to={`/${city}`}  className='Roboto_Condensed font-thin text-xl Nav-link-destination capitalize'>
+                                        <img src={arrow} className='w-4 inline-block mr-3'/>
+                                        {city}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div> 
+                    {/*End: HOVER FOR MD OPTIONS*/}
+
+                    </button>
+                    <div className={`top-12 left-0 md:hidden ${navBtn === true ? 'block ' : ''}`}>
+                        <ul>
+                            {potlocations.map( city => (
+                                <li className='p-2 w-full rounded-md cursor-pointer transition hover:bg-indigo-50' onClick={viewNav}>  
+                                    <Link to={`/${city}`}  className='Roboto_Condensed font-thin text-2xl Nav-link-destination capitalize'>
+                                        <img src={arrow} className='w-4 inline-block mr-3'/>
+                                        {city}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <a className='block cursor-pointer Roboto_Condensed Black tracking-wider mt-5 mb-2 font-bold text-4xl md:text-lg md:font-light md:inline-block md:mx-3 md:my-0 transition-colors md:hover:text-indigo-600' onClick={viewNav}>About us</a>
+                    <a className='block cursor-pointer Roboto_Condensed Black tracking-wider mt-5 mb-2 font-bold text-4xl md:text-lg md:font-light md:inline-block md:mx-3 md:my-0 transition-colors md:hover:text-indigo-600' onClick={viewNav}>Contact</a>
+                    </div>
+                    {/*
                     <div className='inline-block m-3'>
                         <Link to='/favorites'>
                             <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} onClick={printHeart}/>
                         </Link>
-                    </div>
+                    </div>*/}
                 </div>
+
             
         </nav>
     )

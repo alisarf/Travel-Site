@@ -19,6 +19,7 @@ import IntroBanner from '../material-ui/IntroBanner';
 import DashCard from '../material-ui/DashCard';
 import img from '../assets/images/kuta/Kuta-Beach.jpg'
 import Palm from '../material-ui/Palm';
+import DivideSolidSection from '../material-ui/DivideSolidSection';
 
 import content from '../assets/content/content.json'
 import FeatureDestinations from '../material-ui/FeatureDestinations';
@@ -26,8 +27,11 @@ import ScrollToTop from '../material-ui/ScrollToTop';
 
 
 
+
+
 //Icons for Font-Awesome
 import { Typography, Button } from '@mui/material';
+import Feedback from '../material-ui/Feedback';
 
 //INPUT: Location, ImgBanner, Video
 //OUTPUT: Entire Page Template
@@ -35,6 +39,11 @@ import { Typography, Button } from '@mui/material';
 const PageTemplate = (props) => {
 
     const location = props.city;
+    const general = content[location].general;
+    const continent = general.continent;
+    const country = general.country;
+    //image path of the selected location
+    const imagePath = `images/${location}/${general.imageUrlWeather}`;
 
     //Navigation of sections : 
             //-could be less hardcoded, maybe read from content.json
@@ -75,11 +84,13 @@ const PageTemplate = (props) => {
                 {/* The navigation selections */}
 
                 {/* The navigation selections */}
-                <section className='flex flex-col w-container gap-12 justify-between mx-auto my-12 lg:flex-row lg:gap-8 lg:my-20 lg:w-4/5' style={{height: htTrio}}>
+                <section className='flex flex-col w-container gap-12 justify-between mx-auto mb-12 md:gap-20 md:mb-20 lg:flex-row lg:gap-8 lg:my-20 lg:w-4/5' style={{height: htTrio}}>
                     <section className='w-full lg:w-2/5'>
                         <section className='rounded-2xl m-auto h-fit  overflow-hidden shadow-lg' >
-                            <div className='min-h-20vh p-8 relative bg-cover bg-center lg:h-2/5' style={{ backgroundImage: `url(${props.image ? props.image : img})` }}>
+                            <div className='min-h-20vh p-8 relative bg-cover bg-center lg:h-2/5' style={{ backgroundImage: `url(${imagePath ? imagePath : img})` }}>
+                                <div className='z-0 absolute top-0 left-0 bg-gradient-to-t opacity-80 from-gray-900 via-transparent-20 to-transparent trans transition-opacity w-full h-full'></div>
                                 <span className='absolute bottom-8 right-8'>
+
                                     <Weather 
                                     location = {location}
                                     cords = {coordinates} 
@@ -88,8 +99,8 @@ const PageTemplate = (props) => {
                                 </span>
                             </div>
                             <div className='h-3/5 flex flex-col justify-evenly bg-white p-8'>
-                                <span className='Tag mb-4'>Asia</span>
-                                <h3 className='mb-4'>{location}, Indonesia</h3>
+                                <span className='Tag mb-4'>{continent}</span>
+                                <h3 className='mb-4'>{location}, {country}</h3>
                                 <ProgressBarBox location = {location}/>
                                 <button className='Primary_Btn mt-8'>Learn More</button>
                             </div>
@@ -97,25 +108,6 @@ const PageTemplate = (props) => {
                     </section>
                      <MapApi cords = {coordinates}/>
                 </section>
-
-
-                <section className='overflow-hidden Section_Container'>
-                    <div className='bg-white p-12'>
-                        <TitleHead  title = "transport" nav = 'transport'/>
-                        <FeatureTri location = {location}/>
-                    </div>
-                    <SectionPara 
-                        location = {location}
-                        info = 'transport'
-                    />
-                    {/*<Button variant="contained" className='Button'>Learn More</Button>*/}
-
-                </section>
-
-                <section className='pt-16 pb-8 Section_Container mb-12 md:mb-20'>                
-                    <TitleHead  title = "Cost of Living" nav = 'cost'/>
-                    <Cost location = {location}/>
-                </section> 
 
                 <section className='Accent_Lt Palm w-container m-auto mb-12 md:mb-20'>
                     <TitleHead  title = "Things to Do" nav = 'activities'/>
@@ -127,10 +119,37 @@ const PageTemplate = (props) => {
                     />
                 </section>
 
+                <section className='overflow-hidden mb-12 md:mb-20 Section_Container'>
+                    <div className='bg-white p-12'>
+                        <TitleHead  title = "transport" nav = 'transport'/>
+                        <FeatureTri location = {location}/>
+                    </div>
+                    <SectionPara 
+                        location = {location}
+                        info = 'transport'
+                    />
+                    {/*<Button variant="contained" className='Button'>Learn More</Button>*/}
+                </section>
+
+                <DivideSolidSection 
+                    msg = "Laborum Lorem et labore officia proident.Ut ullamco reprehenderit eiusmod ullamco.Amet proident commodo commodo tempor minim esse in est pariatur pariatur.Mollit consequat laborum adipisicing velit.Do veniam duis culpa commodo sunt sit ullamco sint cupidatat in exercitation enim.Lorem eiusmod consectetur minim proident." 
+                    title = "Consequat mollit fugiat ad"
+                />
+
+                <section className='pt-16 bg-white Section_Container overflow-hidden mb-12 md:mb-20'>                
+                    <TitleHead  title = "Cost of Living" nav = 'cost'/>
+                    <Cost location = {location}/>
+                </section> 
+
+                <DivideSolidSection 
+                    msg = "Nostrud cupidatat pariatur veniam qui sunt sint qui veniam culpa aliquip consequat.rit eiusmod ullamco.Amet proident commodo commodo tempor minim esse in est pariatur pariatur.Mollit consequat laborum adipisicing velit.Do veniam duis culpa commodo sunt sit ullamco sint cupidatat in exercitation enim.Lorem eiusmod consectetur minim proident." 
+                    title = "Consectetur minim consectetur"
+                />
+
                 <section className='pt-4 px-4 relative mx-auto bg-white overflow-hidden Section_Container  mb-12 md:mb-20 md:pt-16 md:pb-12 md:px-16 '>
                 <TitleHead title = "What to know" nav = 'articles'/>
                 
-                <SectionParaMulti location = {location} info = 'articles'/>
+                <SectionParaMulti  location = {location} info = 'articles'/>
                 {/* Use a terinary if statement with true/false
                 to indicate if videobanner should be here
                 <VideoBanner 
@@ -158,11 +177,7 @@ const PageTemplate = (props) => {
             </section>
             */}
 
-            <section className="p-16 text-center relative Accent_Bg bottom-4 w-container mx-auto rounded-2xl" style={{top: '5vw', maxWidth: '1280px'}}>
-                <h3 className='text-white'>How helpful was Travel Bali at planning your next trip?</h3>
-                <RadioGroupRating/>
-                <div className='absolute w-full top-0' style={{zIndex:-1}}><img src={palm_leaf} className='m-auto w-40'/></div>
-            </section>
+            <Feedback msg = "How helpful was Globe Travel at planning your next trip?" />
             <Footer/>
             <Palm position = 'left' top = '10%'/>
             <Palm position = 'right' top = '30%'/>

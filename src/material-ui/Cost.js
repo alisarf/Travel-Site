@@ -14,24 +14,24 @@ const Cost = (props) => {
     const arr = costLiving[props.location];
 
     return (
-        <TableContainer component={Paper} sx={{ margin: '2rem auto', width: '70%'}}>
-        <Table sx={{ minWidth: 200 , backgroundColor: '#fafafa' }} aria-label="simple table">
+        <TableContainer component={Paper} sx={{ margin: '2rem auto 0 auto', width: '100%', boxShadow: 'none'}}>
+        <Table sx={{ minWidth: 200 , backgroundColor: '#ffffff', borderTop:'1px solid rgb(224, 224, 224)' }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell sx={{fontWeight: 'bold'}}>Item</TableCell>
-              <TableCell align="right">Cost (USD)</TableCell>
+              <TableCell sx={{fontWeight: 'bold', paddingLeft: '3rem'}}>Item</TableCell>
+              <TableCell align="right" sx={{paddingRight: '3rem'}}>Cost (USD)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {arr.map((row) => (
               <TableRow
                 key={row.title}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 }, textTransform: 'capitalize' }}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 }, textTransform: 'capitalize'}}
               >
-                <TableCell component="th" scope="row">
+                <TableCell component="th" scope="row" sx={{paddingLeft: '3rem'}}>
                   {row.title}
                 </TableCell>
-                <TableCell align="right">{row.cost}</TableCell>
+                <TableCell align="right" sx={{paddingRight: '3rem'}}>{row.cost}</TableCell>
               </TableRow>
             ))}
           </TableBody>

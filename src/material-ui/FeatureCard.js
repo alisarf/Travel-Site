@@ -22,7 +22,8 @@ const FeatureCard = (props) => {
                     className='relative W-20vh'
                 />
                 {/* TODO : USE TXT OVER IMG CLASS FOR VISIBILTY TEXT GRADIENT ON IMAGES */}
-                <div className='Txt-over-Img1 absolute'></div>
+                <div className='z-0 absolute top-0 bg-gradient-to-t opacity-80 from-gray-900 via-transparent-20 to-transparent trans transition-opacity hover:opacity-20 w-full h-full'></div>
+                
                 <div className='absolute bottom-0 text-white flex flex-row justify-between px-8 py-6 w-full'>
                 <Typography 
                     gutterBottom variant="h6"

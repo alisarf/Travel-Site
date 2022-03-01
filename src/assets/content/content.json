@@ -2,7 +2,10 @@
     "ubud": {
         "general" : {
             "description": "Dolor dolor non laborum laboris enim velit veniam do. Ut exercitation sunt irure consectetur sunt ex reprehenderit sunt esse sint deserunt qui.",
-            "imageUrl": "ubud_general.jpg"
+            "imageUrl": "ubud_general.jpg",
+            "imageUrlWeather": "ubud_weather.jpg",
+            "country": "indonesia",
+            "continent": "asia"
         },
         "factors" : [
             { "title":"Affordable", "value": 40}, 
@@ -42,7 +45,10 @@
     "kuta": {
         "general" : {
             "description": "Sunt culpa enim quis fugiat sint officia in duis cupidatat ea cupidatat mollit. Deserunt qui officia tempor aliqua amet.",
-            "imageUrl": "kuta_general.jpg"
+            "imageUrl": "kuta_general.jpg",
+            "imageUrlWeather": "kuta_weather.jpg",
+            "country": "indonesia",
+            "continent": "asia"
         },
         "factors" : [
             { "title":"Affordable", "value": 20}, 
@@ -81,7 +87,10 @@
     "denpasar": {
         "general" : {
             "description": "Minim voluptate est fugiat eu velit. Ex officia ullamco aliqua adipisicing dolore nulla amet magna exercitation non magna qui esse dolor.",
-            "imageUrl": "denpasar_general.jpg"
+            "imageUrl": "denpasar_general.jpg",
+            "imageUrlWeather": "denpasar_weather.jpg",
+            "country": "indonesia",
+            "continent": "asia"
         },
         "factors" : [
             { "title":"Affordable", "value": 90}, 
@@ -116,6 +125,92 @@
             { "title" : "Elephant", "url": "denpasar-elephant.jpg"}, 
             { "title" : "Soldier", "url": "denpasar-fighter.jpg"},
             { "title" : "Lake", "url": "denpasar-lake.jpg"}
+            ]
+    },
+    "cartagena": {
+        "general" : {
+            "description": "Minim voluptate est fugiat eu velit. Ex officia ullamco aliqua adipisicing dolore nulla amet magna exercitation non magna qui esse dolor.",
+            "imageUrl": "cartagena_2.jpg",
+            "imageUrlWeather": "cartagena_weather.jpg",
+            "country": "colombia",
+            "continent": "south america"
+        },
+        "factors" : [
+            { "title":"Affordable", "value": 100}, 
+            { "title":"Safety", "value": 30},
+            { "title":"Fun", "value": 80}
+            ]
+        ,
+        "transport_time": [
+            {"type": "taxi", "time": "1h", "cost": "$80"},
+            {"type": "bus", "time": "4h 30m", "cost": "$2"},
+            {"type": "airplane", "time": "45m", "cost": "$30"}
+            ]
+        ,
+        "transport" : [{ "title": "Transportation", "text": "Do aliquip in aliqua excepteur dolore in tempor.Ad consequat amet adipisicing ut deserunt sint irure labore reprehenderit.Laboris id nostrud est minim sint officia deserunt anim non veniam id dolor in Lorem.Occaecat occaecat cupidatat excepteur est exercitation eiusmod veniam pariatur velit laboris dolore reprehenderit sunt nisi.Enim ullamco veniam qui aute deserunt est cillum aliquip irure tempor.Reprehenderit ea culpa deserunt voluptate cillum laborum labore culpa esse ex amet.Nostrud ullamco ex ad dolore amet reprehenderit. Adipisicing adipisicing enim eu nostrud aute sunt. Labore sunt excepteur ea nostrud ut eiusmod. Deserunt pariatur et exercitation laboris sunt et ut consequat irure exercitation officia. Culpa irure qui in aliquip nulla anim veniam ad."}],
+        "articles" : [{
+                "title" : "Safety",
+                "text" : "Anim esse sint non non velit dolor officia laborum velit nulla laboris nisi sint sit. Voluptate elit et ea do cillum consectetur fugiat sunt ipsum. Irure anim cillum minim quis.In veniam laborum nisi occaecat proident laborum exercitation nisi consequat aliquip ut sunt. Laborum Lorem dolore aute ex non. Do deserunt adipisicing proident aute ex adipisicing in amet ullamco reprehenderit aliqua do nisi."
+            },
+            { 
+                "title" : "What to Eat",
+                "text" : "In esse dolore ea laborum enim commodo. Laborum commodo adipisicing dolor excepteur ad incididunt culpa. Laboris reprehenderit amet quis in magna. Id aute est veniam minim deserunt. Fugiat veniam enim anim velit laborum irure sit minim amet. Ad ipsum amet dolore excepteur aliqua irure ipsum aute ea id laboris consectetur.In minim id adipisicing culpa duis nostrud cupidatat eu cupidatat nisi sit ea culpa et. Ea tempor qui cillum id amet excepteur ad cillum nulla ad voluptate aliqua. Adipisicing quis minim non irure Lorem consequat pariatur consectetur mollit elit mollit nisi. Consectetur occaecat mollit proident amet ex. Occaecat et ea aute nostrud voluptate officia id esse sint cillum velit.Elit veniam elit adipisicing in pariatur. Reprehenderit labore irure nostrud Lorem eu dolor elit proident dolore id nulla. Consequat do ut nulla aliquip id id qui tempor."
+            },
+            { 
+                "title" : "Getting Around",
+                "text" : "Dolor duis Lorem sit mollit aliquip ipsum esse adipisicing non. Proident ut labore eu pariatur est aute sunt ea. Dolor voluptate pariatur consequat reprehenderit pariatur eu nisi voluptate anim.Irure nostrud ipsum laborum adipisicing nostrud incididunt. Lorem esse nisi veniam in enim est et sint duis sit ea. Velit anim nostrud ut nulla deserunt eiusmod. Consectetur esse sit labore laborum velit commodo. Nulla magna eiusmod in exercitation veniam adipisicing reprehenderit commodo labore.Proident non cillum dolor dolore amet consequat nostrud aliqua consequat elit. Pariatur anim elit culpa ipsum exercitation proident magna nisi nostrud sint ullamco adipisicing do. Ad id dolore nisi sint tempor veniam. Exercitation fugiat proident sunt magna sunt aliquip minim. Quis non tempor sint ullamco laborum voluptate adipisicing nisi do pariatur. Qui dolore sunt officia qui et irure eu ipsum. Commodo commodo et dolore proident fugiat ex adipisicing ipsum cillum incididunt qui.Elit incididunt non sunt amet labore fugiat duis cillum ea. Veniam cillum nisi officia id cillum eiusmod sint voluptate exercitation id mollit ut sint. Elit consequat veniam laboris voluptate sint cupidatat duis aliqua Lorem dolore. Sunt dolor consequat aliquip ipsum adipisicing dolor in non minim ad do aliquip. Nostrud amet nisi aute aliquip consequat.Fugiat cillum officia pariatur ullamco dolor officia cillum velit incididunt velit. Irure irure aliqua laborum dolor sunt voluptate culpa occaecat ea ea. Eu irure cillum culpa est ut nulla deserunt non excepteur excepteur nostrud sint aute irure. Fugiat ea laborum consectetur sint voluptate ut sint eiusmod amet ex culpa. Sit mollit pariatur est reprehenderit officia ad adipisicing quis ex elit nulla aliquip tempor tempor. Ipsum deserunt proident magna velit eu incididunt est commodo velit cillum cillum et. Pariatur reprehenderit in veniam ut elit et ex duis reprehenderit quis dolor."
+            },
+            { 
+                "title" : "Entry & Exit Requirements",
+                "text" : "Nulla excepteur aliqua nisi consectetur in. Id magna aliquip in magna. Enim commodo ex exercitation cillum commodo cillum officia voluptate eiusmod eiusmod.Aute cillum consectetur reprehenderit aliquip enim id dolor officia proident cillum. Mollit sunt ea id amet et Lorem ea laboris ea. In tempor enim sint proident nulla qui dolore deserunt cupidatat. Excepteur sunt sunt reprehenderit ea est magna magna id officia laborum non. Consectetur sunt nostrud ea elit mollit ea adipisicing excepteur labore."
+            }],
+        "images" : [
+            { "title" : "Locals", "url": "cartagena_1.jpg"}, 
+            { "title" : "Town Square", "url": "cartagena_2.jpg"},
+            { "title" : "Market", "url": "cartagena_3.jpg"}
+            ]
+    },
+    "dubrovnik": {
+        "general" : {
+            "description": "Minim voluptate est fugiat eu velit. Ex officia ullamco aliqua adipisicing dolore nulla amet magna exercitation non magna qui esse dolor.",
+            "imageUrl": "croatia_4.jpg",
+            "imageUrlWeather": "croatia_weather.jpg",
+            "country": "croatia",
+            "continent": "europe"
+        },
+        "factors" : [
+            { "title":"Affordable", "value": 10}, 
+            { "title":"Safety", "value": 90},
+            { "title":"Fun", "value": 50}
+            ]
+        ,
+        "transport_time": [
+            {"type": "taxi", "time": "1h", "cost": "$80"},
+            {"type": "bus", "time": "4h 30m", "cost": "$2"},
+            {"type": "airplane", "time": "45m", "cost": "$30"}
+            ]
+        ,
+        "transport" : [{ "title": "Transportation", "text": "Do aliquip in aliqua excepteur dolore in tempor.Ad consequat amet adipisicing ut deserunt sint irure labore reprehenderit.Laboris id nostrud est minim sint officia deserunt anim non veniam id dolor in Lorem.Occaecat occaecat cupidatat excepteur est exercitation eiusmod veniam pariatur velit laboris dolore reprehenderit sunt nisi.Enim ullamco veniam qui aute deserunt est cillum aliquip irure tempor.Reprehenderit ea culpa deserunt voluptate cillum laborum labore culpa esse ex amet.Nostrud ullamco ex ad dolore amet reprehenderit. Adipisicing adipisicing enim eu nostrud aute sunt. Labore sunt excepteur ea nostrud ut eiusmod. Deserunt pariatur et exercitation laboris sunt et ut consequat irure exercitation officia. Culpa irure qui in aliquip nulla anim veniam ad."}],
+        "articles" : [{
+                "title" : "Safety",
+                "text" : "Anim esse sint non non velit dolor officia laborum velit nulla laboris nisi sint sit. Voluptate elit et ea do cillum consectetur fugiat sunt ipsum. Irure anim cillum minim quis.In veniam laborum nisi occaecat proident laborum exercitation nisi consequat aliquip ut sunt. Laborum Lorem dolore aute ex non. Do deserunt adipisicing proident aute ex adipisicing in amet ullamco reprehenderit aliqua do nisi."
+            },
+            { 
+                "title" : "What to Eat",
+                "text" : "In esse dolore ea laborum enim commodo. Laborum commodo adipisicing dolor excepteur ad incididunt culpa. Laboris reprehenderit amet quis in magna. Id aute est veniam minim deserunt. Fugiat veniam enim anim velit laborum irure sit minim amet. Ad ipsum amet dolore excepteur aliqua irure ipsum aute ea id laboris consectetur.In minim id adipisicing culpa duis nostrud cupidatat eu cupidatat nisi sit ea culpa et. Ea tempor qui cillum id amet excepteur ad cillum nulla ad voluptate aliqua. Adipisicing quis minim non irure Lorem consequat pariatur consectetur mollit elit mollit nisi. Consectetur occaecat mollit proident amet ex. Occaecat et ea aute nostrud voluptate officia id esse sint cillum velit.Elit veniam elit adipisicing in pariatur. Reprehenderit labore irure nostrud Lorem eu dolor elit proident dolore id nulla. Consequat do ut nulla aliquip id id qui tempor."
+            },
+            { 
+                "title" : "Getting Around",
+                "text" : "Dolor duis Lorem sit mollit aliquip ipsum esse adipisicing non. Proident ut labore eu pariatur est aute sunt ea. Dolor voluptate pariatur consequat reprehenderit pariatur eu nisi voluptate anim.Irure nostrud ipsum laborum adipisicing nostrud incididunt. Lorem esse nisi veniam in enim est et sint duis sit ea. Velit anim nostrud ut nulla deserunt eiusmod. Consectetur esse sit labore laborum velit commodo. Nulla magna eiusmod in exercitation veniam adipisicing reprehenderit commodo labore.Proident non cillum dolor dolore amet consequat nostrud aliqua consequat elit. Pariatur anim elit culpa ipsum exercitation proident magna nisi nostrud sint ullamco adipisicing do. Ad id dolore nisi sint tempor veniam. Exercitation fugiat proident sunt magna sunt aliquip minim. Quis non tempor sint ullamco laborum voluptate adipisicing nisi do pariatur. Qui dolore sunt officia qui et irure eu ipsum. Commodo commodo et dolore proident fugiat ex adipisicing ipsum cillum incididunt qui.Elit incididunt non sunt amet labore fugiat duis cillum ea. Veniam cillum nisi officia id cillum eiusmod sint voluptate exercitation id mollit ut sint. Elit consequat veniam laboris voluptate sint cupidatat duis aliqua Lorem dolore. Sunt dolor consequat aliquip ipsum adipisicing dolor in non minim ad do aliquip. Nostrud amet nisi aute aliquip consequat.Fugiat cillum officia pariatur ullamco dolor officia cillum velit incididunt velit. Irure irure aliqua laborum dolor sunt voluptate culpa occaecat ea ea. Eu irure cillum culpa est ut nulla deserunt non excepteur excepteur nostrud sint aute irure. Fugiat ea laborum consectetur sint voluptate ut sint eiusmod amet ex culpa. Sit mollit pariatur est reprehenderit officia ad adipisicing quis ex elit nulla aliquip tempor tempor. Ipsum deserunt proident magna velit eu incididunt est commodo velit cillum cillum et. Pariatur reprehenderit in veniam ut elit et ex duis reprehenderit quis dolor."
+            },
+            { 
+                "title" : "Entry & Exit Requirements",
+                "text" : "Nulla excepteur aliqua nisi consectetur in. Id magna aliquip in magna. Enim commodo ex exercitation cillum commodo cillum officia voluptate eiusmod eiusmod.Aute cillum consectetur reprehenderit aliquip enim id dolor officia proident cillum. Mollit sunt ea id amet et Lorem ea laboris ea. In tempor enim sint proident nulla qui dolore deserunt cupidatat. Excepteur sunt sunt reprehenderit ea est magna magna id officia laborum non. Consectetur sunt nostrud ea elit mollit ea adipisicing excepteur labore."
+            }],
+        "images" : [
+            { "title" : "Kings Landing", "url": "croatia_1.jpg"}, 
+            { "title" : "City Square", "url": "croatia_2.jpg"},
+            { "title" : "Beaches", "url": "croatia_3.jpg"}
             ]
     }
 }

@@ -9,13 +9,13 @@ Input: array with 4 image objects consisting of url and title
 const Split_Img_Card = ({imgArr, header, subheader}) => {
 
     return (
-        <section className='relative grid grid-cols-3  mx-auto my-32 w-container'>
+        <section className='relative grid grid-cols-3 mx-auto w-container mb-12 md:mb-20'>
         <div className='grid grid-cols-2 grid-rows-2 mx-auto col-span-2 w-full rounded-2xl overflow-hidden' style={{height: '50vh'}}>
             
         {imgArr.map( item => (
             <div className='relative h-fit overflow-hidden flex flex-col justify-center'>
                 <img className='w-full h-auto absolute' src={`/images/ubud/${item.url}`}/>
-                <div className='absolute w-full h-full cursor-pointer Overlay'></div>
+                <div className='z-0 absolute top-0 left-0 cursor-pointer bg-gradient-to-t opacity-50 from-gray-900 via-transparent-20 to-transparent trans transition-opacity hover:opacity-0 w-full h-full'></div>
             </div>
         ))}
 
