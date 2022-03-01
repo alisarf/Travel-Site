@@ -27,6 +27,8 @@ import FeatureDestinations from './material-ui/FeatureDestinations';
 
 //import content
 import content from './assets/content/content.json'
+import Feedback from './material-ui/Feedback';
+import DivideSolidSection from './material-ui/DivideSolidSection';
 
 function App() {
 
@@ -72,8 +74,6 @@ function App() {
   }
   getKeys()
 
-
-
   return (
     <main>
       <HeadBanner title= 'Adventure!' image = {ImgBanner}  elem = {elem}/>
@@ -87,20 +87,10 @@ function App() {
           <p className='text-center Work_sans mb-12'>Find activites hosted by the locals.</p>
           <FeatureDestinations arr = {ftDestArr}/>
 
-          {/*<Typography variant='h1' className='text-center'>Travel Bali</Typography>*/}
-          <section className='flex flex-row m-auto Accent_Bg pt-12 pb-12 w-container rounded-2xl shadow-lg'>
-            <div className='relative'>
-              <img src={halfdiv} className=" absolute w-40 h-100%"></img>
-              <img src={signupGuy} className="w-40 h-40 z-10 relative"></img>
-            </div>
-            <div className=' m-auto items-center flex flex-col gap-y-4 '>
-              <TitleHead title = "Get the Latest News!" nav = 'signup'/>
-              <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1'/>
-              <TextField id="outlined-basic" label="Last Name" variant="outlined" className='flex-2' />
-              <TextField id="outlined-basic" label="Email" variant="outlined" className='flex-3' />
-              <Button>Sign Up</Button>
-            </div>
-          </section>
+          <DivideSolidSection 
+            msg = "Laborum Lorem et labore officia proident.Ut ullamco reprehenderit eiusmod ullamco.Amet proident commodo commodo tempor minim esse in est pariatur pariatur.Mollit consequat laborum adipisicing velit.Do veniam duis culpa commodo sunt sit ullamco sint cupidatat in exercitation enim.Lorem eiusmod consectetur minim proident." 
+            title = "Consequat mollit fugiat ad"
+          />
 
           <Split_Img_Card 
             imgArr= {ftArr}
@@ -122,7 +112,7 @@ function App() {
               msg = 'Culture'
             />*/}</section>
           
-          <div className="gap-10 pt-8 pb-4 w-container m-auto">     
+          <div className="gap-10 pb-4 w-container m-auto">     
             {/* default array needed for home page images*/}
             <TitleHead title = "Things to do" nav = 'articles'/>
             <FeatureCards 
@@ -133,11 +123,31 @@ function App() {
           </div>
         </div>  }
 
-        <section className="w-4/5 mx-auto p-16 text-center relative Accent_Bg rounded-2xl bottom-4 " style={{top: '5vw'}}>
-          <h3 className='text-white'>How helpful was Travel Bali at planning your next trip?</h3>
-          <RadioGroupRating/>
-          <div className='absolute w-full top-0' style={{zIndex:-1}}><img src={palm_leaf} className='m-auto w-40'/></div>
-        </section>
+
+                  {/*<Typography variant='h1' className='text-center'>Travel Bali</Typography>*/}
+
+          {/*    SIGNUP FORM
+          <section className='flex flex-row m-auto Accent_Bg pt-12 pb-12 w-container rounded-2xl shadow-lg mb-12 md:mb-20'>
+            <div className='relative'>
+              <img src={halfdiv} className=" absolute w-40 h-100%"></img>
+              <img src={signupGuy} className="w-40 h-40 z-10 relative"></img>
+            </div>
+            <div className=' m-auto items-center flex flex-col gap-y-4 '>
+              <TitleHead title = "Get the Latest News!" nav = 'signup'/>
+              <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1'/>
+              <TextField id="outlined-basic" label="Last Name" variant="outlined" className='flex-2' />
+              <TextField id="outlined-basic" label="Email" variant="outlined" className='flex-3' />
+              <Button>Sign Up</Button>
+            </div>
+          </section>
+          */}
+
+        <DivideSolidSection 
+          msg = "Exercitation cupidatat enim ad amet eu officia consectetur.Ullamco minim mollit cupidatat fugiat veniam esse labore labore velit eiusmod incididunt sit aliquip.Ea eu minim veniam ullamco dolore deserunt.Ex laboris qui labore velit enim sunt minim consectetur.Deserunt sunt eiusmod commodo laboris.Dolor mollit sint duis velit ea." 
+          title = "Eu non fugiat et nisi excepteur"
+        />
+
+        <Feedback msg= "How helpful was Globe Travel at planning your next trip?"/>
 
         <Footer/>
       </main>

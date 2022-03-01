@@ -61,9 +61,49 @@ body {
   height: 10vw;
 }
 
-@media screen and (max-width: 640px) {
+.Nav-mobile {
+  background-color: #FBFBFB;
+}
+
+.Nav-card-hover {
+  position: absolute;
+  top: 5vw;
+  z-index: 500;
+  background-color: white;
+  left: 0;
+  border-radius: 15px;
+}
+
+.Nav-card-hover-triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  top: calc(-1rem - 10px);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
   .VW-nav {
     height: 20vw;
+  }
+  .Nav-mobile {
+    height: 100vh;
+    top: 20vw;
+    width: 110vw;
+    left: -10%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 200;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Nav-card-hover {
+    top: 8vw;
   }
 }
 
@@ -145,7 +185,6 @@ footer {
 }
 
 nav {
-  z-index: 2;
   position: relative;
 }
 
@@ -182,11 +221,6 @@ nav {
   color: black !important;
 }
 
-.Nav-h-min {
-  min-height: 3rem;
-  top: .75rem;
-}
-
 .Grey-Deep-Bg {
   background-color: #3d3d4edb;
 }
@@ -212,26 +246,26 @@ main {
 }
 
 .LetterSpacing {
-  color: #28282a;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   font-size: 1.2rem;
   padding: 4px;
   position: relative;
-  border-bottom: 3px solid white;
+  opacity: .9;
 }
 
 .LetterSpacing:hover {
-  color: #818CF8;
+  color: black;
   z-index: 1;
+  opacity: 1 !important;
 }
 
 .LetterSpacing::before {
   content: "";
   position: absolute;
   bottom: 0;
-  background-color: white;
-  height: 3px !important;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 0px !important;
   width: 100%;
   left: 0;
   -webkit-transition: all .3s ease;
@@ -395,7 +429,7 @@ p {
 }
 
 .Circular_box {
-  background: #424346d1;
+  background: #f3f4f63b;
   border-radius: 100px;
 }
 
@@ -484,6 +518,10 @@ p {
   z-index: -10;
 }
 
+.underline-offset-6 {
+  text-underline-offset: 6px;
+}
+
 .w-container {
   width: 80%;
   max-width: 1280px;
@@ -493,16 +531,17 @@ p {
   aspect-ratio: 1/1;
 }
 
-.Txt-over-Img1 {
-  background: #121212;
-  background: -webkit-gradient(linear, left bottom, left top, from(#121212), color-stop(80%, rgba(18, 18, 18, 0)));
-  background: linear-gradient(0deg, #121212 0%, rgba(18, 18, 18, 0) 80%);
+.p-container {
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
-.Txt-over-Img2 {
-  background: #121212;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 0)), color-stop(50%, rgba(18, 18, 18, 0.6)), to(rgba(18, 18, 18, 0.8)));
-  background: linear-gradient(180deg, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.6) 50%, rgba(18, 18, 18, 0.8) 100%);
+.pl-15 {
+  padding-left: 15%;
+}
+
+.line-ht-spaced {
+  line-height: 1.2 !important;
 }
 
 .Carousel-container {
@@ -569,9 +608,19 @@ p {
     -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
+  .p-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pl-15 {
+    padding-left: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
+  html {
+    font-size: 14px !important;
+  }
   .W-20vh {
     height: 20vh !important;
   }
@@ -587,6 +636,9 @@ p {
   }
   .w-container {
     width: 90%;
+  }
+  footer {
+    padding-top: 15%;
   }
 }
 /*# sourceMappingURL=general.css.map */

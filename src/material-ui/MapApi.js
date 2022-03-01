@@ -43,7 +43,7 @@ const MapApi = (props) => {
         setViewport({
             latitude: latitude,
             longitude: longitude,
-            zoom : 10
+            zoom : 9
         })
     }, [latitude, longitude])
 

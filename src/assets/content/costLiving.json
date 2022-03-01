@@ -118,5 +118,35 @@
             "title": "☕️ Cup of Joe",
             "cost": "$1.99"
         }
+    ],
+    "dubrovnik" : [
+        {
+            "title": "💵 Cost of living",
+            "cost": "$327 / month"
+        },
+        {
+            "title": "🏠 1br studio",
+            "cost": "$122 / month"
+        },
+        {
+            "title": "✂️ Basic Haircut",
+            "cost": "$3.00"
+        },
+        {
+            "title": "🩺 Visit to Doctor",
+            "cost": "$50.35"
+        },
+        {
+            "title": "🍛 Meal",
+            "cost": "$1.05"
+        },
+        {
+            "title": "🍺 Beer (0.5L)",
+            "cost": "$0.52"
+        },
+        {
+            "title": "☕️ Cup of Joe",
+            "cost": "$1.99"
+        }
     ]
 }
