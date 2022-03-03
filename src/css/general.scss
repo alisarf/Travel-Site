@@ -1,3 +1,7 @@
+@import "utilities/colors";
+@import "components/buttons";
+@import "components/nav";
+
 //block decal overflow
 html {
     overflow-x: hidden;
@@ -10,51 +14,7 @@ html {
     scroll-behavior: smooth !important;
 }
 
-/*COLOR PALLETTE*/
 
-//Blues
-$accentBold : #0912FF;
-$accent : #818CF8;
-$accent_active : #5665FC;
-$accentLt : rgba(129, 140, 248, 0.04);
-$primary_blue : #3B8FF1;
-$primary_blue_active: #1476E9;
-
-//Neutrals
-$grey-lightest: #EBEBEB;
-$black_grey : #3d3d4e;
-$black-grey_grey: #28282a;
-$white_text : white;
-$main_Bg : #FBFBFB;
-
-
-.Accent { 
-    color: $accent;
-}
-.Accent_Bg {
-    background-color: $accent;
-}
-.Accent_Bg_Lt {
-    background-color: $accentLt;
-}
-.Accent_Active {
-    color: $accent_active;
-}
-.Accent_Bold {
-    background-color: $accentBold;
-}
-.Accent_Bold_Bg {
-    background-color: $accentBold;
-}
-.Black {
-    color: $black_grey;
-}
-.Black_Bg {
-    background-color: $black-grey;
-}
-.Grey_lt {
-    background-color: $grey-lightest;
-}
 
 
 /*----Box Shadow----*/
@@ -67,66 +27,6 @@ body {
 }
 
 
-//UNIVERSAL SPACING VIEWWIDTH
-.VW-nav {
-    height: 10vw;
-}
-.Nav-mobile{
-    background-color: $main_Bg;
-}
-.Nav-card-hover{
-        position: absolute;
-        top: 5vw;
-        z-index: 500;
-        background-color: white;
-        left: 0;
-        border-radius: 15px;
-}
-.Nav-card-hover-triangle {
-    width: 0; 
-    height: 0; 
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid white;
-    top: calc(-1rem - 10px);
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-@media screen and (max-width: 768px) {
-    .VW-nav {
-        height: 20vw;
-    }
-    .Nav-mobile {
-        height: 100vh;
-        top: 20vw;
-        width: 110vw;
-        left: -10%;
-        overflow: hidden;
-        position: fixed;
-        z-index: 200;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .Nav-card-hover{
-        top: 8vw;
-    }
-}
-
-
-.Button{
-    background-color: #ff3d00 !important;
-    padding: 1rem 2rem !important;
-    border-radius: 0 !important;
-    font-family: 'Roboto Condensed', 'sans-serif' !important;
-    font-weight: 700 !important;
-    display: flex !important;
-    position: relative !important;
-    margin: auto !important;
-    &:hover{
-        background-color: #e63600 !important;
-    }
-}
 
 //testing background
 

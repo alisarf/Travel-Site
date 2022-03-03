@@ -1,0 +1,45 @@
+/*COLOR PALLETTE*/
+
+//Blues
+$accentBold : #0912FF;
+$accent : #818CF8;
+$accent_active : #5665FC;
+$accentLt : rgba(129, 140, 248, 0.04);
+$primary_blue : #3B8FF1;
+$primary_blue_active: #1476E9;
+
+//Neutrals
+$grey-lightest: #EBEBEB;
+$black_grey : #3d3d4e;
+$black-grey_grey: #28282a;
+$white_text : white;
+$main_Bg : #FBFBFB;
+
+
+.Accent { 
+    color: $accent;
+}
+.Accent_Bg {
+    background-color: $accent;
+}
+.Accent_Bg_Lt {
+    background-color: $accentLt;
+}
+.Accent_Active {
+    color: $accent_active;
+}
+.Accent_Bold {
+    background-color: $accentBold;
+}
+.Accent_Bold_Bg {
+    background-color: $accentBold;
+}
+.Black {
+    color: $black_grey;
+}
+.Black_Bg {
+    background-color: $black-grey;
+}
+.Grey_lt {
+    background-color: $grey-lightest;
+}

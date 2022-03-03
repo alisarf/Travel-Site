@@ -1,16 +1,8 @@
+/*COLOR PALLETTE*/
 @import url("https://fonts.googleapis.com/css2?family=Rakkas&family=Roboto:ital,wght@1,100;1,300;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
-html {
-  overflow-x: hidden;
-}
-
-.scroll-smooth {
-  scroll-behavior: smooth !important;
-}
-
-/*COLOR PALLETTE*/
 .Accent {
   color: #818CF8;
 }
@@ -47,14 +39,21 @@ html {
   background-color: #EBEBEB;
 }
 
-/*----Box Shadow----*/
-.Box_Shadow {
-  -webkit-box-shadow: 4px 4px 14px #D2D2D2;
-          box-shadow: 4px 4px 14px #D2D2D2;
+.Button {
+  background-color: #ff3d00 !important;
+  padding: 1rem 2rem !important;
+  border-radius: 0 !important;
+  font-family: 'Roboto Condensed', 'sans-serif' !important;
+  font-weight: 700 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: relative !important;
+  margin: auto !important;
 }
 
-body {
-  background-color: #FBFBFB;
+.Button:hover {
+  background-color: #e63600 !important;
 }
 
 .VW-nav {
@@ -107,21 +106,22 @@ body {
   }
 }
 
-.Button {
-  background-color: #ff3d00 !important;
-  padding: 1rem 2rem !important;
-  border-radius: 0 !important;
-  font-family: 'Roboto Condensed', 'sans-serif' !important;
-  font-weight: 700 !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  position: relative !important;
-  margin: auto !important;
+html {
+  overflow-x: hidden;
 }
 
-.Button:hover {
-  background-color: #e63600 !important;
+.scroll-smooth {
+  scroll-behavior: smooth !important;
+}
+
+/*----Box Shadow----*/
+.Box_Shadow {
+  -webkit-box-shadow: 4px 4px 14px #D2D2D2;
+          box-shadow: 4px 4px 14px #D2D2D2;
+}
+
+body {
+  background-color: #FBFBFB;
 }
 
 .Text-shadow {

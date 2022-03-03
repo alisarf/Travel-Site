@@ -1,0 +1,45 @@
+//UNIVERSAL SPACING VIEWWIDTH
+.VW-nav {
+    height: 10vw;
+}
+.Nav-mobile{
+    background-color: $main_Bg;
+}
+.Nav-card-hover{
+    position: absolute;
+    top: 5vw;
+    z-index: 500;
+    background-color: white;
+    left: 0;
+    border-radius: 15px;
+}
+.Nav-card-hover-triangle {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    top: calc(-1rem - 10px);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+    .VW-nav {
+        height: 20vw;
+    }
+    .Nav-mobile {
+        height: 100vh;
+        top: 20vw;
+        width: 110vw;
+        left: -10%;
+        overflow: hidden;
+        position: fixed;
+        z-index: 200;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .Nav-card-hover{
+        top: 8vw;
+    }
+}

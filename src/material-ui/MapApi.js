@@ -49,7 +49,7 @@ const MapApi = (props) => {
 
     return (
         <Paper className="w-full h-auto overflow-hidden lg:w-3/5" sx={{minHeight: '30vh', borderRadius: '15px'}}>
-            <ReactMapGL className = 'rounded-md Min-H-30VH'       
+            <ReactMapGL className = ' overflow-hidden rounded-md Min-H-30VH'       
                 {...viewport}
                 scrollZoom={false}
                 width = "auto"

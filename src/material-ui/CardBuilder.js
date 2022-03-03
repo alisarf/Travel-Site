@@ -11,7 +11,6 @@ function CardBuilder (props) {
   //onClick={props.setHeart( })}
   //caches the heart that you make on a card
 
-
   const handleChange = (e) => { 
       if (props.elem.length === 0) {
        props.setElem([{ id: props.id, url: props.image }])
@@ -22,17 +21,13 @@ function CardBuilder (props) {
         } else {
           console.log('unchecked');
           props.setElem(props.elem.filter(({id}) => id !== props.id))
-          //removeItem = (id) => {
-          //  setProduct(product.filter((i)=>(i.id !== id)))
-          //}
         }
       }
     localStorage.setItem('data', JSON.stringify(props.elem));
   }; 
-  
 
-    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-    //console.log(props.image.webformatURL)
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
     return (
         <Card sx={{ maxWidth: 345 }}  className="mx-auto">
         <CardMedia
@@ -41,7 +36,6 @@ function CardBuilder (props) {
           height="100px"
           image= {props.image}
         />
-        
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Lorem Ipsum
@@ -55,12 +49,12 @@ function CardBuilder (props) {
           <Button size="small">Learn More</Button>
           <div className="ml-auto">
             <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} onChange={handleChange}/>
-                <Checkbox
-                {...label}
-                icon={<BookmarkBorderIcon />}
-                checkedIcon={<BookmarkIcon />}
-                />
-            </div>
+              <Checkbox
+              {...label}
+              icon={<BookmarkBorderIcon />}
+              checkedIcon={<BookmarkIcon />}
+            />
+          </div>
         </CardActions>
       </Card>
     );
