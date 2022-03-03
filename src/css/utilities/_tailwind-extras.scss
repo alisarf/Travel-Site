@@ -1,0 +1,39 @@
+//********TAILWIND ADDITIONS**********//
+.min-h-20vh {
+    min-height: 20vh;
+}
+.-z-10{
+    z-index: -10;
+}
+.underline-offset-6 {
+    text-underline-offset: 6px;
+}
+.w-container {
+    width: 80%;
+    max-width: 1280px;
+}
+.grid_sq {
+ aspect-ratio: 1/1;
+}
+.p-container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.pl-15 {
+    padding-left: 15%;
+}
+.line-ht-spaced {
+    line-height: 1.2 !important;
+}
+.w-fit {
+    width: fit-content;
+}
+//MISC TAILWIND
+// used in FeatureCard
+.W-20vh{
+    height: 350px;
+}
+//MOSTLY FOR MAP
+.Min-H-30VH {
+    min-height: 30vh;
+}

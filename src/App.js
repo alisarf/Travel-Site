@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import './css/style.css';
-import './css/reset.css';
+import './css/utilities/reset.css';
 import './css/general.css';
 import CardBuilder from './material-ui/CardBuilder';
 import { Typography, Button, Paper, TextField, Pagination} from '@mui/material';
