@@ -1,0 +1,98 @@
+/**----Font Classes----**/
+
+.Condense {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.Work_sans{
+    font-family: 'Work Sans', sans-serif !important;
+}
+//font family
+.Roboto {
+    font-family: 'Roboto','sans-serif';
+}
+.Roboto_Condensed {
+    font-family: 'Roboto Condensed','sans-serif';
+}
+
+/**----Font Pre-Sets----**/
+
+h1, h2, h3, h5{
+    color: $black_grey;
+} 
+h1{
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 5rem;
+    color: #FFFFFF;
+}
+
+h2{
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    //font-size: 2.5rem;
+    //line-height: 3rem;
+}
+h3 {
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+h4 {
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: bold;
+    font-size: 1.875rem;
+    line-height: 2.2rem;
+
+    padding-bottom: 1rem;
+}
+
+h5{
+    font-family: 'Roboto Condensed','sans-serif';
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.185em;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+/**MISC FONT STYLING**/
+
+//text shadow background
+.Text-shadow{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+//Page Title : Global Travel
+.Special_Title{
+    font-family: 'Spartan', sans-serif;
+    font-size: 2rem;  
+}
+
+/*----H2 Accent Line----*/
+.Divider::after{
+    position: relative; 
+    content: ""; 
+    width: 30px; 
+    height: 4px; 
+    background: $accentBold; 
+    display: block; 
+    margin: 0.5rem auto;
+}
+
+.SidePanel .Divider::after {
+    margin: .5rem 0 !important;
+}
+//SectionParaMulti Paragraph for heavy content reading
+.Reading-content {
+    line-height: 1.5;
+    font-size: 1.125rem;
+    font-family: 'Work Sans', sans-serif;
+}

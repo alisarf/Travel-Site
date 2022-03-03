@@ -1,10 +1,31 @@
+nav{
+    position: relative;
+}
+
 //UNIVERSAL SPACING VIEWWIDTH
 .VW-nav {
     height: 10vw;
 }
+
+.Nav-link{
+    text-decoration: none;
+    //text-decoration-color: rgba(99, 102, 241, 0.5);
+    transition: all .2s;
+    &:hover{
+        //text-decoration-color: rgb(99, 102, 241);
+        color: #16ffe4b9;
+        
+    }
+}
+
+.Nav-link-destination {
+    color: black !important;
+}
+
 .Nav-mobile{
     background-color: $main_Bg;
 }
+
 .Nav-card-hover{
     position: absolute;
     top: 5vw;
@@ -13,6 +34,7 @@
     left: 0;
     border-radius: 15px;
 }
+
 .Nav-card-hover-triangle {
     width: 0; 
     height: 0; 
@@ -24,6 +46,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 @media screen and (max-width: 768px) {
     .VW-nav {
         height: 20vw;

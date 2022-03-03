@@ -1,0 +1,23 @@
+footer{
+    padding: 7.5% 15%;
+}
+.ListItems{
+    li{
+        font-weight: 500;
+        margin: .5rem 0;
+        color: rgb(115, 115, 115);
+        &:hover{
+            color: rgb(71, 71, 71);
+            cursor: pointer;
+        }
+    }
+}
+//SOCIAL ICONS:
+.Transition_Icon{
+    cursor: pointer;
+    color: $accent;
+    transition: .3 ease-in;
+    &:hover{
+        color: $accent_active;
+    }
+}

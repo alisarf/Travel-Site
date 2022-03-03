@@ -1,13 +1,18 @@
-.Button{
-    background-color: #ff3d00 !important;
-    padding: 1rem 2rem !important;
-    border-radius: 0 !important;
-    font-family: 'Roboto Condensed', 'sans-serif' !important;
-    font-weight: 700 !important;
-    display: flex !important;
-    position: relative !important;
-    margin: auto !important;
-    &:hover{
-        background-color: #e63600 !important;
+/*----Buttons----*/
+.Primary_Btn {
+    font-family: 'Roboto Condensed','sans-serif';
+    display: flex;
+    justify-content: center;
+    background: $primary_blue;
+    border-radius: 8px;
+    width: 100%;
+    //margin: 0 auto;
+    line-height: 3rem;
+    color: $white_text;
+    text-transform: uppercase;
+    transition: all 0.1s ease;
+    &:hover {
+        background-color: $primary_blue_active;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 }

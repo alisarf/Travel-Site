@@ -34,7 +34,7 @@ const Weather = (props) => {
             {(typeof weather.main != "undefined") ? (
             <section className="flex flex-row gap-8 justify-evenly items-center">
                 <div className="Circular_box">
-                    <img src={weathericon.base + weather.weather[0].icon + weathericon.end} className="Weather_icon" alt={weather.weather[0].description}/>
+                    <img src={weathericon.base + weather.weather[0].icon + weathericon.end} alt={weather.weather[0].description} style={{width: '50px', height: '50px'}}/>
                 </div>
                 <div>
                     <h5 className="text-white uppercase text-sm"> {weather.weather[0].main} </h5>

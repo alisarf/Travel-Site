@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 import arrow from '../assets/images/media/arrow.svg'
 
-
-
 import '../css/style.css';
-import '../css/reset.css';
+import '../css/utilities/reset.css';
 import '../css/general.css';
 import content from '../assets/content/content.json'
 
