@@ -8,7 +8,7 @@ import arrow from '../assets/images/media/arrow.svg'
 
 
 import '../css/style.css';
-import '../css/custom.css';
+import '../css/reset.css';
 import '../css/general.css';
 import content from '../assets/content/content.json'
 
