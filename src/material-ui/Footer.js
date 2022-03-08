@@ -14,16 +14,16 @@ const Footer = () => {
           <Link to='/' >
               <span className="Special_Title font-bold text-center uppercase text-white">Globe Travel</span>
           </Link>
-        <div className=' SocialIcons md:mr-auto'>
-          <FacebookIcon className='Transition_Icon'/>
-          <InstagramIcon className='Transition_Icon mx-2'/>
-          <TwitterIcon className='Transition_Icon'/>
+        <div className='md:mr-auto'>
+          <FacebookIcon className='Footer__Icon'/>
+          <InstagramIcon className='Footer__Icon mx-2'/>
+          <TwitterIcon className='Footer__Icon'/>
         </div>
         </section>
         <section className='flex flex-row justify-center mb-10'>
           <div className='inline-block'>
             <h6 className='font-bold'>Company</h6>
-            <ul className='ListItems'>
+            <ul className='Footer__Links'>
               <li>Contact us</li>
               <li>Locations</li>
               <li>Mission</li>

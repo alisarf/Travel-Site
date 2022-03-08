@@ -2,13 +2,13 @@
 .Tag {
     width: fit-content;
     padding: .2rem .8rem;
-    background-color: $accentBold;
+    background-color: var(--accentBold);
     font-family: 'Roboto Condensed','sans-serif';
     font-weight: bold;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: $white_text;
+    color: var(--white_text);
 }
 
 //left rounded corner for progress bar
@@ -19,6 +19,6 @@
 /**WEATHER API SECTION**/
 //shadow circle under weather svg for visibility
 .Circular_box{
-    background: #f3f4f63b;
+    background: hsla(220, 14%, 96%, 0.231);
     border-radius: 100px;
 }

@@ -1,6 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# design files, figma, adobe and sketch
+*.sketch
+*.fig
+*.xd
+
+# dependencies and to avoid clutter
 /node_modules
 /.pnp
 .pnp.js

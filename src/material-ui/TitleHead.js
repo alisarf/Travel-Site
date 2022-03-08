@@ -6,7 +6,7 @@ const TitleHead = (props) => {
     return (
         <section id={props.nav}>
             <div className='mx-auto mb-8 text-4xl md:text-5xl'>
-                <h2 className='Divider text-center capitalize'>{props.title}</h2>
+                <h2 className='Dark Divider text-center capitalize'>{props.title}</h2>
             </div>
         </section>
     )

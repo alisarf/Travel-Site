@@ -1,4 +1,4 @@
-/*******MATERIAL UI OVERIDES******/
+//##MATERIAL UI OVERIDES
 
 //center pagination
 .MuiPagination-ul{
@@ -39,7 +39,7 @@
 //Divide
 .MuiDivider-root::before , .MuiDivider-root::after{
     //border-top: 3px solid rgba(142, 161, 160, 0.68) !important;
-    border-top: 3px solid $accentBold !important;
+    border-top: 3px solid --accentBold !important;
 }
 //Divide-margin of the Typography
 .css-1vw6mcs-MuiTypography-root{
@@ -50,11 +50,7 @@
     border-radius: 1rem !important;
     overflow: hidden;
 }
-//mui icon rating
-.SocialIcons .css-i4bv87-MuiSvgIcon-root{ 
-    width: 1.5rem !important;
-    height: 1.5rem !important;
-}
+
 .RadioGroupRating .css-i4bv87-MuiSvgIcon-root {
     width: 2.5rem !important;
     height: 2.5rem !important;

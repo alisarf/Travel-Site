@@ -24,6 +24,9 @@ My Figma Design : https://www.figma.com/file/x4g13FOmawte7m2r2yNMGz/Travel_Site?
 
 The purpose of this repository was to learn how to work with Material UI and Tailwind CSS and to build on React knowledge. The only significant challenge I have faced with this project is passing array props between pages when using React Router. I tried using local storage to pass the informatin between pages, however, this doesn't seem to solve the problem. I believe creating a database with user accounts would be the way to go but I don't anticipate spending the time to set this up for the "favorite" icon system. Another small issue occured when passing img urls from JSON file to Material UI components. I found that storing images within the public folder resolved this issue. 
 
+Other Things to Note:
+Implemented BEM for folder/file set up and some nomenclature. Picked PascalCase over camelCase to avoid confusion with tailwind classes.
+
 ### Screenshot
 
 Destination Page Sample:
@@ -46,12 +49,17 @@ Destination Page Sample:
 
 ### What I learned
 
+- Utilizing some best practices with setting up SASS files/folders
+- Implementing BEM when applicable
+- Using CSS Variables instead of SASS variables
+- Implementing SASS functions for converting px to rem and to set up reusable breakpoints.
 - How to repurpose components from previous React projects
 - Build on React knowledge, working with useState, useEffect, props, reusability of components and React Router
 - How to utilize and style Material UI components
 - MUI was okay but overiding the styling was annoying. However, I liked how efficient it was to implement components and have results with uniform styling patterns. 
 - Tailwind was very useful and I would like to learn more about working with custom styles. Would use again on future projects.
 - How to interact with MapBox and Open Weather Map Api system.
+- How to implement a prefers-color-scheme toggle with SASS for users who have a dark and light theme device presets.
 
 ### Continued development
 

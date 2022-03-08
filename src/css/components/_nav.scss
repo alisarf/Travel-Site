@@ -1,57 +1,42 @@
 nav{
     position: relative;
-}
-
-//UNIVERSAL SPACING VIEWWIDTH
-.VW-nav {
     height: 10vw;
-}
-
-.Nav-link{
-    text-decoration: none;
-    //text-decoration-color: rgba(99, 102, 241, 0.5);
-    transition: all .2s;
-    &:hover{
-        //text-decoration-color: rgb(99, 102, 241);
-        color: #16ffe4b9;
-        
+    @include breakpoint(small) {
+        height: 20vw;
     }
 }
 
-.Nav-link-destination {
+.Nav_modal--link, .Nav__hamburger--link {
     color: black !important;
 }
 
-.Nav-mobile{
-    background-color: $main_Bg;
-}
-
-.Nav-card-hover{
+.Nav__modal{
     position: absolute;
     top: 5vw;
     z-index: 500;
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     left: 0;
     border-radius: 15px;
-}
-
-.Nav-card-hover-triangle {
-    width: 0; 
-    height: 0; 
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid white;
-    top: calc(-1rem - 10px);
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media screen and (max-width: 768px) {
-    .VW-nav {
-        height: 20vw;
+    @include breakpoint(large) {
+        top: 8vw; //need to move up/down when screen moves, consider calc()
     }
-    .Nav-mobile {
+    &--triangle {
+        width: 0; 
+        height: 0; 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid hsl(0, 0%, 100%);
+        top: calc(-1rem - 10px);
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//Hamburger Nav
+//Fullscreen nav option in mobile display
+.Nav__hamburgerToggle {
+    @include breakpoint(small) {
         height: 100vh;
         top: 20vw;
         width: 110vw;
@@ -59,10 +44,19 @@ nav{
         overflow: hidden;
         position: fixed;
         z-index: 200;
+        background-color: var(--main_Bg);
+
     }
 }
-@media screen and (max-width: 1200px) {
-    .Nav-card-hover{
-        top: 8vw;
+
+//FOR VISUALLY TESTING NAV MODAL
+.Test123{
+    height: fit-content;
+    background-color: hsl(160, 100%, 75%);
+
+}
+@include breakpoint(medium) {
+    .Test123:hover{
+            padding-bottom: 3vh;
     }
 }
