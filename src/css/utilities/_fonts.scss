@@ -1,64 +1,75 @@
-/**----Font Classes----**/
+/**----Font Variables----**/
+:root {
+    --work-sans: 'Work Sans', sans-serif;
+    --roboto: 'Roboto','sans-serif';
+    --roboto-condensed: 'Roboto Condensed','sans-serif';
+}
 
-.Condense {
-    font-family: 'Roboto Condensed', sans-serif;
-}
+/* ---Font Helper Classes---*/
 .Work_sans{
-    font-family: 'Work Sans', sans-serif !important;
+    font-family: var(--work-sans);
 }
-//font family
+
 .Roboto {
-    font-family: 'Roboto','sans-serif';
+    font-family: var(--roboto);
 }
+
 .Roboto_Condensed {
-    font-family: 'Roboto Condensed','sans-serif';
+    font-family: var(--roboto-condensed);
 }
 
 /**----Font Pre-Sets----**/
 
-h1, h2, h3, h5{
-    color: $black_grey;
-} 
-h1{
-    font-family: 'Roboto Condensed','sans-serif';
-    font-weight: bold;
-    font-size: 5rem;
-    color: #FFFFFF;
+h2,
+h3,
+h5 {
+    color: var(--black_grey);
 }
 
-h2{
-    font-family: 'Roboto Condensed','sans-serif';
-    font-weight: bold;
-    //font-size: 2.5rem;
-    //line-height: 3rem;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--roboto-condensed);
 }
-h3 {
-    font-family: 'Roboto Condensed','sans-serif';
+
+h1,
+h2,
+h3,
+h4 {
     font-weight: bold;
-    font-size: 2rem;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h3,
+h4,
+h5 {
     line-height: 2.3rem;
+}
+
+h3 {
+    font-size: 2rem;
     letter-spacing: 0.5px;
     text-transform: capitalize;
 }
-h4 {
-    font-family: 'Roboto Condensed','sans-serif';
-    font-weight: bold;
-    font-size: 1.875rem;
-    line-height: 2.2rem;
 
+h4 {
+    font-size: 1.875rem;
     padding-bottom: 1rem;
 }
 
 h5{
-    font-family: 'Roboto Condensed','sans-serif';
     font-weight: 500;
     font-size: 2rem;
-    line-height: 2.3rem;
     letter-spacing: 0.185em;
 }
 
 p {
-    font-family: 'Work Sans', sans-serif;
+    font-family:  var(--work-sans);
     font-size: 1.2rem;
     line-height: 2rem;
 }
@@ -82,7 +93,7 @@ p {
     content: ""; 
     width: 30px; 
     height: 4px; 
-    background: $accentBold; 
+    background: var(--accentBold); 
     display: block; 
     margin: 0.5rem auto;
 }
@@ -90,9 +101,10 @@ p {
 .SidePanel .Divider::after {
     margin: .5rem 0 !important;
 }
+
 //SectionParaMulti Paragraph for heavy content reading
-.Reading-content {
+.SectionParaMulti__Content {
     line-height: 1.5;
     font-size: 1.125rem;
-    font-family: 'Work Sans', sans-serif;
+    font-family: var(--work-sans);
 }

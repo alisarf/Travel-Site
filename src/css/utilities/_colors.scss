@@ -1,45 +1,76 @@
-/*COLOR PALLETTE*/
+//**COLOR PALLETTES AND THEMES
 
-//Blues
-$accentBold : #0912FF;
-$accent : #818CF8;
-$accent_active : #5665FC;
-$accentLt : rgba(129, 140, 248, 0.04);
-$primary_blue : #3B8FF1;
-$primary_blue_active: #1476E9;
-
-//Neutrals
-$grey-lightest: #EBEBEB;
-$black_grey : #3d3d4e;
-$black-grey_grey: #28282a;
-$white_text : white;
-$main_Bg : #FBFBFB;
+//##CSS Variables
+//##Color Helper Classes
+//##Prefers Dark Mode Theme
 
 
+//CSS Variables
+:root {
+    //Blues
+    --color: red;
+    --accentBold : hsl(238, 100%, 52%);
+    --accent : hsl(234, 89%, 74%);
+    --accent_active : hsl(235, 97%, 66%);
+    --accentLt : hsla(234, 89%, 74%, 0.04);
+    --primary_blue : hsl(212, 87%, 59%);
+    --primary_blue_active: hsl(212, 84%, 50%);
+    //Neutrals
+    --grey-lightest: hsl(0, 0%, 92%);
+    --black_grey : hsl(240, 12%, 27%);
+    --black_grey_light: hsl(0, 0%, 45%);
+    --black_grey_light_hover: hsl(0, 0%, 28%);
+    --black-grey_grey: hsl(240, 2%, 16%);
+    --white_text : hsl(0, 0%, 100%);
+    --main_Bg : hsl(0, 0%, 98%);
+}
+
+//Color Helper Classes
 .Accent { 
-    color: $accent;
+    color: var(--accent);
 }
 .Accent_Bg {
-    background-color: $accent;
+    background-color: var(--accent);
 }
 .Accent_Bg_Lt {
-    background-color: $accentLt;
+    background-color: var(--accentLt);
 }
 .Accent_Active {
-    color: $accent_active;
+    color: var(--accent_active);
 }
 .Accent_Bold {
-    background-color: $accentBold;
+    background-color: var(--accentBold);
 }
 .Accent_Bold_Bg {
-    background-color: $accentBold;
+    background-color: var(--accentBold);
 }
 .Black {
-    color: $black_grey;
+    color: var(--black_grey);
 }
 .Black_Bg {
-    background-color: $black-grey;
+    background-color: var(--black-grey);
 }
 .Grey_lt {
-    background-color: $grey-lightest;
+    background-color: var(--grey-lightest);
+}
+
+//Prefers Dark Mode Theme
+//Sets color theme based on user preferences
+@media (prefers-color-scheme: dark) {
+    h2.Dark {
+        color: var(--accent);
+    }
+    .Dark.Palm{
+        visibility: hidden;
+    }
+    span.Dark,
+    p.Dark.Black,
+    a.Dark.Black,
+    a.Dark.Nav__link--destination,
+    span.Dark {
+        color: whitesmoke !important;
+    }
+    .Dark.Black_Bg {
+        background-color: hsl(267, 14%, 12%);
+    }
 }

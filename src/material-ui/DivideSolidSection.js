@@ -5,7 +5,7 @@ const DivideSolidSection = ({msg, title}) => {
         <section className="">
             <div className='w-container pt-8 pb-28 p-container md:pt-20 md:pb-40 flex flex-col justify-between m-auto text-center lg:w-2/5 lg:flex-col'>
                 <TitleHead title = {title}/>
-                <p className="w-full font-semibold text-black lg:mt-4">{msg}
+                <p className="Dark Black w-full font-semibold lg:mt-4">{msg}
                 <a className='cursor-pointer Roboto_Condensed tracking-wider font-extrabold block mt-4 Accent_Active'>Learn more about this here <img src={arrow} className="w-6 inline-block"/></a>
                 </p>
             </div>

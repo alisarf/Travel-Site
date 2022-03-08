@@ -1,0 +1,9 @@
+//CONVERT PIXELS TO REM
+/* to use:
+    h1 {
+        font-size: rem(30);
+    }
+*/
+@function rem($pixels, $context: 16) {
+    @return ($pixels / $context) * 1rem;
+}

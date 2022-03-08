@@ -24,7 +24,7 @@ const Split_Img_Card = ({imgArr, header, subheader}) => {
         <div className=' my-0'>
             <h2 className='Divider text-left capitalize text-4xl md:text-5xl '>{header}</h2>
         </div>
-        <Typography variant = "body1" className='Work_sans'>{subheader}</Typography>
+        <Typography variant = "body1" className='Work_sans Black'>{subheader}</Typography>
         </div>
         </section>
     )

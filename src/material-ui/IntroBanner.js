@@ -16,7 +16,7 @@ const IntroBanner = (props) => {
     }
     
     return (
-        <section className="flex flex-col h-auto m-auto overflow-hidden mb-12 Section_Container md:flex-row md:mb-20">
+        <section className="flex flex-col h-auto m-auto overflow-hidden mb-12 Container md:flex-row md:mb-20">
             <div className='Accent_Bg w-full relative p-8 overflow-hidden md:w-3/5 md:p-16'>
                 <h1 className='relative z-10 text-white font-bold Roboto_Condensed uppercase text-5xl mb-8 text-center md:text-6xl md:text-left'>{props.location ? props.location : 'Explore'}</h1>
                 <p className='relative z-10 text-white text-center md:text-left'>

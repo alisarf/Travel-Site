@@ -119,7 +119,7 @@ const PageTemplate = (props) => {
                     />
                 </section>
 
-                <section className='overflow-hidden mb-12 md:mb-20 Section_Container'>
+                <section className='overflow-hidden mb-12 md:mb-20 Container'>
                     <div className='bg-white p-12'>
                         <TitleHead  title = "transport" nav = 'transport'/>
                         <FeatureTri location = {location}/>
@@ -136,7 +136,7 @@ const PageTemplate = (props) => {
                     title = "Consequat mollit fugiat ad"
                 />
 
-                <section className='pt-16 bg-white Section_Container overflow-hidden mb-12 md:mb-20'>                
+                <section className='pt-16 bg-white Container overflow-hidden mb-12 md:mb-20'>                
                     <TitleHead  title = "Cost of Living" nav = 'cost'/>
                     <Cost location = {location}/>
                 </section> 
@@ -146,7 +146,7 @@ const PageTemplate = (props) => {
                     title = "Consectetur minim consectetur"
                 />
 
-                <section className='pt-4 px-4 relative mx-auto bg-white overflow-hidden Section_Container  mb-12 md:mb-20 md:pt-16 md:pb-12 md:px-16 '>
+                <section className='pt-4 px-4 relative mx-auto bg-white overflow-hidden Container  mb-12 md:mb-20 md:pt-16 md:pb-12 md:px-16 '>
                 <TitleHead title = "What to know" nav = 'articles'/>
                 
                 <SectionParaMulti  location = {location} info = 'articles'/>
