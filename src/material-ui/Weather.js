@@ -28,13 +28,15 @@ const Weather = (props) => {
     }, [props.location]);        // eslint-disable-line react-hooks/exhaustive-deps
 
 
-
     return (
         <article className = 'w-fit'>
             {(typeof weather.main != "undefined") ? (
             <section className="flex flex-row gap-8 justify-evenly items-center">
                 <div className="Circular_box">
-                    <img src={weathericon.base + weather.weather[0].icon + weathericon.end} alt={weather.weather[0].description} style={{width: '50px', height: '50px'}}/>
+                    <img 
+                    src={weathericon.base + weather.weather[0].icon + weathericon.end} 
+                    alt={weather.weather[0].description} style={{width: '50px', height: '50px'}}
+                    />
                 </div>
                 <div>
                     <h5 className="text-white uppercase text-sm"> {weather.weather[0].main} </h5>
