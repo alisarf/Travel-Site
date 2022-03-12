@@ -1,19 +1,19 @@
 //##MATERIAL UI OVERIDES
 
 //center pagination
-.MuiPagination-ul{
-    justify-content: center;
+.MuiPagination-ul {
+  justify-content: center;
 }
 
 //Prevent anchor decor on Title text
 .css-1iwtne7-MuiTypography-root-MuiLink-root {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 //text field mui override
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-    border: 5px solid white !important;
-    border-radius: 15px !important;
-    background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid white !important;
+  border-radius: 15px !important;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /*
@@ -29,29 +29,30 @@
 
 //Cost Table- bold to row title (sx doesnt work)
 .css-1ex1afd-MuiTableCell-root {
-    font-weight: 700 !important;
-    font-family: 'Work Sans', 'sans-serif' !important;
+  font-weight: 700 !important;
+  font-family: "Work Sans", "sans-serif" !important;
 }
-.css-177gid-MuiTableCell-root{
-    font-family: 'Work Sans', 'sans-serif' !important;
+.css-177gid-MuiTableCell-root {
+  font-family: "Work Sans", "sans-serif" !important;
 }
 
 //Divide
-.MuiDivider-root::before , .MuiDivider-root::after{
-    //border-top: 3px solid rgba(142, 161, 160, 0.68) !important;
-    border-top: 3px solid --accentBold !important;
+.MuiDivider-root::before,
+.MuiDivider-root::after {
+  //border-top: 3px solid rgba(142, 161, 160, 0.68) !important;
+  border-top: 3px solid --accentBold !important;
 }
 //Divide-margin of the Typography
-.css-1vw6mcs-MuiTypography-root{
-    margin-bottom: 0 !important;
+.css-1vw6mcs-MuiTypography-root {
+  margin-bottom: 0 !important;
 }
 
 .css-1ps6pg7-MuiPaper-root {
-    border-radius: 1rem !important;
-    overflow: hidden;
+  border-radius: 1rem !important;
+  overflow: hidden;
 }
 
 .RadioGroupRating .css-i4bv87-MuiSvgIcon-root {
-    width: 2.5rem !important;
-    height: 2.5rem !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
 }

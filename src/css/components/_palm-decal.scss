@@ -1,15 +1,15 @@
 /**USED AS THE BACKGROUND LEAF DECAL ALTERNATING DOWN PAGE**/
 
 .Palm {
-    background-image: url('../assets/images/media/palm/palm_leaf.svg');
+  background-image: url("../assets/images/media/palm/palm_leaf.svg");
 }
 .Palm_leaf {
-    position: absolute;
-    min-width: 614px;
-    top: -6.24%;
-    right: 0;
+  position: absolute;
+  min-width: 614px;
+  top: -6.24%;
+  right: 0;
 }
 //Flip horizontally palm for alternation
 .RightFlip {
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }

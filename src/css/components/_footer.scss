@@ -1,23 +1,23 @@
-footer{
-    padding: 7.5% 15%;
-    @include breakpoint(verySmall) {
-        padding-top: 15%;
+footer {
+  padding: 7.5% 15%;
+  @include breakpoint(verySmall) {
+    padding-top: 15%;
+  }
+  .Footer__Links li {
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: var(--black_grey_light);
+    &:hover {
+      color: var(--black_grey_light_hover);
+      cursor: pointer;
     }
-    .Footer__Links li{
-        font-weight: 500;
-        margin: .5rem 0;
-        color: var(--black_grey_light);
-        &:hover {
-            color: var(--black_grey_light_hover);
-            cursor: pointer;
-        }
+  }
+  .Footer__Icon {
+    cursor: pointer;
+    color: var(--accent);
+    transition: 0.3 ease-in;
+    &:hover {
+      color: var(--accent_active);
     }
-    .Footer__Icon {
-        cursor: pointer;
-        color: var(--accent);
-        transition: .3 ease-in;
-        &:hover {
-            color: var(--accent_active);
-        }
-    }
+  }
 }

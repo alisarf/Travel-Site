@@ -1,62 +1,61 @@
-nav{
+nav {
+  position: relative;
+  height: 10vw;
+  @include breakpoint(small) {
+    height: 20vw;
+  }
+}
+
+.Nav_modal--link,
+.Nav__hamburger--link {
+  color: black !important;
+}
+
+.Nav__modal {
+  position: absolute;
+  top: 5vw;
+  z-index: 500;
+  background-color: hsl(0, 0%, 100%);
+  left: 0;
+  border-radius: 15px;
+  @include breakpoint(large) {
+    top: 8vw; //need to move up/down when screen moves, consider calc()
+  }
+  &--triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid hsl(0, 0%, 100%);
+    top: calc(-1rem - 10px);
     position: relative;
-    height: 10vw;
-    @include breakpoint(small) {
-        height: 20vw;
-    }
-}
-
-.Nav_modal--link, .Nav__hamburger--link {
-    color: black !important;
-}
-
-.Nav__modal{
-    position: absolute;
-    top: 5vw;
-    z-index: 500;
-    background-color: hsl(0, 0%, 100%);
-    left: 0;
-    border-radius: 15px;
-    @include breakpoint(large) {
-        top: 8vw; //need to move up/down when screen moves, consider calc()
-    }
-    &--triangle {
-        width: 0; 
-        height: 0; 
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid hsl(0, 0%, 100%);
-        top: calc(-1rem - 10px);
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 //Hamburger Nav
 //Fullscreen nav option in mobile display
 .Nav__hamburgerToggle {
-    @include breakpoint(small) {
-        height: 100vh;
-        top: 20vw;
-        width: 110vw;
-        left: -10%;
-        overflow: hidden;
-        position: fixed;
-        z-index: 200;
-        background-color: var(--main_Bg);
-
-    }
+  @include breakpoint(small) {
+    height: 100vh;
+    top: 20vw;
+    width: 110vw;
+    left: -10%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 200;
+    background-color: var(--main_Bg);
+  }
 }
 
 //FOR VISUALLY TESTING NAV MODAL
-.Test123{
-    height: fit-content;
-    background-color: hsl(160, 100%, 75%);
-
+.Test123 {
+  height: fit-content;
+  background-color: hsl(160, 100%, 75%);
 }
 @include breakpoint(medium) {
-    .Test123:hover{
-            padding-bottom: 3vh;
-    }
+  .Test123:hover {
+    padding-bottom: 3vh;
+  }
 }
