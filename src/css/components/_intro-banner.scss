@@ -1,32 +1,31 @@
-.LetterSpacing{
-    //color: --black-grey_grey;
-    transition: all .3s ease;
-    font-size: 1.2rem;
-    padding: 4px;
-    position: relative;
-    //border-bottom: 3px solid white; 
-    opacity: .9;
+.LetterSpacing {
+  //color: --black-grey_grey;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  padding: 4px;
+  position: relative;
+  //border-bottom: 3px solid white;
+  opacity: 0.9;
 }
 
-.LetterSpacing:hover{
-    //color: --accent;
-    color: black;
-    z-index: 1;
-    opacity: 1 !important;
+.LetterSpacing:hover {
+  //color: --accent;
+  color: black;
+  z-index: 1;
+  opacity: 1 !important;
 }
 
 .LetterSpacing::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-color: hsla(0, 0%, 100%, 0.8);
-    height: 0px !important;
-    width: 100%;
-    left: 0;
-    transition: all .3s ease;
-    z-index: -1; //relative to the Letterspacing
-    
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  height: 0px !important;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: -1; //relative to the Letterspacing
 }
-.LetterSpacing:hover::before{
-    height: 100% !important;
+.LetterSpacing:hover::before {
+  height: 100% !important;
 }

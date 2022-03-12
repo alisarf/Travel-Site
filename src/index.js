@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import './css/style.css';
-import reportWebVitals from './reportWebVitals';
-import RouterDirectory from './RouterDirectory'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import "./css/style.css";
+import reportWebVitals from "./reportWebVitals";
+import RouterDirectory from "./RouterDirectory";
 
 ReactDOM.render(
   <React.StrictMode>
     <RouterDirectory />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

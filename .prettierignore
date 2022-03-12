@@ -1,0 +1,4 @@
+*.html 
+
+#Formats mapApi mapboxgl.workerClass incorrectly, breaks page
+/src/material-ui/MapApi.js

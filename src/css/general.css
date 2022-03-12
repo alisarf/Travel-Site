@@ -73,9 +73,9 @@
 
 /**----Font Variables----**/
 :root {
-  --work-sans: 'Work Sans', sans-serif;
-  --roboto: 'Roboto','sans-serif';
-  --roboto-condensed: 'Roboto Condensed','sans-serif';
+  --work-sans: "Work Sans", sans-serif;
+  --roboto: "Roboto", "sans-serif";
+  --roboto-condensed: "Roboto Condensed", "sans-serif";
 }
 
 /* ---Font Helper Classes---*/
@@ -152,7 +152,7 @@ p {
 }
 
 .Special_Title {
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   font-size: 2rem;
 }
 
@@ -168,7 +168,7 @@ p {
 }
 
 .SidePanel .Divider::after {
-  margin: .5rem 0 !important;
+  margin: 0.5rem 0 !important;
 }
 
 .SectionParaMulti__Content {
@@ -253,14 +253,15 @@ p {
 */
 .css-1ex1afd-MuiTableCell-root {
   font-weight: 700 !important;
-  font-family: 'Work Sans', 'sans-serif' !important;
+  font-family: "Work Sans", "sans-serif" !important;
 }
 
 .css-177gid-MuiTableCell-root {
-  font-family: 'Work Sans', 'sans-serif' !important;
+  font-family: "Work Sans", "sans-serif" !important;
 }
 
-.MuiDivider-root::before, .MuiDivider-root::after {
+.MuiDivider-root::before,
+.MuiDivider-root::after {
   border-top: 3px solid --accentBold !important;
 }
 
@@ -289,13 +290,14 @@ nav {
   height: 10vw;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   nav {
     height: 20vw;
   }
 }
 
-.Nav_modal--link, .Nav__hamburger--link {
+.Nav_modal--link,
+.Nav__hamburger--link {
   color: black !important;
 }
 
@@ -326,7 +328,7 @@ nav {
   margin-right: auto;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .Nav__hamburgerToggle {
     height: 100vh;
     top: 20vw;
@@ -353,12 +355,12 @@ nav {
 }
 
 .LetterSpacing {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 1.2rem;
   padding: 4px;
   position: relative;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .LetterSpacing:hover {
@@ -375,8 +377,8 @@ nav {
   height: 0px !important;
   width: 100%;
   left: 0;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   z-index: -1;
 }
 
@@ -396,7 +398,7 @@ nav {
   border-radius: 8px;
   background: var(--primary_blue);
   color: var(--white_text);
-  font-family: 'Roboto Condensed','sans-serif';
+  font-family: "Roboto Condensed", "sans-serif";
   line-height: 3rem;
   text-transform: uppercase;
   -webkit-transition: all 0.1s ease;
@@ -414,9 +416,9 @@ nav {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: .2rem .8rem;
+  padding: 0.2rem 0.8rem;
   background-color: var(--accentBold);
-  font-family: 'Roboto Condensed','sans-serif';
+  font-family: "Roboto Condensed", "sans-serif";
   font-weight: bold;
   font-size: 1rem;
   text-transform: uppercase;
@@ -455,9 +457,15 @@ footer {
   padding: 7.5% 15%;
 }
 
+@media (max-width: 650px) {
+  footer {
+    padding-top: 15%;
+  }
+}
+
 footer .Footer__Links li {
   font-weight: 500;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   color: var(--black_grey_light);
 }
 
@@ -469,8 +477,8 @@ footer .Footer__Links li:hover {
 footer .Footer__Icon {
   cursor: pointer;
   color: var(--accent);
-  -webkit-transition: .3 ease-in;
-  transition: .3 ease-in;
+  -webkit-transition: 0.3 ease-in;
+  transition: 0.3 ease-in;
 }
 
 footer .Footer__Icon:hover {
@@ -479,6 +487,12 @@ footer .Footer__Icon:hover {
 
 html {
   overflow-x: hidden;
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 14px !important;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -511,9 +525,16 @@ a {
   margin-right: auto;
   margin-left: auto;
   border-radius: 1rem;
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (max-width: 650px) {
+  .Container {
+    width: 90% !important;
+  }
 }
 
 /*--------PREFERS DARK MODE---------*/
@@ -537,6 +558,25 @@ a {
   }
   .pl-15 {
     padding-left: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 14px !important;
+  }
+  .W-20vh {
+    height: 20vh !important;
+  }
+  .MuiDivider-root {
+    white-space: normal !important;
+    width: auto !important;
+  }
+  .css-1vw6mcs-MuiTypography-root {
+    font-size: 2rem !important;
+  }
+  .w-container {
+    width: 90%;
   }
 }
 

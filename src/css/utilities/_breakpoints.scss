@@ -4,19 +4,25 @@
 //USE --> @include breakpoint(medium) {MYCONTENT}
 
 @mixin breakpoint($point) {
-    @if $point == larger {
-      @media (max-width: 1600px) { @content; }
+  @if $point == larger {
+    @media (max-width: 1600px) {
+      @content;
     }
-    @else if $point == large {
-        @media (max-width: 1200px) { @content; }
+  } @else if $point == large {
+    @media (max-width: 1200px) {
+      @content;
     }
-    @else if $point == medium {
-      @media (max-width: 1024px) { @content; }
+  } @else if $point == medium {
+    @media (max-width: 1024px) {
+      @content;
     }
-    @else if $point == smallMed {
-      @media (max-width: 768px) { @content; }
+  } @else if $point == small {
+    @media (max-width: 768px) {
+      @content;
     }
-    @else if $point == small {
-      @media (max-width: 650px)  { @content; }
+  } @else if $point == verySmall {
+    @media (max-width: 650px) {
+      @content;
     }
+  }
 }
