@@ -51,7 +51,7 @@ const Nav = (props) => {
   }
 
   return (
-    <nav className="z-100 flex w-4/5 m-auto py-2 justify-between items-center tracking-widest w-container">
+    <nav className="Nav__ht z-100 flex w-4/5 m-auto py-2 justify-between items-center tracking-widest w-container">
       <Link to="/">
         <h2 className="Dark Special_Title Black font-bold text-center uppercase">
           Globe Travel

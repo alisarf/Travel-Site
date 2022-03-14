@@ -289,13 +289,13 @@ p {
     }
 */
 /*  components  */
-nav {
+.Nav__ht {
   position: relative;
   height: 10vw;
 }
 
 @media (max-width: 768px) {
-  nav {
+  .Nav__ht {
     height: 20vw;
   }
 }
