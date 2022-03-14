@@ -1,5 +1,5 @@
 footer {
-  padding: 7.5% 15%;
+  padding: 7.5% 10%;
   @include breakpoint(verySmall) {
     padding-top: 15%;
   }
@@ -20,4 +20,8 @@ footer {
       color: var(--accent_active);
     }
   }
+}
+
+.Footer_maxwidth {
+  max-width: 1280px;
 }

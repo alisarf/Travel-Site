@@ -13,13 +13,16 @@ nav {
 
 .Nav__modal {
   position: absolute;
-  top: 5vw;
+  //top: 5vw;
+  padding-top: 1.2rem;
+  margin-top: 0.6rem; //Gap between drop down
   z-index: 500;
   background-color: hsl(0, 0%, 100%);
   left: 0;
   border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(13, 23, 75, 0.25);
   @include breakpoint(large) {
-    top: 8vw; //need to move up/down when screen moves, consider calc()
+    //top: 8vw; //need to move up/down when screen moves, consider calc()
   }
   &--triangle {
     width: 0;
@@ -27,16 +30,28 @@ nav {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid hsl(0, 0%, 100%);
-    top: calc(-1rem - 10px);
+    top: calc(-1.2rem - 10px);
     position: relative;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 //Hamburger Nav
 //Fullscreen nav option in mobile display
 .Nav__hamburgerToggle {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeIn 150ms;
   @include breakpoint(small) {
     height: 100vh;
     top: 20vw;
@@ -49,13 +64,25 @@ nav {
   }
 }
 
-//FOR VISUALLY TESTING NAV MODAL
-.Test123 {
-  height: fit-content;
-  background-color: hsl(160, 100%, 75%);
-}
-@include breakpoint(medium) {
-  .Test123:hover {
-    padding-bottom: 3vh;
+//Custom Hamburger Nav - in progress
+.Nav__hamburgerIcon {
+  height: 0.2rem;
+  background-color: black;
+  width: 2rem;
+  position: absolute;
+  &::before,
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    background-color: black;
+    position: absolute;
+    left: 0;
+  }
+  &::before {
+    top: 0.5rem;
+  }
+  &::after {
+    top: -0.5rem;
   }
 }

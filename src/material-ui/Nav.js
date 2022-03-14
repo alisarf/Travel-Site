@@ -53,9 +53,9 @@ const Nav = (props) => {
   return (
     <nav className="z-100 flex w-4/5 m-auto py-2 justify-between items-center tracking-widest w-container">
       <Link to="/">
-        <span className="Dark Special_Title Black font-bold text-center uppercase">
+        <h2 className="Dark Special_Title Black font-bold text-center uppercase">
           Globe Travel
-        </span>
+        </h2>
       </Link>
       <button
         className={`${navView === true ? "z-10" : ""} md:hidden`}
@@ -64,7 +64,7 @@ const Nav = (props) => {
         <MenuIcon />
       </button>
       <div
-        className={`Nav__hamburgerToggle Dark Black_Bg items-center bg-none ${
+        className={`Nav__hamburgerToggle Dark Black_Bg items-center bg-none transition-opacity ${
           navView === true
             ? "flex flex-col -right-1/5 top-0 absolute bg-white"
             : "hidden"
@@ -76,14 +76,14 @@ const Nav = (props) => {
           onMouseEnter={handleChange}
         >
           <button
-            className="Test123 Roboto_Condensed Black h-20 tracking-wider font-bold text-4xl mt-5 mb-2 md:mx-3 md:my-0 md:text-lg md:font-light transition-colors md:hover:text-indigo-600"
+            className="Test123 Roboto_Condensed Black p-4 h-fit tracking-wider font-bold text-4xl mt-5 mb-2 md:mx-3 md:my-0 md:text-lg md:font-light transition-colors md:hover:text-indigo-600"
             onMouseEnter={toggleHoverDest}
             onMouseLeave={toggleHoverDest}
           >
             Destinations
             {/*Start: HOVER FOR MD OPTIONS*/}
             <div
-              className={`Nav__modal top-12 p-4 left-0 hidden rounded-xl shadow-md ${
+              className={`Nav__modal top-12 p-4 left-0 hidden rounded-xl ${
                 hoverDest === true ? "md:block " : ""
               }`}
             >
@@ -141,11 +141,15 @@ const Nav = (props) => {
           </a>
         </div>
         {/*
-                    <div className='inline-block m-3'>
-                        <Link to='/favorites'>
-                            <FavoriteRoundedIcon sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} onClick={printHeart}/>
-                        </Link>
-                    </div>*/}
+          <div className='inline-block m-3'>
+              <Link to='/favorites'>
+                  <FavoriteRoundedIcon 
+                    sx={{ color: 'pink' , cursor: 'pointer','&:hover': { color: 'hotpink',}}} 
+                    onClick={printHeart}
+                  />
+              </Link>
+          </div>
+        */}
       </div>
     </nav>
   );

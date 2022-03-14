@@ -225,6 +225,10 @@ p {
   min-height: 30vh;
 }
 
+.aspect-square {
+  aspect-ratio: 1;
+}
+
 .MuiPagination-ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -303,17 +307,14 @@ nav {
 
 .Nav__modal {
   position: absolute;
-  top: 5vw;
+  padding-top: 1.2rem;
+  margin-top: 0.6rem;
   z-index: 500;
   background-color: white;
   left: 0;
   border-radius: 15px;
-}
-
-@media (max-width: 1200px) {
-  .Nav__modal {
-    top: 8vw;
-  }
+  -webkit-box-shadow: 0 2px 6px rgba(13, 23, 75, 0.25);
+          box-shadow: 0 2px 6px rgba(13, 23, 75, 0.25);
 }
 
 .Nav__modal--triangle {
@@ -322,10 +323,37 @@ nav {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid white;
-  top: calc(-1rem - 10px);
+  top: calc(-1.2rem - 10px);
   position: relative;
   margin-left: auto;
   margin-right: auto;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Nav__hamburgerToggle {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: fadeIn 150ms;
+          animation: fadeIn 150ms;
 }
 
 @media (max-width: 768px) {
@@ -341,17 +369,28 @@ nav {
   }
 }
 
-.Test123 {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: #80ffd5;
+.Nav__hamburgerIcon {
+  height: 0.2rem;
+  background-color: black;
+  width: 2rem;
+  position: absolute;
 }
 
-@media (max-width: 1024px) {
-  .Test123:hover {
-    padding-bottom: 3vh;
-  }
+.Nav__hamburgerIcon::before, .Nav__hamburgerIcon::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background-color: black;
+  position: absolute;
+  left: 0;
+}
+
+.Nav__hamburgerIcon::before {
+  top: 0.5rem;
+}
+
+.Nav__hamburgerIcon::after {
+  top: -0.5rem;
 }
 
 .LetterSpacing {
@@ -454,7 +493,7 @@ nav {
 }
 
 footer {
-  padding: 7.5% 15%;
+  padding: 7.5% 10%;
 }
 
 @media (max-width: 650px) {
@@ -483,6 +522,10 @@ footer .Footer__Icon {
 
 footer .Footer__Icon:hover {
   color: var(--accent_active);
+}
+
+.Footer_maxwidth {
+  max-width: 1280px;
 }
 
 html {

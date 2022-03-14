@@ -10,13 +10,13 @@ Input: array with 4 image objects consisting of url and title
 
 const Split_Img_Card = ({ imgArr, header, subheader }) => {
   return (
-    <section className="relative grid grid-cols-3 mx-auto w-container mb-12 md:mb-20">
+    <section className="relative grid  grid-rows-2 mx-auto w-container mb-12 md:mb-20 md:grid-cols-3 md:grid-rows-1">
       <div
-        className="grid grid-cols-2 grid-rows-2 mx-auto col-span-2 w-full rounded-2xl overflow-hidden"
-        style={{ height: "50vh" }}
+        className="Split_Img_Card__vh grid grid-cols-2 grid-rows-2 mx-auto w-full rounded-t-2xl overflow-hidden md:rounded-2xl"
+        style={{}}
       >
         {imgArr.map((item) => (
-          <div className="relative h-fit overflow-hidden flex flex-col justify-center">
+          <div className="relative h-fit overflow-hidden flex flex-col justify-center aspect-square">
             <img
               className="w-full h-auto absolute"
               src={`/images/ubud/${item.url}`}
@@ -25,7 +25,8 @@ const Split_Img_Card = ({ imgArr, header, subheader }) => {
           </div>
         ))}
       </div>
-      <div className="my-auto px-16 bg-white h-4/5 border rounded-r-xl flex flex-col justify-center items-baseline shadow-lg SidePanel">
+
+      <div className="mb-auto mx-auto w-full p-16 bg-white border rounded-b-xl flex flex-col justify-center items-baseline shadow-lg SidePanel md:my-auto md:rounded-r-xl">
         <div className=" my-0">
           <h2 className="Divider text-left capitalize text-4xl md:text-5xl ">
             {header}

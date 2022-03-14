@@ -96,7 +96,6 @@ function App() {
     <main>
       <HeadBanner title="Adventure!" image={ImgBanner} elem={elem} />
       <IntroBanner image={ImgBanner} />
-
       {destination ? (
         <PageTemplate city={destination} />
       ) : (
@@ -117,18 +116,31 @@ function App() {
             title="Consequat mollit fugiat ad"
           />
 
+          {/**TODO: FIGURE OUT THE UI design 
           <Split_Img_Card
             imgArr={ftArr}
             header="Get Outside"
             subheader="Find activites hosted by the locals."
           />
+        */}
 
           {/*<section className="grid m-auto gap-10 sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-3">    
               {featImgArr.slice(start, end).map(image => (
-                  <CardBuilder id= {image.id} image ={image.url} setElem={setElem} elem={elem} className="mx-auto h-full"/>
+                  <CardBuilder 
+                    id= {image.id} 
+                    image ={image.url} 
+                    setElem={setElem} 
+                    elem={elem} 
+                    className="mx-auto h-full"
+                  />
                 ))}
               </section>
-            <Pagination className = "m-auto" count={Math.ceil(featImgArr.length / 3)} variant="outlined" color="primary"  onChange={pageChange}/>
+            <Pagination 
+              className = "m-auto" 
+              count={Math.ceil(featImgArr.length / 3)} 
+              variant="outlined" color="primary"  
+              onChange={pageChange}
+            />
             */}
           <section className="m-auto w-full">
             {/*<img className=' m-auto rounded' src={cultureimage} alt="" />
@@ -149,32 +161,48 @@ function App() {
           </div>
         </div>
       )}
-
-      {/*<Typography variant='h1' className='text-center'>Travel Bali</Typography>*/}
-
+      {/*
+      <Typography 
+        variant="h1" 
+        className="text-center">
+        Travel Bali
+      </Typography>
+      */}
       {/*    SIGNUP FORM
-          <section className='flex flex-row m-auto Accent_Bg pt-12 pb-12 w-container rounded-2xl shadow-lg mb-12 md:mb-20'>
-            <div className='relative'>
-              <img src={halfdiv} className=" absolute w-40 h-100%"></img>
-              <img src={signupGuy} className="w-40 h-40 z-10 relative"></img>
-            </div>
-            <div className=' m-auto items-center flex flex-col gap-y-4 '>
-              <TitleHead title = "Get the Latest News!" nav = 'signup'/>
-              <TextField id="outlined-basic" label="First Name" variant="outlined" className='flex-1'/>
-              <TextField id="outlined-basic" label="Last Name" variant="outlined" className='flex-2' />
-              <TextField id="outlined-basic" label="Email" variant="outlined" className='flex-3' />
-              <Button>Sign Up</Button>
-            </div>
-          </section>
-          */}
-
+      <section className="flex flex-row m-auto Accent_Bg pt-12 pb-12 w-container rounded-2xl shadow-lg mb-12 md:mb-20">
+        <div className="relative">
+          <img src={halfdiv} className=" absolute w-40 h-100%"></img>
+          <img src={signupGuy} className="w-40 h-40 z-10 relative"></img>
+        </div>
+        <div className=" m-auto items-center flex flex-col gap-y-4 ">
+          <TitleHead title="Get the Latest News!" nav="signup" />
+          <TextField
+            id="outlined-basic"
+            label="First Name"
+            variant="outlined"
+            className="flex-1"
+          />
+          <TextField
+            id="outlined-basic"
+            label="Last Name"
+            variant="outlined"
+            className="flex-2"
+          />
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            className="flex-3"
+          />
+          <Button>Sign Up</Button>
+        </div>
+      </section>
+      */}
       <DivideSolidSection
         msg="Exercitation cupidatat enim ad amet eu officia consectetur.Ullamco minim mollit cupidatat fugiat veniam esse labore labore velit eiusmod incididunt sit aliquip.Ea eu minim veniam ullamco dolore deserunt.Ex laboris qui labore velit enim sunt minim consectetur.Deserunt sunt eiusmod commodo laboris.Dolor mollit sint duis velit ea."
         title="Eu non fugiat et nisi excepteur"
       />
-
       <Feedback msg="How helpful was Globe Travel at planning your next trip?" />
-
       <Footer />
     </main>
   );
