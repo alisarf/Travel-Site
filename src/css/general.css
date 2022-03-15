@@ -52,6 +52,7 @@
   background-color: var(--grey-lightest);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   h2.Dark {
     color: var(--accent);
@@ -67,10 +68,10 @@
     color: whitesmoke !important;
   }
   .Dark.Black_Bg {
-    background-color: #1e1a23;
+    background-color: hsl(267, 14%, 12%);
   }
 }
-
+*/
 /**----Font Variables----**/
 :root {
   --work-sans: "Work Sans", sans-serif;
@@ -581,13 +582,14 @@ a {
 }
 
 /*--------PREFERS DARK MODE---------*/
+/*
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1e1a23;
-    color: white;
+    background-color: hsl(267, 14%, 12%);
+    color: hsl(0, 0%, 100%);
   }
 }
-
+*/
 /*----MEDIA QUERIES----*/
 @media (max-width: 1024px) {
   .grid-col-1to3 div:nth-last-child(1) {

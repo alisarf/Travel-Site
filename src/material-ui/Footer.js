@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 //Icons mUI
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -11,9 +11,9 @@ const Footer = () => {
       <div className="Footer_maxwidth m-auto text-center flex flex-col md:flex-row justify-between ">
         <section className="flex flex-col justify-center">
           <Link to="/">
-            <span className="Special_Title font-bold text-center uppercase text-white">
+            <h2 className="Special_Title font-bold text-center uppercase text-white">
               Globe Travel
-            </span>
+            </h2>
           </Link>
           <div className="md:mr-auto">
             <FacebookIcon className="Footer__Icon" />
@@ -23,7 +23,6 @@ const Footer = () => {
         </section>
         <section className="flex flex-row justify-center mb-10">
           <div className="inline-block">
-            <h6 className="font-bold">Company</h6>
             <ul className="Footer__Links">
               <li>Contact us</li>
               <li>Locations</li>
